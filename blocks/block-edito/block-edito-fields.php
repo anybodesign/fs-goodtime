@@ -6,11 +6,11 @@ if( function_exists('acf_add_local_field_group') ):
 
 acf_add_local_field_group(array(
 	'key' => 'group_5e3d7f1b431fa',
-	'title' => __('Block Edito', 'from-scratch'),
+	'title' => __('Block Edito', 'good-time'),
 	'fields' => array(
 		array(
 			'key' => 'field_5e3d7f21355d1',
-			'label' => __('Title', 'from-scratch'),
+			'label' => __('Title', 'good-time'),
 			'name' => 'title',
 			'type' => 'text',
 			'instructions' => '',
@@ -29,7 +29,7 @@ acf_add_local_field_group(array(
 		),
 		array(
 			'key' => 'field_5e3d7f2c355d2',
-			'label' => __('Text', 'from-scratch'),
+			'label' => __('Text', 'good-time'),
 			'name' => 'text',
 			'type' => 'wysiwyg',
 			'instructions' => '',
@@ -48,7 +48,7 @@ acf_add_local_field_group(array(
 		),
 		array(
 			'key' => 'field_5e3d7f67355d3',
-			'label' => __('Left picture', 'from-scratch'),
+			'label' => __('Left picture', 'good-time'),
 			'name' => 'left_picture',
 			'type' => 'image',
 			'instructions' => '',
@@ -60,7 +60,7 @@ acf_add_local_field_group(array(
 				'id' => '',
 			),
 			'return_format' => 'array',
-			'preview_size' => 'medium',
+			'preview_size' => 'thumbnail',
 			'library' => 'all',
 			'min_width' => '',
 			'min_height' => '',
@@ -72,7 +72,7 @@ acf_add_local_field_group(array(
 		),
 		array(
 			'key' => 'field_5e3d7f74355d4',
-			'label' => __('Right picture', 'from-scratch'),
+			'label' => __('Right picture', 'good-time'),
 			'name' => 'right_picture',
 			'type' => 'image',
 			'instructions' => '',

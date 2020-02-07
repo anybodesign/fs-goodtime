@@ -18,7 +18,7 @@ function block_edito_init() {
             'mode'				=> 'auto',
             'supports'			=> array( 'align' => false, 'mode' => false, 'multiple' => false),
             'keywords'			=> array( 'editorial', 'edito' ),
-            'render_template'   => FS_THEME_DIR . '/blocks/block-edito/templates/block-edito.php',
+            'render_template'   => FS_THEME_DIR . '/blocks/block-edito/templates/block-edito-template.php',
             'enqueue_assets'	=> function() {
 										wp_enqueue_style( 'block-edito', FS_THEME_URL . '/blocks/block-edito/css/block-edito.css' );
 										//wp_enqueue_script( 'block-edito', FS_THEME_URL . '/blocks/block-edito/js/block-edito.js', array('jquery'), '', true );
