@@ -1,0 +1,28 @@
+// -------------------------
+// = Variables
+// -------------------------
+
+
+// Grid Padding & Max Width
+
+$grid-padding: 1rem; 		// @note: The padding gutter! equiv. 10px
+$max-width: 96rem;			// @note: 960px
+
+$half-space: calc( (100% - #{$max-width}) /2 + #{$grid-padding} );  // Half the viewport
+
+
+// Break-Points
+
+$width-small: 30em; 		// @note: 480px
+$width-medium: 45em;		// @note: 720px
+$width-large: 60em; 		// @note: 960px
+$width-wide: 75em;	 		// @note: 1200px
+$width-xwide: 90em;	 		// @note: 1440px
+
+
+// Colors
+
+$primary-color: #412F85;
+$secondary-color: #FFD910;
+$text-color: #23252B;
+$bg-color: #fff;
