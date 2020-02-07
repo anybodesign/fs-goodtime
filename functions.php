@@ -447,6 +447,46 @@ function fs_search_form( $form ) {
 add_filter( 'get_search_form', 'fs_search_form' );
 
 
+// Tinymce class
+
+function fs_mce_buttons_2($buttons) {
+    array_unshift($buttons, 'styleselect');
+    return $buttons;
+}
+add_filter('mce_buttons_2', 'fs_mce_buttons_2');
+
+function fs_tiny_formats($init_array) {
+
+    $style_formats = array(
+
+        array(
+            'title' => __( 'Text intro', 'from-scratch' ),
+            'selector' => 'p',
+            'classes' => 'text-intro',
+            'wrapper' => true,
+        ),
+        array(
+            'title' => __( 'Text mentions', 'from-scratch' ),
+            'selector' => 'p',
+            'classes' => 'text-mentions',
+            'wrapper' => true,
+        ),
+        array(
+            'title' => __( 'Action button', 'from-scratch' ),
+            'selector' => 'a',
+            'classes' => 'action-btn',
+        )
+    );
+    
+    // Filter
+    $style_formats = apply_filters( 'fs_tiny_formats', $style_formats ); 
+    
+    $init_array['style_formats'] = json_encode($style_formats);
+    return $init_array;
+
+}
+add_filter('tiny_mce_before_init', 'fs_tiny_formats');
+
 
 // ------------------------
 // ACF
