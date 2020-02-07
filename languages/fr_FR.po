@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Good Time\n"
-"POT-Creation-Date: 2020-02-07 16:00+0100\n"
-"PO-Revision-Date: 2020-02-07 16:01+0100\n"
+"POT-Creation-Date: 2020-02-07 16:32+0100\n"
+"PO-Revision-Date: 2020-02-07 16:32+0100\n"
 "Last-Translator: Thomas Villain <atelier@anybodesign.com>\n"
 "Language-Team: Thomas Villain <atelier@anybodesign.com>\n"
 "Language: fr_FR\n"
@@ -24,21 +24,42 @@ msgstr ""
 msgid "It looks like nothing was found at this location. Maybe try a search?"
 msgstr "On dirait qu’il n'y a rien ici. Essayez peut-être une recherche ?"
 
-#: blocks/block-custom/block-custom-fields.php:9
-msgid "Block Custom"
-msgstr "Block Custom"
+#: blocks/block-edito/block-edito-fields.php:9
+msgid "Block Edito"
+msgstr "Bloc édito"
 
-#: blocks/block-custom/block-custom-fields.php:13
-msgid "Field"
-msgstr "Champ"
+#: blocks/block-edito/block-edito-fields.php:13
+msgid "Title"
+msgstr "Titre"
 
-#: blocks/block-custom/block-custom.php:14
-msgid "Block"
-msgstr "Bloc"
+#: blocks/block-edito/block-edito-fields.php:32
+#| msgid "Rich Text"
+msgid "Text"
+msgstr "Texte"
 
-#: blocks/block-custom/block-custom.php:15
-msgid "Block description."
-msgstr "Description du bloc."
+#: blocks/block-edito/block-edito-fields.php:51
+msgid "Left picture"
+msgstr "Image de gauche"
+
+#: blocks/block-edito/block-edito-fields.php:75
+msgid "Right picture"
+msgstr "Image de droite"
+
+#: blocks/block-edito/block-edito.php:14
+msgid "Editorial"
+msgstr "Édito"
+
+#: blocks/block-edito/block-edito.php:15
+msgid "The first block you need on your home page."
+msgstr "Le premier bloc dont vous avez besoin sur votre page d’accueil."
+
+#: blocks/block-edito/templates/block-edito-template.php:3
+msgid "Welcome title here..."
+msgstr "Titre de bienvenue ici..."
+
+#: blocks/block-edito/templates/block-edito-template.php:4
+msgid "Welcome text here..."
+msgstr "Texte de bienvenue ici..."
 
 #: comments.php:19
 msgid "They talk about it"
@@ -407,12 +428,10 @@ msgstr[0] "%s commentaire"
 msgstr[1] "%s commentaires"
 
 #. Theme Name of the plugin/theme
-#| msgid "Good Time"
 msgid "FS Good Time"
 msgstr "FS Good Time"
 
 #. Theme URI of the plugin/theme
-#| msgid "https://github.com/anybodesign/good-time"
 msgid "https://github.com/anybodesign/fs-goodtime"
 msgstr "https://github.com/anybodesign/fs-goodtime"
 
@@ -435,6 +454,15 @@ msgstr "Maintenance"
 #. Template Name of the plugin/theme
 msgid "Style Guide"
 msgstr "Style Guide"
+
+#~ msgid "Field"
+#~ msgstr "Champ"
+
+#~ msgid "Block"
+#~ msgstr "Bloc"
+
+#~ msgid "Block description."
+#~ msgstr "Description du bloc."
 
 #~ msgid "Complementary color"
 #~ msgstr "Couleur complémentaire"
@@ -512,9 +540,6 @@ msgstr "Style Guide"
 
 #~ msgid "Not found in Trash"
 #~ msgstr "Introuvable dans la corbeille"
-
-#~ msgid "Project picture"
-#~ msgstr "Image du projet"
 
 #~ msgid "Set project picture"
 #~ msgstr "Définir l’image du projet"
@@ -629,9 +654,6 @@ msgstr "Style Guide"
 #~ msgid "Large High"
 #~ msgstr "Grande (x2)"
 
-#~ msgid "Rich Text"
-#~ msgstr "Texte riche"
-
 #~ msgid "Text and Image"
 #~ msgstr "Texte et image"
 
@@ -649,9 +671,6 @@ msgstr "Style Guide"
 
 #~ msgid "Enlarge picture"
 #~ msgstr "Agrandir l'image"
-
-#~ msgid "Enter text here..."
-#~ msgstr "Entrez du texte ici…"
 
 #, php-format
 #~ msgid "Continue reading %s"
