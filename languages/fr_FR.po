@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Good Time\n"
-"POT-Creation-Date: 2020-01-30 16:38+0100\n"
-"PO-Revision-Date: 2020-01-30 16:38+0100\n"
+"POT-Creation-Date: 2020-02-07 16:00+0100\n"
+"PO-Revision-Date: 2020-02-07 16:01+0100\n"
 "Last-Translator: Thomas Villain <atelier@anybodesign.com>\n"
 "Language-Team: Thomas Villain <atelier@anybodesign.com>\n"
 "Language: fr_FR\n"
@@ -60,7 +60,7 @@ msgstr "Ajouter mon commentaire !"
 msgid "Powered by WordPress!"
 msgstr "Propulsé par WordPress !"
 
-#: footer.php:39 functions.php:317
+#: footer.php:39 functions.php:306
 msgid "Footer Menu"
 msgstr "Menu pied de page"
 
@@ -68,369 +68,161 @@ msgstr "Menu pied de page"
 msgid "Back to top"
 msgstr "Haut de page"
 
-#: functions.php:65
+#: functions.php:51
 msgid "Black"
 msgstr "Noir"
 
-#: functions.php:70
+#: functions.php:56
 msgid "White"
 msgstr "Blanc"
 
-#: functions.php:78 inc/customizer.php:58
+#: functions.php:64 inc/customizer.php:75
 msgid "Primary color"
 msgstr "Couleur primaire"
 
-#: functions.php:83 inc/customizer.php:74
+#: functions.php:69 inc/customizer.php:99
 msgid "Secondary color"
 msgstr "Couleur secondaire"
 
-#: functions.php:88
-msgid "Complementary color"
-msgstr "Couleur complémentaire"
-
-#: functions.php:99
+#: functions.php:79
 msgid "Small"
 msgstr "Petite"
 
-#: functions.php:100
+#: functions.php:80
 msgid "S"
 msgstr "S"
 
-#: functions.php:105
+#: functions.php:85
 msgid "Large"
 msgstr "Grande"
 
-#: functions.php:106
+#: functions.php:86
 msgid "L"
 msgstr "L"
 
-#: functions.php:316 template-parts/header-nav.php:6
+#: functions.php:305 template-parts/header-nav.php:6
 msgid "Main Menu"
 msgstr "Menu principal"
 
-#: functions.php:318
+#: functions.php:307
 msgid "Social Menu"
 msgstr "Menu réseaux sociaux"
 
-#: functions.php:393
+#: functions.php:376
 msgid "Read More"
 msgstr "Lire la suite"
 
-#: functions.php:411
+#: functions.php:394
 msgid "Thumbnail x2"
 msgstr "Miniature (x2)"
 
-#: functions.php:412
+#: functions.php:395
 msgid "Medium x2"
 msgstr "Moyenne (x2)"
 
-#: functions.php:413
+#: functions.php:396
 msgid "Large x2"
 msgstr "Grande x2"
 
-#: functions.php:414
+#: functions.php:397
 msgid "Screen Medium"
 msgstr "Écran moyen"
 
-#: functions.php:415
+#: functions.php:398
 msgid "Screen Full"
 msgstr "Plein écran"
 
-#: functions.php:416
+#: functions.php:399
 msgid "Video Medium"
 msgstr "Vidéo taille moyenne"
 
-#: functions.php:417
+#: functions.php:400
 msgid "Video Full"
 msgstr "Vidéo plein écran"
 
-#: functions.php:441
+#: functions.php:424
 msgid "Primary Widgets Area"
 msgstr "Zone primaire Widgets"
 
-#: functions.php:466
-msgid "Text intro"
-msgstr "Texte d’intro"
-
-#: functions.php:472
-msgid "Text mentions"
-msgstr "Mentions"
-
-#: functions.php:478
-msgid "Action button"
-msgstr "Bouton d’action"
-
-#: functions.php:498
+#: functions.php:440
 msgid "Search for:"
 msgstr "Rechercher :"
 
-#: functions.php:499
+#: functions.php:441
 msgid "Keywords"
 msgstr "Mots clés"
 
-#: functions.php:500
+#: functions.php:442
 msgid "Search"
 msgstr "Chercher"
 
-#: functions.php:586 functions.php:587
-msgid "Site Options"
-msgstr "Options du site"
-
-#: functions.php:595 functions.php:596
-msgid "Archives Customizer"
-msgstr "Personnalisation des pages d’archives"
-
-#: functions.php:600 functions.php:601
-msgid "Social Networks"
-msgstr "Réseaux sociaux"
-
-#: inc/custom-post-type.php:32
-msgctxt "Post Type General Name"
-msgid "Projects"
-msgstr "Projets"
-
-#: inc/custom-post-type.php:33
-msgctxt "Post Type Singular Name"
-msgid "Project"
-msgstr "Projet"
-
-#: inc/custom-post-type.php:34
-msgid "Projects"
-msgstr "Projets"
-
-#: inc/custom-post-type.php:35 inc/custom-post-type.php:67
-msgid "Project"
-msgstr "Projet"
-
-#: inc/custom-post-type.php:36
-msgid "Project archives"
-msgstr "Archives du projet"
-
-#: inc/custom-post-type.php:37
-msgid "Project attributes"
-msgstr "Attributs du projet"
-
-#: inc/custom-post-type.php:38
-msgid "Parent project:"
-msgstr "Projet parent :"
-
-#: inc/custom-post-type.php:39
-msgid "All the projects"
-msgstr "Tous les projets"
-
-#: inc/custom-post-type.php:40
-msgid "Add new project"
-msgstr "Ajouter un nouveau projet"
-
-#: inc/custom-post-type.php:41
-msgid "Add New"
-msgstr "Ajouter"
-
-#: inc/custom-post-type.php:42
-msgid "New project"
-msgstr "Nouveau projet"
-
-#: inc/custom-post-type.php:43
-msgid "Edit project"
-msgstr "Modifier le projet"
-
-#: inc/custom-post-type.php:44
-msgid "Update project"
-msgstr "Mettre à jour le projet"
-
-#: inc/custom-post-type.php:45
-msgid "View project"
-msgstr "Voir le projet"
-
-#: inc/custom-post-type.php:46
-msgid "View projects"
-msgstr "Voir les projets"
-
-#: inc/custom-post-type.php:47
-msgid "Search project"
-msgstr "Rechercher un projet"
-
-#: inc/custom-post-type.php:48
-msgid "Not found"
-msgstr "Aucun résultat"
-
-#: inc/custom-post-type.php:49
-msgid "Not found in Trash"
-msgstr "Introuvable dans la corbeille"
-
-#: inc/custom-post-type.php:50
-msgid "Project picture"
-msgstr "Image du projet"
-
-#: inc/custom-post-type.php:51
-msgid "Set project picture"
-msgstr "Définir l’image du projet"
-
-#: inc/custom-post-type.php:52
-msgid "Remove project picture"
-msgstr "Supprimer l'image du projet"
-
-#: inc/custom-post-type.php:53
-msgid "Use as project picture"
-msgstr "Utiliser comme image de projet"
-
-#: inc/custom-post-type.php:54
-msgid "Insert into project"
-msgstr "Insérer dans le projet"
-
-#: inc/custom-post-type.php:55
-msgid "Uploaded to this project"
-msgstr "Téléversé dans ce projet"
-
-#: inc/custom-post-type.php:56
-msgid "Projects list"
-msgstr "Liste des projets"
-
-#: inc/custom-post-type.php:57
-msgid "Projects list navigation"
-msgstr "Navigation dans la liste des projets"
-
-#: inc/custom-post-type.php:58
-msgid "Filter events list"
-msgstr "Filtrer la liste d'évènements"
-
-#: inc/custom-post-type.php:68
-msgid "Project description"
-msgstr "Description du projet"
-
-#: inc/custom-post-type.php:97
-msgid "Choose a title for this project"
-msgstr "Choisissez un titre pour ce projet"
-
-#: inc/custom-post-type.php:143
-msgctxt "Taxonomy General Name"
-msgid "Projects types"
-msgstr "Types de projets"
-
-#: inc/custom-post-type.php:144
-msgctxt "Taxonomy Singular Name"
-msgid "Project type"
-msgstr "Type de projet"
-
-#: inc/custom-post-type.php:145
-msgid "Project type"
-msgstr "Type de projet"
-
-#: inc/custom-post-type.php:146
-msgid "All types"
-msgstr "Tous les types"
-
-#: inc/custom-post-type.php:147
-msgid "Parent type"
-msgstr "Type Parent"
-
-#: inc/custom-post-type.php:148
-msgid "Parent type:"
-msgstr "Type parent :"
-
-#: inc/custom-post-type.php:149
-msgid "New type name"
-msgstr "Nouveau nom de type"
-
-#: inc/custom-post-type.php:150
-msgid "Add type Item"
-msgstr "Ajouter un type"
-
-#: inc/custom-post-type.php:151
-msgid "Edit type"
-msgstr "Modifier le type"
-
-#: inc/custom-post-type.php:152
-msgid "Update type"
-msgstr "Mettre à jour le type"
-
-#: inc/custom-post-type.php:153
-msgid "View type"
-msgstr "Voir le type"
-
-#: inc/custom-post-type.php:154
-msgid "Separate types with commas"
-msgstr "Séparer les types par des virgules"
-
-#: inc/custom-post-type.php:155
-msgid "Add or remove types"
-msgstr "Ajouter ou supprimer des types"
-
-#: inc/custom-post-type.php:156
-msgid "Choose from the most used"
-msgstr "Choisir parmi les plus utilisés"
-
-#: inc/custom-post-type.php:157
-msgid "Popular types"
-msgstr "Types populaires"
-
-#: inc/custom-post-type.php:158
-msgid "Search types"
-msgstr "Rechercher des types"
-
-#: inc/custom-post-type.php:159
-msgid "Not Found"
-msgstr "Aucun résultat"
-
-#: inc/custom-post-type.php:160
-msgid "No types"
-msgstr "Aucun type"
-
-#: inc/custom-post-type.php:161
-msgid "Types list"
-msgstr "Liste des types"
-
-#: inc/custom-post-type.php:162
-msgid "Types list navigation"
-msgstr "Navigation dans la liste des types"
-
-#: inc/customizer.php:22
+#: inc/customizer.php:24
 msgid "Theme Options"
 msgstr "Options du thème"
 
-#: inc/customizer.php:26
+#: inc/customizer.php:31
 msgid "Layout Options"
 msgstr "Options de mise en page"
 
-#: inc/customizer.php:27
+#: inc/customizer.php:32
 msgid "Choose the layout of the site header and main navigation."
 msgstr ""
 "Choisissez la mise en page pour l'en-tête du site et la navigation "
 "principale."
 
-#: inc/customizer.php:31
+#: inc/customizer.php:39
 msgid "Theme Fonts"
 msgstr "Polices du thème"
 
-#: inc/customizer.php:32
+#: inc/customizer.php:40
 msgid "Choose a font combination for the site."
 msgstr "Choisissez une combinaison de polices pour le site."
 
-#: inc/customizer.php:36
+#: inc/customizer.php:47
 msgid "Theme Pictures"
 msgstr "Images du thème"
 
-#: inc/customizer.php:37
+#: inc/customizer.php:48
 msgid "Select default banner pictures."
 msgstr "Sélection des images par défaut pour la bannière."
 
-#: inc/customizer.php:90
-msgid "Contraste color"
-msgstr "Couleur de contraste"
+#: inc/customizer.php:120
+msgid "Buttons contrast setting"
+msgstr "Réglage du contraste des boutons"
 
-#: inc/customizer.php:109
+#: inc/customizer.php:121
+msgid "Select the desired color for plain/hovered buttons."
+msgstr "Sélectionnez la couleur désirée pour les boutons inactifs/survolés."
+
+#: inc/customizer.php:124
+msgid "White text"
+msgstr "Texte en blanc"
+
+#: inc/customizer.php:125
+msgid "Dark text"
+msgstr "Texte sombre"
+
+#: inc/customizer.php:126
+msgid "White + Dark"
+msgstr "Blanc et sombre"
+
+#: inc/customizer.php:127
+msgid "Dark + White"
+msgstr "Sombre et blanc"
+
+#: inc/customizer.php:152
 msgid "Site Logo"
 msgstr "Logo du site"
 
-#: inc/customizer.php:110
+#: inc/customizer.php:153
 msgid "Your logo, displayed instead of the website title."
 msgstr "Votre logo, affiché à la place du titre du site."
 
-#: inc/customizer.php:123
+#: inc/customizer.php:172
 msgid "Site Logo - Mobile"
 msgstr "Logo du site - mobile"
 
-#: inc/customizer.php:124
+#: inc/customizer.php:173
 msgid ""
 "Specific version of the logo for mobile devices. If none, the default logo "
 "will be used."
@@ -438,51 +230,51 @@ msgstr ""
 "Version spécifique du logo pour appareils mobiles. Si non renseigné, le logo "
 "par défaut sera utilisé."
 
-#: inc/customizer.php:138
+#: inc/customizer.php:194
 msgid "Hide the website tagline"
 msgstr "Masquer le slogan du site"
 
-#: inc/customizer.php:151
+#: inc/customizer.php:213
 msgid "Custom footer text"
 msgstr "Texte de pied de page personnalisé"
 
-#: inc/customizer.php:152
+#: inc/customizer.php:214
 msgid "Add a custom text instead of the year and blog name."
 msgstr "Ajouter un texte personnalisé au lieu du nom de blog et de l’année."
 
-#: inc/customizer.php:166
+#: inc/customizer.php:234
 msgid "Display WordPress Link"
 msgstr "Afficher le lien WordPress"
 
-#: inc/customizer.php:186
+#: inc/customizer.php:258
 msgid "Display a Back to top button"
 msgstr "Afficher un bouton Haut de page"
 
-#: inc/customizer.php:201
+#: inc/customizer.php:277
 msgid "Make the header sticky"
 msgstr "Rendre l'en-tête collant"
 
-#: inc/customizer.php:225
+#: inc/customizer.php:302
 msgid "Layout version"
 msgstr "Version de mise en page"
 
-#: inc/customizer.php:228
+#: inc/customizer.php:305
 msgid "Version 1"
 msgstr "Version 1"
 
-#: inc/customizer.php:229
+#: inc/customizer.php:306
 msgid "Version 2"
 msgstr "Version 2"
 
-#: inc/customizer.php:230
+#: inc/customizer.php:307
 msgid "Version 3"
 msgstr "Version 3"
 
-#: inc/customizer.php:248
+#: inc/customizer.php:331
 msgid "404 error"
 msgstr "Erreur 404"
 
-#: inc/customizer.php:249
+#: inc/customizer.php:332
 msgid "Choose a picture for the 404 error page. (2048 x 625 pixels max.)"
 msgstr ""
 "Choisissez une image pour la page d’erreur 404. (2048 x 625 pixels max.)"
@@ -615,20 +407,22 @@ msgstr[0] "%s commentaire"
 msgstr[1] "%s commentaires"
 
 #. Theme Name of the plugin/theme
-msgid "Good Time"
-msgstr "Good Time"
+#| msgid "Good Time"
+msgid "FS Good Time"
+msgstr "FS Good Time"
 
 #. Theme URI of the plugin/theme
-msgid "https://github.com/anybodesign/good-time"
-msgstr "https://github.com/anybodesign/good-time"
+#| msgid "https://github.com/anybodesign/good-time"
+msgid "https://github.com/anybodesign/fs-goodtime"
+msgstr "https://github.com/anybodesign/fs-goodtime"
 
 #. Description of the plugin/theme
-msgid "A WordPress Starter Theme"
-msgstr "Un starter thème pour WordPress"
+msgid "A WordPress Theme for all good times in life :)"
+msgstr "Un thème WordPress pour tous les bons moments de la vie :)"
 
 #. Author of the plugin/theme
-msgid "Thomas Villain"
-msgstr "Thomas Villain"
+msgid "Thomas Villain - Anybodesign"
+msgstr "Thomas Villain - Anybodesign"
 
 #. Author URI of the plugin/theme
 msgid "https://anybodesign.com/"
@@ -641,6 +435,187 @@ msgstr "Maintenance"
 #. Template Name of the plugin/theme
 msgid "Style Guide"
 msgstr "Style Guide"
+
+#~ msgid "Complementary color"
+#~ msgstr "Couleur complémentaire"
+
+#~ msgid "Text intro"
+#~ msgstr "Texte d’intro"
+
+#~ msgid "Text mentions"
+#~ msgstr "Mentions"
+
+#~ msgid "Action button"
+#~ msgstr "Bouton d’action"
+
+#~ msgid "Site Options"
+#~ msgstr "Options du site"
+
+#~ msgid "Archives Customizer"
+#~ msgstr "Personnalisation des pages d’archives"
+
+#~ msgid "Social Networks"
+#~ msgstr "Réseaux sociaux"
+
+#~ msgctxt "Post Type General Name"
+#~ msgid "Projects"
+#~ msgstr "Projets"
+
+#~ msgctxt "Post Type Singular Name"
+#~ msgid "Project"
+#~ msgstr "Projet"
+
+#~ msgid "Projects"
+#~ msgstr "Projets"
+
+#~ msgid "Project"
+#~ msgstr "Projet"
+
+#~ msgid "Project archives"
+#~ msgstr "Archives du projet"
+
+#~ msgid "Project attributes"
+#~ msgstr "Attributs du projet"
+
+#~ msgid "Parent project:"
+#~ msgstr "Projet parent :"
+
+#~ msgid "All the projects"
+#~ msgstr "Tous les projets"
+
+#~ msgid "Add new project"
+#~ msgstr "Ajouter un nouveau projet"
+
+#~ msgid "Add New"
+#~ msgstr "Ajouter"
+
+#~ msgid "New project"
+#~ msgstr "Nouveau projet"
+
+#~ msgid "Edit project"
+#~ msgstr "Modifier le projet"
+
+#~ msgid "Update project"
+#~ msgstr "Mettre à jour le projet"
+
+#~ msgid "View project"
+#~ msgstr "Voir le projet"
+
+#~ msgid "View projects"
+#~ msgstr "Voir les projets"
+
+#~ msgid "Search project"
+#~ msgstr "Rechercher un projet"
+
+#~ msgid "Not found"
+#~ msgstr "Aucun résultat"
+
+#~ msgid "Not found in Trash"
+#~ msgstr "Introuvable dans la corbeille"
+
+#~ msgid "Project picture"
+#~ msgstr "Image du projet"
+
+#~ msgid "Set project picture"
+#~ msgstr "Définir l’image du projet"
+
+#~ msgid "Remove project picture"
+#~ msgstr "Supprimer l'image du projet"
+
+#~ msgid "Use as project picture"
+#~ msgstr "Utiliser comme image de projet"
+
+#~ msgid "Insert into project"
+#~ msgstr "Insérer dans le projet"
+
+#~ msgid "Uploaded to this project"
+#~ msgstr "Téléversé dans ce projet"
+
+#~ msgid "Projects list"
+#~ msgstr "Liste des projets"
+
+#~ msgid "Projects list navigation"
+#~ msgstr "Navigation dans la liste des projets"
+
+#~ msgid "Filter events list"
+#~ msgstr "Filtrer la liste d'évènements"
+
+#~ msgid "Project description"
+#~ msgstr "Description du projet"
+
+#~ msgid "Choose a title for this project"
+#~ msgstr "Choisissez un titre pour ce projet"
+
+#~ msgctxt "Taxonomy General Name"
+#~ msgid "Projects types"
+#~ msgstr "Types de projets"
+
+#~ msgctxt "Taxonomy Singular Name"
+#~ msgid "Project type"
+#~ msgstr "Type de projet"
+
+#~ msgid "Project type"
+#~ msgstr "Type de projet"
+
+#~ msgid "All types"
+#~ msgstr "Tous les types"
+
+#~ msgid "Parent type"
+#~ msgstr "Type Parent"
+
+#~ msgid "Parent type:"
+#~ msgstr "Type parent :"
+
+#~ msgid "New type name"
+#~ msgstr "Nouveau nom de type"
+
+#~ msgid "Add type Item"
+#~ msgstr "Ajouter un type"
+
+#~ msgid "Edit type"
+#~ msgstr "Modifier le type"
+
+#~ msgid "Update type"
+#~ msgstr "Mettre à jour le type"
+
+#~ msgid "View type"
+#~ msgstr "Voir le type"
+
+#~ msgid "Separate types with commas"
+#~ msgstr "Séparer les types par des virgules"
+
+#~ msgid "Add or remove types"
+#~ msgstr "Ajouter ou supprimer des types"
+
+#~ msgid "Choose from the most used"
+#~ msgstr "Choisir parmi les plus utilisés"
+
+#~ msgid "Popular types"
+#~ msgstr "Types populaires"
+
+#~ msgid "Search types"
+#~ msgstr "Rechercher des types"
+
+#~ msgid "Not Found"
+#~ msgstr "Aucun résultat"
+
+#~ msgid "No types"
+#~ msgstr "Aucun type"
+
+#~ msgid "Types list"
+#~ msgstr "Liste des types"
+
+#~ msgid "Types list navigation"
+#~ msgstr "Navigation dans la liste des types"
+
+#~ msgid "Contraste color"
+#~ msgstr "Couleur de contraste"
+
+#~ msgid "A WordPress Starter Theme"
+#~ msgstr "Un starter thème pour WordPress"
+
+#~ msgid "Thomas Villain"
+#~ msgstr "Thomas Villain"
 
 #~ msgid "Pictures selection."
 #~ msgstr "Sélection des images."
@@ -830,6 +805,3 @@ msgstr "Style Guide"
 
 #~ msgid "The site’s copyright, displayed in the footer"
 #~ msgstr "Copyright du site, affiché dans le pied de page"
-
-#~ msgid "Thomas Villain - Anybodesign"
-#~ msgstr "Thomas Villain - Anybodesign"
