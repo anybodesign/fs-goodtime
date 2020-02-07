@@ -447,6 +447,40 @@ function fs_search_form( $form ) {
 add_filter( 'get_search_form', 'fs_search_form' );
 
 
+
+// ------------------------
+// ACF
+// ------------------------
+
+
+if( class_exists('acf') ) {
+
+	
+	// Custom blocks
+
+	$my_blocks = array_diff( scandir(FS_THEME_DIR . '/blocks'), array('..', '.') );
+	
+	foreach( $my_blocks as $block ) {
+		include_once 'blocks/'. $block .'/'. $block .'.php';
+		include_once 'blocks/'. $block .'/'. $block .'-fields.php';
+	}	
+
+	// Translate ACF fields
+	
+	function fs_custom_acf_settings_localization($localization){
+	  return true;
+	}
+	add_filter('acf/settings/l10n', 'fs_custom_acf_settings_localization');
+	
+	function fs_custom_acf_settings_textdomain($domain){
+	  return 'from-scratch';
+	}
+	add_filter('acf/settings/l10n_textdomain', 'fs_custom_acf_settings_textdomain');
+		
+}
+
+
+
 // ------------------------
 // Auto-Updater
 // ------------------------
