@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Good Time\n"
-"POT-Creation-Date: 2020-02-07 16:32+0100\n"
-"PO-Revision-Date: 2020-02-07 16:32+0100\n"
+"POT-Creation-Date: 2020-02-07 16:50+0100\n"
+"PO-Revision-Date: 2020-02-07 16:51+0100\n"
 "Last-Translator: Thomas Villain <atelier@anybodesign.com>\n"
 "Language-Team: Thomas Villain <atelier@anybodesign.com>\n"
 "Language: fr_FR\n"
@@ -33,7 +33,6 @@ msgid "Title"
 msgstr "Titre"
 
 #: blocks/block-edito/block-edito-fields.php:32
-#| msgid "Rich Text"
 msgid "Text"
 msgstr "Texte"
 
@@ -162,20 +161,40 @@ msgid "Video Full"
 msgstr "Vidéo plein écran"
 
 #: functions.php:424
-msgid "Primary Widgets Area"
-msgstr "Zone primaire Widgets"
+msgid "First Widgets Column"
+msgstr "Première colonne de widgets"
 
-#: functions.php:440
+#: functions.php:433
+msgid "Second Widgets Column"
+msgstr "Deuxième colonne de widgets"
+
+#: functions.php:442
+msgid "Third Widgets Column"
+msgstr "Troisième colonne de widgets"
+
+#: functions.php:458
 msgid "Search for:"
 msgstr "Rechercher :"
 
-#: functions.php:441
+#: functions.php:459
 msgid "Keywords"
 msgstr "Mots clés"
 
-#: functions.php:442
+#: functions.php:460
 msgid "Search"
 msgstr "Chercher"
+
+#: functions.php:481
+msgid "Text intro"
+msgstr "Texte d’intro"
+
+#: functions.php:487
+msgid "Text mentions"
+msgstr "Mentions"
+
+#: functions.php:493
+msgid "Action button"
+msgstr "Bouton d’action"
 
 #: inc/customizer.php:24
 msgid "Theme Options"
@@ -455,6 +474,9 @@ msgstr "Maintenance"
 msgid "Style Guide"
 msgstr "Style Guide"
 
+#~ msgid "Primary Widgets Area"
+#~ msgstr "Zone primaire Widgets"
+
 #~ msgid "Field"
 #~ msgstr "Champ"
 
@@ -466,15 +488,6 @@ msgstr "Style Guide"
 
 #~ msgid "Complementary color"
 #~ msgstr "Couleur complémentaire"
-
-#~ msgid "Text intro"
-#~ msgstr "Texte d’intro"
-
-#~ msgid "Text mentions"
-#~ msgstr "Mentions"
-
-#~ msgid "Action button"
-#~ msgstr "Bouton d’action"
 
 #~ msgid "Site Options"
 #~ msgstr "Options du site"

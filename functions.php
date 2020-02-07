@@ -421,8 +421,26 @@ function fs_bg_img() {
 
 function fs_widgets_init() {
 	register_sidebar(array(
-		'name'			=>	esc_html__( 'Primary Widgets Area', 'good-time' ),
+		'name'			=>	esc_html__( 'First Widgets Column', 'good-time' ),
 		'id'			=>	'widgets_area1',
+		'description' 	=> 	'',
+		'before_widget' => 	'<div id="%1$s" class="widget-container %2$s">',
+		'after_widget' 	=> 	'</div>',
+		'before_title' 	=> 	'<p class="widget-title">',
+		'after_title' 	=> 	'</p>',
+	));
+	register_sidebar(array(
+		'name'			=>	esc_html__( 'Second Widgets Column', 'good-time' ),
+		'id'			=>	'widgets_area2',
+		'description' 	=> 	'',
+		'before_widget' => 	'<div id="%1$s" class="widget-container %2$s">',
+		'after_widget' 	=> 	'</div>',
+		'before_title' 	=> 	'<p class="widget-title">',
+		'after_title' 	=> 	'</p>',
+	));
+	register_sidebar(array(
+		'name'			=>	esc_html__( 'Third Widgets Column', 'good-time' ),
+		'id'			=>	'widgets_area3',
 		'description' 	=> 	'',
 		'before_widget' => 	'<div id="%1$s" class="widget-container %2$s">',
 		'after_widget' 	=> 	'</div>',
@@ -513,7 +531,7 @@ if( class_exists('acf') ) {
 	add_filter('acf/settings/l10n', 'fs_custom_acf_settings_localization');
 	
 	function fs_custom_acf_settings_textdomain($domain){
-	  return 'from-scratch';
+	  return 'good-time';
 	}
 	add_filter('acf/settings/l10n_textdomain', 'fs_custom_acf_settings_textdomain');
 		
