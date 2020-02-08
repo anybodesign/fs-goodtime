@@ -19,10 +19,17 @@ function fs_customize_register($wp_customize) {
 	// + + + + + + + + + + 
 	
 	$wp_customize->add_section(
+		'fs_footer_section',
+		array(
+			'title'			=> __('Footer Options', 'good-time'),
+			'priority'		=> 50,
+		)
+	);
+	$wp_customize->add_section(
 		'fs_options_section',
 		array(
 			'title'			=> __('Theme Options', 'good-time'),
-			'priority'		=> 20,
+			'priority'		=> 50,
 		)
 	);
 	$wp_customize->add_section(
@@ -30,7 +37,7 @@ function fs_customize_register($wp_customize) {
 		array(
 			'title' 		=> __('Layout Options', 'good-time'),
 			'description' 	=> __('Choose the layout of the site header and main navigation.', 'good-time'),
-			'priority'		=> 30,
+			'priority'		=> 50,
 		)
 	);
 	$wp_customize->add_section(
@@ -38,7 +45,7 @@ function fs_customize_register($wp_customize) {
 		array(
 			'title' 		=> __('Theme Fonts', 'good-time'),
 			'description' 	=> __('Choose a font combination for the site.', 'good-time'),
-			'priority'		=> 40,
+			'priority'		=> 50,
 		)
 	);
 	$wp_customize->add_section(
@@ -197,8 +204,69 @@ function fs_customize_register($wp_customize) {
 			)
 		);
 	
-	
+
+	// Site identity
+	// -
+	// + + + + + + + + + + 
+
+		// Footer pictures
+		
+		$wp_customize->add_setting(
+			'footer_picture', 
+			array(
+				'sanitize_callback'	=> 'esc_url_raw'
+			)
+		);
+		$wp_customize->add_control(
+			new WP_Customize_Image_control(
+				$wp_customize, 
+				'footer_picture', 
+				array(
+					'label'			=> __('Footer picture', 'good-time'),
+					'description'	=> __('A small picture displayed in the first widgets column', 'good-time'),
+					'section'		=> 'fs_footer_section',
+					'settings'		=> 'footer_picture',
+				)
+			)
+		);
+		
+		$wp_customize->add_setting(
+			'footer_deco', 
+			array(
+				'sanitize_callback'	=> 'esc_url_raw'
+			)
+		);
+		$wp_customize->add_control(
+			new WP_Customize_Image_control(
+				$wp_customize, 
+				'footer_deco', 
+				array(
+					'label'			=> __('Footer decoration', 'good-time'),
+					'description'	=> __('An optionnal decoration at the bottom of the first widgets column', 'good-time'),
+					'section'		=> 'fs_footer_section',
+					'settings'		=> 'footer_deco',
+				)
+			)
+		);
+			
 		// Footer text
+		
+		$wp_customize->add_setting(
+			'footer_text_color', 
+			array(
+				'default'			=> false,
+				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+			)
+		);
+		$wp_customize->add_control(
+			'footer_text_color', 
+			array(
+				'type'			=> 'checkbox',
+				'label'			=> __('Dark colored footer text', 'good-time'),
+				'section'		=> 'fs_footer_section',
+				'settings'		=> 'footer_text_color',
+			)
+		);		
 		
 		$wp_customize->add_setting(
 			'footer_text', 
@@ -211,8 +279,8 @@ function fs_customize_register($wp_customize) {
 			'footer_text', 
 			array(
 				'label'			=> __('Custom footer text', 'good-time'),
-				'description'	=> __('Add a custom text instead of the year and blog name.', 'good-time'),
-				'section'		=> 'title_tagline',
+				'description'	=> __('Add a custom text instead of the year and blog name', 'good-time'),
+				'section'		=> 'fs_footer_section',
 				'settings'		=> 'footer_text',
 			)
 		);
@@ -232,7 +300,7 @@ function fs_customize_register($wp_customize) {
 			array(
 				'type'			=> 'checkbox',
 				'label'			=> __('Display WordPress Link', 'good-time'),
-				'section'		=> 'title_tagline',
+				'section'		=> 'fs_footer_section',
 				'settings'		=> 'display_wp',
 			)
 		);
