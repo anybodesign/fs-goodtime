@@ -17,18 +17,62 @@
 		<footer role="contentinfo" id="site_foot">
 			
 			<div class="row inner">
+				
+				<div class="footer-widgets">
+
+					<?php if ( is_active_sidebar( 'widgets_area1' ) || has_nav_menu( 'social_menu' ) ) { ?>
+					<div class="widgets-area">
+						
+						<?php if ( get_theme_mod('footer_picture') == true ) { ?>
+						<img class="footer-picture" src="<?php echo(get_theme_mod('footer_picture', 'none')); ?>" alt="">
+						<?php } ?>
+						
+						<?php if ( is_active_sidebar( 'widgets_area1' ) ) { dynamic_sidebar( 'widgets_area1' ); } ?>
+
+						<?php if ( has_nav_menu( 'social_menu' ) ) : ?>
+						<nav class="social-nav" role="navigation" aria-label="<?php _e('Social Networks Menu', 'good-time'); ?>">
+						<?php wp_nav_menu( array(
+								'theme_location'	=> 	'social_menu',
+								'menu_class'		=>	'social-menu',
+								'container'			=>	false
+								));
+						?>
+						</nav>
+						<?php endif; ?>
+
+						<?php if ( get_theme_mod('footer_deco') == true ) { ?>
+						<img class="footer-decoration" src="<?php echo(get_theme_mod('footer_deco', 'none')); ?>" alt="">
+						<?php } ?>						
+					</div>						
+					<?php }	?>
+					
+					<?php if ( is_active_sidebar( 'widgets_area2' ) ) { ?>
+					<div class="widgets-area">
+						<?php dynamic_sidebar( 'widgets_area2' ); ?>
+					</div>						
+					<?php }	?>
+					
+					<?php if ( is_active_sidebar( 'widgets_area3' ) ) { ?>
+					<div class="widgets-area">
+						<?php dynamic_sidebar( 'widgets_area3' ); ?>
+					</div>						
+					<?php }	?>										
+					
+				</div>
+				
+				
 				<div class="footer-content">				
 					
 					<?php // The credit/copyright line, settings in the Customizer ?>
 					
 					<p class="footer-copyright">
-						<?php if(get_theme_mod('footer_text')) {
+						<?php if ( get_theme_mod('footer_text') ) {
 							echo get_theme_mod('footer_text', ''); 
 						} else {
 							echo '&copy;'; echo date(' Y '); echo esc_url(bloginfo('name')).'.'; 	
 						} ?>
 						
-						<?php if(get_theme_mod('display_wp') == true) { ?>
+						<?php if ( get_theme_mod('display_wp' ) == true ) { ?>
 						<a href="//wordpress.org"><?php _e('Powered by WordPress!', 'good-time'); ?></a>
 						<?php } ?>
 					</p>
@@ -51,7 +95,7 @@
 			
 		</footer>
 
-		<?php if(get_theme_mod('back2top') == true) { ?>
+		<?php if ( get_theme_mod('back2top') == true ) { ?>
 			<button id="back2top" title="<?php _e('Back to top','good-time'); ?>">
 				<img src="<?php bloginfo( 'template_directory' ); ?>/img/ui/back-to-top.svg" alt="">
 			</button>
