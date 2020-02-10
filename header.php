@@ -21,18 +21,18 @@
 	<?php wp_head(); ?>
 </head>
 <?php 
-	$btns = null;
-	if ( get_theme_mod('btn_contrast') == 'dark' )	{
-		$btns = 'dark-btns';
-	}
-	else if ( get_theme_mod('btn_contrast') == 'white-dark' )	{
-		$btns = 'white-dark-btns';
-	}
-	else if ( get_theme_mod('btn_contrast') == 'dark-white' )	{
-		$btns = 'dark-white-btns';
-	}
+	if ( get_theme_mod('btn_contrast') == 'dark' ) { $btns = 'dark-btns'; }
+	else if ( get_theme_mod('btn_contrast') == 'white-dark' ) { $btns = 'white-dark-btns'; }
+	else if ( get_theme_mod('btn_contrast') == 'dark-white' ) { $btns = 'dark-white-btns'; } 
+	else { $btns = null; }
+	
+	if ( get_theme_mod('layout_option') == 'version1' ) { $header = 'header-v1'; }
+	else if ( get_theme_mod('layout_option') == 'version2' ) { $header = 'header-v2'; }
+	else if ( get_theme_mod('layout_option') == 'version3' ) { $header = 'header-v3'; } 
+	else { $header = null; }
+
 ?>
-<body <?php body_class($btns); ?>>
+<body <?php body_class( array($btns, $header) ); ?>>
 <?php wp_body_open(); ?>
 
 <div id="wrapper">
@@ -41,20 +41,9 @@
 		if ( ! is_page_template( 'pagecustom-maintenance.php' ) ) {
 			get_template_part('template-parts/header', 'skiplinks');
 		}
-		
-		$version = null;
-		if ( get_theme_mod('layout_option') == 'version1' ) {
-			$version = ' class="header-v1"';
-		}
-		else if ( get_theme_mod('layout_option') == 'version2' ) {
-			$version = ' class="header-v2"';
-		}
-		else if ( get_theme_mod('layout_option') == 'version3' ) {
-			$version = ' class="header-v3"';
-		}
 	?>
 	
-	<header role="banner" id="site_head"<?php echo $version; ?>>
+	<header role="banner" id="site_head">
 		<div class="row inner justify-between">
 			
 			<?php 
