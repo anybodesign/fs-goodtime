@@ -489,13 +489,31 @@ input[type=submit].action-btn {
 	font-family: $font-bold;
 	text-transform: uppercase;
 	text-decoration: none;
-	background-color: $text-color;
+	background-color: $primary-color;
 	color: #fff;
 	transition: background .2s linear;
+
+		.dark-btns &,
+		.dark-white-btns & {
+			color: $text-color;
+		}
+		.white-btns &,
+		.white-dark-btns & {
+			color: #fff;
+		}
 	
 	&.focus-visible, 
 	&:hover {
 		background-color: $secondary-color;
+		
+		.dark-btns &,
+		.white-dark-btns & {
+			color: $text-color;
+		}
+		.white-btns &,
+		.dark-white-btns & {
+			color: #fff;
+		}
 	}
 	&:focus {
 		outline: none;
@@ -510,11 +528,11 @@ input[type=submit].white-btn {
 	@extend .action-btn;
 	
 	background-color: #fff;
-	color: $text-color;
+	color: $text-color !important;
 
 	&.focus-visible, 
 	&:hover {
-		background-color: $text-color;
+		background-color: $secondary-color;
 		color: #fff;
 	}	
 }
