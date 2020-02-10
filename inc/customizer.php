@@ -116,7 +116,7 @@ function fs_customize_register($wp_customize) {
 			'btn_contrast', 
 			array(
 				'default' => 'white',
-				'sanitize_callback' => 'fs_customizer_sanitize_radio_layout',
+				'sanitize_callback' => 'fs_customizer_sanitize_btn_contrast',
 			)
 		);
 		
