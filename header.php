@@ -20,19 +20,41 @@
 	<?php endif; ?>
 	<?php wp_head(); ?>
 </head>
-
-<body <?php body_class(); ?>>
+<?php 
+	$btns = null;
+	if ( get_theme_mod('btn_contrast') == 'dark' )	{
+		$btns = 'dark-btns';
+	}
+	else if ( get_theme_mod('btn_contrast') == 'white-dark' )	{
+		$btns = 'white-dark-btns';
+	}
+	else if ( get_theme_mod('btn_contrast') == 'dark-white' )	{
+		$btns = 'dark-white-btns';
+	}
+?>
+<body <?php body_class($btns); ?>>
 <?php wp_body_open(); ?>
 
 <div id="wrapper">
 
-	<?php 
+	<?php
 		if ( ! is_page_template( 'pagecustom-maintenance.php' ) ) {
 			get_template_part('template-parts/header', 'skiplinks');
 		}
+		
+		$version = null;
+		if ( get_theme_mod('layout_option') == 'version1' ) {
+			$version = ' class="header-v1"';
+		}
+		else if ( get_theme_mod('layout_option') == 'version2' ) {
+			$version = ' class="header-v2"';
+		}
+		else if ( get_theme_mod('layout_option') == 'version3' ) {
+			$version = ' class="header-v3"';
+		}
 	?>
 	
-	<header role="banner" id="site_head">
+	<header role="banner" id="site_head"<?php echo $version; ?>>
 		<div class="row inner justify-between">
 			
 			<?php 
