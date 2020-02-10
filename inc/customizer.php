@@ -242,7 +242,7 @@ function fs_customize_register($wp_customize) {
 				'footer_deco', 
 				array(
 					'label'			=> __('Footer decoration', 'good-time'),
-					'description'	=> __('An optionnal decoration at the bottom of the first widgets column', 'good-time'),
+					'description'	=> __('An optional decoration at the bottom of the first widgets column', 'good-time'),
 					'section'		=> 'fs_footer_section',
 					'settings'		=> 'footer_deco',
 				)

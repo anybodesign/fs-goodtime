@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Good Time\n"
-"POT-Creation-Date: 2020-02-07 17:27+0100\n"
-"PO-Revision-Date: 2020-02-07 17:29+0100\n"
+"POT-Creation-Date: 2020-02-10 10:11+0100\n"
+"PO-Revision-Date: 2020-02-10 10:11+0100\n"
 "Last-Translator: Thomas Villain <atelier@anybodesign.com>\n"
 "Language-Team: Thomas Villain <atelier@anybodesign.com>\n"
 "Language: fr_FR\n"
@@ -76,19 +76,19 @@ msgstr "On en discute ?"
 msgid "Add my comment!"
 msgstr "Ajouter mon commentaire !"
 
-#: footer.php:28
+#: footer.php:33
 msgid "Social Networks Menu"
 msgstr "Menu réseaux sociaux"
 
-#: footer.php:67
+#: footer.php:76
 msgid "Powered by WordPress!"
 msgstr "Propulsé par WordPress !"
 
-#: footer.php:74 functions.php:306
+#: footer.php:83 functions.php:306
 msgid "Footer Menu"
 msgstr "Menu pied de page"
 
-#: footer.php:90
+#: footer.php:99
 msgid "Back to top"
 msgstr "Haut de page"
 
@@ -295,7 +295,7 @@ msgid "Footer decoration"
 msgstr "Décoration du pied de page"
 
 #: inc/customizer.php:245
-msgid "An optionnal decoration at the bottom of the first widgets column"
+msgid "An optional decoration at the bottom of the first widgets column"
 msgstr "Une décoration optionnelle au bas de la première colonne de widgets"
 
 #: inc/customizer.php:265
