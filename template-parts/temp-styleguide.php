@@ -99,7 +99,7 @@
 								</div>
 							</div>
 							
-							<input type="submit" class="action-btn" value="Send">
+							<input type="submit" value="Send">
 							
 						</fieldset>
 					</form>

@@ -252,7 +252,7 @@ figure {
 	position: relative;
 	max-width: 100%;
 	margin: 0 0 $grid-padding 0;
-	overflow: hidden;
+	//overflow: hidden;
 
 	img {
 		display: block;
@@ -483,8 +483,9 @@ mark {
 // You can use the class .action-btn on <a>, <button> or <input> 
 
 .action-btn,
-button.action-btn,
-input[type=submit].action-btn {
+button,
+input[type="button"],
+input[type=submit] {
 	display: inline-block;
 	padding: $grid-padding $grid-padding*2;
 	font-size: 1.6rem;
@@ -493,6 +494,8 @@ input[type=submit].action-btn {
 	text-decoration: none;
 	background-color: $primary-color;
 	color: #fff;
+	border: 0;
+	cursor: pointer;
 	transition: background .2s linear;
 
 		.dark-btns &,
@@ -526,6 +529,7 @@ input[type=submit].action-btn {
 
 .white-btn,
 button.white-btn,
+input[type="button"].white-btn,
 input[type=submit].white-btn {
 	@extend .action-btn;
 	
