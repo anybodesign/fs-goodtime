@@ -12,7 +12,7 @@
 
 					<?php if ( $title || $text ) { ?>
 					<div class="edito-content">
-						<?php if ( $title ) { echo '<h1 class="page-title">'.$title.'</h1>'; } ?>
+						<?php if ( $title ) { echo '<h1 class="edito-title">'.$title.'</h1>'; } ?>
 						<?php if ( $text ) { echo $text; } ?>
 					</div>
 					<?php } ?>
