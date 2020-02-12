@@ -39,25 +39,29 @@
 
 // Main nav
 
-
 .site-nav {
 	padding: $grid-padding;
+	
+	@include rwd(large) {
+		padding: 0;
+	}
 }
 
 .main-menu {
 	position: absolute;
 	top: 0; 
-	left: $grid-padding;
-	width: 80%;
+	left: 0;
+	width: 50%;
 	padding: $grid-padding;
+	padding-top: 7rem;
 	background-color: #fff;
 	
-	transform: translateY(-110%);
+	transform: translateX(-105%);
 	transition: transform .4s ease-in-out;
 	z-index: 100;
 	
 	.menu-opened + & {
-		transform: translateY(0);
+		transform: translateX(0);
 	}
 	
 	@include rwd(large) {
@@ -71,24 +75,64 @@
 
 		display: flex;
 		flex-wrap: wrap;
+		
+		.header-v1 & {
+			flex-direction: column;
+		}
+		.header-v2 & {
+			
+		}
+		.header-v3 & {
+			
+		}
 	}
-
 	
 	& > li {
 		position: relative;
 		display: block;
+		color: $primary-color;
+		border-top: $primary-color 1px dashed;
 		
 		@include rwd(large) {
-			margin-right: $grid-padding;
+			font-size: 1.8rem;
+			
+			.header-v1 & {
+
+			}
+			.header-v2 & {
+				margin-left: $grid-padding;
+			}
+			.header-v3 & {
+				
+			}
 		}
 		
 		a {
 			text-decoration: none;
+			display: block;
+			padding: $grid-padding/1.5 $grid-padding*3;
+			transition: .3s ease-in-out;
+			
+			.header-v1 & {
+
+			}
+			.header-v2 & {
+
+			}
+			.header-v3 & {
+				
+			}
 		}
 		& > a:hover, 
 		& > a.focus-visible,
 		&.current-menu-item > a {
 			
+			@include rwd(large) {
+				
+				.header-v1 & {
+					background-color: transparentize($primary-color, .8);
+				}
+			}
 		}
 		a:focus {
 			
@@ -317,11 +361,13 @@
 		}
 		span::after {
 			top: 0;
+			width: 2.4rem;
 			transform: rotate(45deg);
 			border-color: $text-color;
 		}
 		span::before {
 			top: 0;
+			width: 2.4rem;
 			transform: rotate(-45deg);
 			border-color: $text-color;
 		}
@@ -346,7 +392,7 @@
 		display: block;
 		position: relative;
 		background-color: transparentize($primary-color, .8);
-		padding: $grid-padding;
+		padding: $grid-padding*1.75 $grid-padding;
 		
 		font-size: 1.6rem;
 		color: $text-color;
@@ -357,7 +403,10 @@
 	@include rwd(large) {
 		
 		.header-v1 & {
-			padding-left: 25%;
+			
+			.inner {
+				padding-left: 15rem;				
+			}
 		}
 	}
 }
