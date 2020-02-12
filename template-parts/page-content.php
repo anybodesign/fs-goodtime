@@ -11,13 +11,10 @@
  */
 ?>
 					<div class="page-content">
-						
-						<?php the_content(); ?>
-
-						<?php if ( '' != get_the_post_thumbnail() ) { ?>
-						<figure class="page-figure">
-							<?php the_post_thumbnail('large-hd'); ?>
-						</figure>
-						<?php } ?>
-												
+						<?php 
+							if ( get_theme_mod('layout_option') != 'version1' ) {
+								get_template_part( 'template-parts/header', 'banner' );
+							} 
+							the_content(); 
+						?>
 					</div>

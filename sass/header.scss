@@ -5,22 +5,152 @@
 
 #site_head {
 	position: relative;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	body:not([class*=home]) &::after {
+		content: '';
+		display: block;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-image: linear-gradient(to top, #000 0%, rgba(0,0,0,0) 100%);
+		opacity: .5;
+		z-index: 1;
+	}
+			
+	& > .row {
+		position: relative;
+		z-index: 2;
+	}	
+
+	.home & {
+		min-height: 50vh;
+	}
+}
+.header-content {
+	position: relative;
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
 	background-color: #fff;
 	
-	& > .row {
-		align-items: center;
-		padding: $grid-padding*2 0;
+	&::after {
+		content: '';
+		display: block;
+		width: 100%;
+		height: 2.4rem;
+		position: absolute;
+		left: 0;
+		bottom: -2.4rem;
+		background: url(img/ui/nav-bg.png) center top no-repeat;
+		background-size: 100% 100%;
+	}
+	
+	
+	@include rwd(large) {
+		
+		.header-v1 & {
+			display: block;
+			width: 25%;
+			padding: 0 $grid-padding;
+			background-color: #fff;
+		}
+		.header-v2 & {
+			flex-direction: row;
+			max-width: $max-width;
+			margin: 0 auto;
+			padding: $grid-padding*2 0;
+			background-color: transparent;
+		}
+	}
+	
+}
+
+
+
+.header-banner {
+	width: 100%;
+	padding: $grid-padding*4 $grid-padding;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	
+	& > * {
+		position: relative;
+		z-index: 2;
+	}
+	.home & {
+		position: relative;
+	}
+	.home &::after {
+		content: '';
+		display: block;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-image: linear-gradient(to top, #000 0%, rgba(0,0,0,0) 100%);
+		opacity: .5;
+		z-index: 1;
+	}
+	
+	.home & {
+		position: absolute;
+		top: 0;
+		left: 0;		
+		height: 60vh;
+	}	
+
+	.error404 &,
+	.page-template-pagecustom-maintenance & {
+		
+	}
+	
+	@include rwd(large) {
+		padding: 0;
+		
+		.home & {
+			height: 100vh;			
+		}	
+		.header-v1 & {
+			&::after {
+				background-image: linear-gradient(to right, #000 0%, rgba(0,0,0,0) 50%);
+			}
+		}		
 	}
 }
 
 .site-title {
 	display: block;
 	margin: 0;
-	line-height: 1;
+	line-height: 1.2;
+	font-size: 2.8rem;
+	font-family: $font-bold;
+	color: $primary-color;
 	
 	a,
 	img {
 		display: block;
+		transition: .3s ease-in-out;
+	}
+	a {
+		text-decoration: none;
+		
+		&:hover,
+		&.focus-visible {
+			color: $text-color;
+			
+			img {
+				opacity: .7;
+			}
+		}		
 	}
 
 	.logo.has-mobile-logo { display: none; }
@@ -36,11 +166,15 @@
 .site-desc {
 	display: block;
 	margin: 0;
+	font-size: 1.8rem;
+	line-height: 1.2;
 }
 
 .site-brand {
-	padding: $grid-padding;
+	padding: 0 $grid-padding;
 }
+
+
 
 // Sticky Nav
 

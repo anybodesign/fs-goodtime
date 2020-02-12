@@ -30,7 +30,6 @@
 	else if ( get_theme_mod('layout_option') == 'version2' ) { $header = 'header-v2'; }
 	else if ( get_theme_mod('layout_option') == 'version3' ) { $header = 'header-v3'; } 
 	else { $header = null; }
-
 ?>
 <body <?php body_class( array($btns, $header) ); ?>>
 <?php wp_body_open(); ?>
@@ -43,20 +42,35 @@
 		}
 	?>
 	
-	<header role="banner" id="site_head">
-		<div class="row inner justify-between">
-			
-			<?php 
-				get_template_part('template-parts/header', 'brand'); 
-			?>
-			<?php 
-				if ( ! is_page_template( 'pagecustom-maintenance.php' ) ) {
-					get_template_part('template-parts/header', 'nav');
-				}
-			?>
-
+	<header id="site_head" role="banner"<?php if ( !is_front_page() ) { fs_bg_img(); } ?>>
+		<div class="row inner">
+			<div class="header-content">
+				<?php 
+					get_template_part('template-parts/header', 'brand'); 
+				?>
+				<?php 
+					if ( ! is_page_template( 'pagecustom-maintenance.php' ) ) {
+						get_template_part('template-parts/header', 'nav');
+					}
+				?>
+			</div>
 		</div>
+		
+		<div class="header-banner"<?php if ( is_front_page() ) { fs_bg_img(); } ?>>
+			<?php if ( get_theme_mod('layout_option') == 'version1' ) { ?>
+				<?php get_template_part( 'template-parts/header', 'banner' ); ?>
+			<?php } ?>
+		</div>
+		
 	</header>
 
 
-		<main class="content-area" role="main" id="site_main">
+		<main id="site_main" class="content-area" role="main">
+			
+			<?php if ( function_exists('bcn_display') && !is_front_page() ) { ?>
+			<div class="breadcrumbs-nav">
+				<div class="inner">
+					<?php bcn_display(); ?>					
+				</div>
+			</div>
+			<?php } ?>

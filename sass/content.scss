@@ -18,27 +18,29 @@
 	}
 }
 
-.page-banner,
 .page-content,
 .page-sidebar {
 	width: 100%;
 }
 
-.page-banner {
-	
-	.inner {
-		padding: $grid-padding;
-	}
-
-
-	.error404 &,
-	.page-template-pagecustom-maintenance & {
-		
-	}
-	
-}
-
 .page-title {
+	margin: 0;
+	
+	.header-v1 & {
+		color: #fff;
+	}
+	
+	@include rwd(large) {
+
+		body:not([class*=home]) & {
+			position: absolute;
+			max-width: $max-width;
+			margin: 0 auto;
+			padding-left: 30%;
+			top: 50%;
+			transform: translateY(-50%);
+		}	
+	}
 	
 	.search-term {
 		font-family: $font-bolditalic;
@@ -46,6 +48,7 @@
 }
 
 .page-content {
+	margin-top: $grid-padding;
 	
 	// Centering Blocks and content
 	

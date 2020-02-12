@@ -267,15 +267,17 @@
 
 #menu-toggle {
 	display: block; 
-	height: 24px; 
-	width: 24px;
+	height: 2.4rem; 
 	position: relative;
 	border: 0; 
 	border-radius: 0;
 	margin: 0; 
 	padding: 0;
+	padding-left: 3.4rem;
+	background-color: transparent;
+	color: $primary-color;
+	text-transform: none;
 	cursor: pointer;
-	@include a11y-hide();
 	z-index: 200;
 
 	span,
@@ -283,13 +285,13 @@
 	span::after {
 		position: absolute; 
 		display: block;
-		width: 24px; 
 		height: 0;
 		margin: 0;
 		border-top: $primary-color 2px solid;
 		transition: .3s linear;
 	}
 	span {
+		width: 2.4rem;
 		top: 10px; 
 		left: 0;
 		
@@ -299,9 +301,11 @@
 			left: 0;
 		}
 		&::after {
+			width: 2rem;
 			bottom: -9px;
 		}
 		&::before {
+			width: 1.6rem;
 			top: -11px; 
 		}
 	}
@@ -314,12 +318,12 @@
 		span::after {
 			top: 0;
 			transform: rotate(45deg);
-			border-color: $secondary-color;
+			border-color: $text-color;
 		}
 		span::before {
 			top: 0;
 			transform: rotate(-45deg);
-			border-color: $secondary-color;
+			border-color: $text-color;
 		}
 	}
 
@@ -329,5 +333,31 @@
 	
 	@include rwd(large) {
 		display: none;				
+	}
+}
+
+
+// Breadcrumbs
+
+.breadcrumbs-nav {
+	display: none;
+	
+	@include rwd(medium) {
+		display: block;
+		position: relative;
+		background-color: transparentize($primary-color, .8);
+		padding: $grid-padding;
+		
+		font-size: 1.6rem;
+		color: $text-color;
+
+	}
+	
+	
+	@include rwd(large) {
+		
+		.header-v1 & {
+			padding-left: 25%;
+		}
 	}
 }
