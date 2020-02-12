@@ -5,6 +5,7 @@
 
 #site_head {
 	position: relative;
+	background-color: $primary-color;
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -58,7 +59,6 @@
 		.header-v1 & {
 			display: block;
 			width: 25%;
-			padding: 0 $grid-padding;
 			background-color: #fff;
 		}
 		.header-v2 & {
@@ -169,9 +169,8 @@
 	font-size: 1.8rem;
 	line-height: 1.2;
 }
-
 .site-brand {
-	padding: 0 $grid-padding;
+	padding: $grid-padding;
 }
 
 
