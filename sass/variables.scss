@@ -11,6 +11,7 @@ $max-width-small: 66rem;	// @note: 660px
 
 $half-space: calc( (100% - #{$max-width}) /2 + #{$grid-padding} );  // Half the viewport
 
+$border: #fff .8rem solid;
 $shadow: 0 2px 4px 0 rgba(0,0,0,.2);
 
 // Break-Points
