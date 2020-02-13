@@ -34,11 +34,10 @@
 		
 		body:not([class*=home]) & {
 			position: absolute;
-			max-width: $max-width;
-			margin-left: 25rem;
-			padding-left: $half-space;
+			width: 66rem;
 			top: 50%;
-			transform: translateY(-50%);
+			left: 50%;
+			transform: translate(-30%, -50%);
 		}
 		
 		.header-v1 & {
