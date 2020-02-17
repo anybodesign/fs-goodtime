@@ -18,7 +18,7 @@
 		background-color: #fff;
 	}
 	&.has-black-color-background-color {
-		background-color: #303030;
+		background-color: $text-color;
 	}
 	
 	&.has-text-color.has-primary-color-color {
@@ -31,7 +31,7 @@
 		color: #fff;
 	}
 	&.has-text-color.has-black-color-color {
-		color: #303030;
+		color: $text-color;
 	}
 }
 
@@ -306,18 +306,68 @@
 
 // Gallery 
 
-.acf-block--gallery {}
-
+.acf-block--gallery {
+	
+	.acf-block-gallery-figure {
+		overflow: visible;
+		
+		img {
+			border: $border;
+			box-shadow: $shadow;
+		}
+	}
+	
+	@include rwd(large) {
+		.acf-block-gallery-caption {
+			background-color: transparentize($primary-color, .3) !important;
+		}
+		
+		.acf-block-gallery-item {
+			
+			&:hover,
+			&.focus-visible {
+				img {
+					transform: none !important;
+				}
+			}
+		}
+	}
+}
 
 // CTA
 
-.acf-block--cta {}
+.acf-block--cta {
+	position: relative;
+	text-align: left !important;
+	padding: 8em 4em 4em 4em !important;
+
+	@include rwd(large) {
+		padding: 12em 4em 0 4em !important;
+		margin-bottom: 7rem;
+	}	
+
+	.acf-block-container {
+		position: relative;
+		padding: $grid-padding*2;
+		background-color: #fff;
+		box-shadow: $shadow;
+		
+		@include rwd(large) {
+			padding: $grid-padding*3;
+			width: 50% !important;
+			transform: translateY(5rem);
+		}
+	}
+}
 
 
 // Posts
 
-.acf-block---post {}
-.acf-block-post-item {}
+.acf-block--posts {
+	padding-top: $grid-padding*4;
+	padding-bottom: $grid-padding;
+}
+
 
 
 // Testimonials
@@ -326,7 +376,6 @@
 	margin: $grid-padding*2 auto;
 	
 	.testimonial-picture {
-		
 		img {
 			border-radius: 50%;
 			border: $border;
@@ -361,6 +410,24 @@
 				font-size: 2rem;
 			}
 		}
+	}
+}
+
+
+// Advanced List
+
+.acf-block--advanced-list {
+
+	.acf-block-list-item {
+		padding-bottom: $grid-padding;
+	}
+	.list-featured {
+		color: $primary-color;
+		font-family: $font-bold;
+	}
+	.list-legend {
+		padding-top: $grid-padding;
+		margin-top: $grid-padding;
 	}
 }
 
