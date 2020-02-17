@@ -4,10 +4,24 @@
 
 
 #site_foot {
+	margin-top: 10rem;
+	padding: $grid-padding*3 0;
+	background-color: $primary-color;
 	
+	p, li, label {
+		color: #fff;
+	}
+	
+	&.dark-txt {
+		p, li, label {
+			color: $text-color;
+			border-bottom-color: $text-color;
+		}
+	}
 }
 
 .footer-widgets {
+	position: relative;
 	width: 100%;
 	
 	.widgets-area {
@@ -15,6 +29,35 @@
 		
 		@include rwd(medium) {
 			flex: 1 0 0;
+		}
+		
+		.footer-picture {
+			border: $border;
+			box-shadow: $shadow;
+			max-height: 10rem;
+			width: auto;
+			transform: rotate(-7deg);
+			position: absolute;
+			top: -10rem;
+			right: $grid-padding*2;
+			
+			@include rwd(large) {
+				right: auto;
+				left: 0;
+			}
+			@include rwd(wide) {
+				left: -5rem;
+			}
+		}
+		
+		.widget-title {
+			@extend h3;
+			padding-bottom: $grid-padding;
+			border-bottom: #fff 1px solid;
+		}
+		
+		textarea {
+			height: 8rem;
 		}
 	}
 	
@@ -28,12 +71,14 @@
 
 .footer-content {
 	display: flex;
+	align-items: baseline;
 	width: 100%;
 	padding: $grid-padding;
 }
 
 .footer-copyright {
 	margin-bottom: 0;
+	font-size: 1.6rem;
 }
 
 .footer-nav {
@@ -45,5 +90,6 @@
 	li {
 		display: inline;
 		margin: 0 .25em;
+		font-size: 1.6rem;
 	}
 }

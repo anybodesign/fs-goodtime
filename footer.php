@@ -14,7 +14,7 @@
 		
 	<?php if ( ! is_page_template( 'pagecustom-maintenance.php' ) ) { ?>
 
-		<footer role="contentinfo" id="site_foot">
+		<footer role="contentinfo" id="site_foot"<?php if ( get_theme_mod('footer_text_color') ) { echo ' class="dark-txt"'; } ; ?>>
 			
 			<div class="row inner">
 				

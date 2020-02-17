@@ -410,3 +410,94 @@
 		}
 	}
 }
+
+// Widget nav menu
+
+.widget_nav_menu {
+	
+	.menu {
+		& > li {
+			
+			& > a {
+				display: block;
+				text-decoration: none;
+				padding: $grid-padding 0;
+				border-bottom: #fff 1px solid;
+				background-color: transparent;
+				transition: .3s ease-in-out;
+				
+				&:hover,
+				&.focus-visible {
+					background-color: rgba(255, 255, 255, 0.1);
+					padding-left: $grid-padding/2;
+				}
+			}
+		}
+	}
+}
+
+
+// Social nav 
+
+.social-menu {
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: $grid-padding*2;
+	
+	& > li {
+		display: block;
+		margin: 0 $grid-padding $grid-padding 0;
+		
+		& > a {
+			display: block;
+			width: 4rem;
+			height: 4rem;
+			background-position: 0 0;
+			background-repeat: no-repeat;
+			background-size: contain;
+			@include a11y-hide();
+			
+			&:hover,
+			&.focus-visible {
+				animation: pop-in .6s;
+			}
+			
+			&[href*="facebook.com"] {
+				background-image: url(img/social/facebook.svg);
+			}
+			&[href*="twitter.com"] {
+				background-image: url(img/social/twitter.svg);
+			}
+			&[href*="tripadvisor.com"] {
+				background-image: url(img/social/tripadvisor.svg);
+			}
+			&[href*="youtube.com"] {
+				background-image: url(img/social/youtube.svg);
+			}
+			&[href*="vimeo.com"] {
+				background-image: url(img/social/vimeo.svg);
+			}
+			&[href*="pinterest.com"] {
+				background-image: url(img/social/pinterest.svg);
+			}
+			&[href*="snapchat.com"] {
+				background-image: url(img/social/snapchat.svg);
+			}
+			&[href*="linkedin.com"] {
+				background-image: url(img/social/linkedin.svg);
+			}
+			&[href*="instagram.com"] {
+				background-image: url(img/social/instagram.svg);
+			}
+			&[href*="github.com"] {
+				background-image: url(img/social/github.svg);
+			}
+			&[href*="dribble.com"] {
+				background-image: url(img/social/dribble.svg);
+			}
+			&[href*="behance.com"] {
+				background-image: url(img/social/behance.svg);
+			}
+		}	
+	}
+}

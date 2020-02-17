@@ -40,7 +40,8 @@ select {
 	
 	&.focus-visible {
 		background-color: $primary-color;
-		color: #fff; 	
+		color: #fff;
+		border-color: #fff;  	
 	}
 	&:focus {
 		outline: none;
