@@ -47,7 +47,11 @@
 }
 
 .page-wrap {
-	margin-top: $grid-padding*4;	
+	margin-top: $grid-padding*4;
+	
+	.page-template-pagecustom-maintenance & {
+		margin-top: 0;
+	}	
 }
 
 .page-content {
@@ -103,7 +107,8 @@
 	@include rwd(large) {
 		
 		.has-sidebar & {
-			width: 75%;
+			width: 70%;
+			padding-right: 5%;
 		}
 	}	
 }
@@ -129,6 +134,7 @@
 	background-size: cover;
 	
 	.maintenance-message {
+		margin: $grid-padding;
 		padding: $grid-padding*3;
 		background-color: #fff;
 	}

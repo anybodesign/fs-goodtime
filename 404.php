@@ -12,17 +12,10 @@
 get_header(); ?>
 					
 				<div class="page-wrap">
-
-					<?php 
-						get_template_part( 'template-parts/header', 'banner' ); 
-					?>
-					
 					<div class="page-content">
 						<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try a search?', 'good-time' ); ?></p>
 						<?php get_search_form(); ?>		
-																			
 					</div>	
-									
 				</div>
 
 <?php get_footer(); ?>

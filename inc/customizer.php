@@ -71,7 +71,7 @@ function fs_customize_register($wp_customize) {
 				'sanitize_callback'	=> 'sanitize_hex_color',
 				'capability'		=> 'edit_theme_options',
 				'type'				=> 'theme_mod',
-				'transport'			=> 'refresh', 
+				'transport'			=> 'refresh', // postMessage
 			)
 		);
 		$wp_customize->add_control(
