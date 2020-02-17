@@ -11,12 +11,9 @@
  */
 ?>
 				<aside class="widget-area" role="complementary">
-					
-					<?php // Sidebar example
-						
-							if ( is_active_sidebar( 'widgets_area1' ) ) { 
-								dynamic_sidebar( 'widgets_area1' ); 
-							} 
+					<?php
+						if ( is_active_sidebar( 'widgets_blog' ) ) { 
+							dynamic_sidebar( 'widgets_blog' ); 
+						} 
 					?>
-					
 				</aside>

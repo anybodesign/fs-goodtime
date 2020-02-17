@@ -75,11 +75,11 @@ function fs_setup() {
 	add_theme_support( 'disable-custom-colors' );
 
 	add_theme_support( 'editor-font-sizes', array(
-	    array(
-	        'name' => __( 'Small', 'good-time' ),
-	        'shortName' => __( 'S', 'good-time' ),
-	        'size' => 14,
-	        'slug' => 'small'
+	     array(
+	        'name' => __( 'Regular', 'good-time' ),
+	        'shortName' => __( 'M', 'good-time' ),
+	        'size' => 18,
+	        'slug' => 'regular'
 	    ),
 	    array(
 	        'name' => __( 'Large', 'good-time' ),
@@ -87,6 +87,12 @@ function fs_setup() {
 	        'size' => 22,
 	        'slug' => 'large'
 	    ),
+		array(
+	        'name' => __( 'Small', 'good-time' ),
+	        'shortName' => __( 'S', 'good-time' ),
+	        'size' => 14,
+	        'slug' => 'small'
+	    ),	    
 	));
 	
 	add_theme_support( 'disable-custom-font-sizes' );
@@ -441,6 +447,15 @@ function fs_widgets_init() {
 	register_sidebar(array(
 		'name'			=>	esc_html__( 'Third Widgets Column', 'good-time' ),
 		'id'			=>	'widgets_area3',
+		'description' 	=> 	'',
+		'before_widget' => 	'<div id="%1$s" class="widget-container %2$s">',
+		'after_widget' 	=> 	'</div>',
+		'before_title' 	=> 	'<p class="widget-title">',
+		'after_title' 	=> 	'</p>',
+	));
+	register_sidebar(array(
+		'name'			=>	esc_html__( 'Blog Widgets', 'good-time' ),
+		'id'			=>	'widgets_blog',
 		'description' 	=> 	'',
 		'before_widget' => 	'<div id="%1$s" class="widget-container %2$s">',
 		'after_widget' 	=> 	'</div>',
