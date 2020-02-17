@@ -29,11 +29,11 @@ get_header(); ?>
 			
 						<?php endwhile; ?>
 			
-						<?php the_posts_pagination(array(
-								'prev_text'          => __( 'Previous page', 'good-time' ),
-								'next_text'          => __( 'Next page', 'good-time' ),
-								'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'good-time' ) . ' </span>',
-							)); ?>
+						<?php if ( function_exists('wp_pagenavi') ) { ?>
+							<div class="post-navigation">
+							<?php wp_pagenavi(); ?>	
+							</div>
+						<?php } ?>
 			
 					<?php else : ?>
 	
