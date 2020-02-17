@@ -1,3 +1,163 @@
+/* ------------------------- */
+/* = Posts
+/* ------------------------- */
+
+// Post block
+
+.post-block {
+	position: relative;
+	justify-content: center;
+	margin-bottom: $grid-padding*4;
+	//padding-bottom: $grid-padding;
+	//border-bottom: $primary-color 1px dashed;
+	
+	@include rwd(medium) {
+	
+		display: flex;
+		flex-wrap: wrap;
+		width: 100%;
+		
+		.post-figure {
+			width: 30%;
+			padding-right: $grid-padding*2;
+		}
+		.post-content {
+			width: 70%;	
+		}
+	}
+
+	.post-title {
+		color: $primary-color;
+		margin-bottom: $grid-padding/2;
+		
+		a {
+			text-decoration: none;
+			
+			&:hover,
+			&.focus-visible {
+				color: $text-color;
+			}
+		}	
+	}
+	.post-meta {
+		font-size: 1.6rem;
+		margin-bottom: $grid-padding;
+		
+		a {
+			@include link-style();			
+		}
+
+		.meta-date {
+			position: absolute;
+			top: $grid-padding; 
+			left: 0;
+			background-color: $secondary-color;
+			padding: $grid-padding/2 $grid-padding; 
+			text-align: center;
+			font-family: $font-bold;
+			transform: translateY(-120%);
+			
+			@include rwd(medium) {
+				transform: translateX(-120%);
+			}
+			
+			.meta-date-text {
+				display: none;
+			}	
+			.meta-date-time {
+				span {
+					display: block;
+					margin: 0;
+					line-height: 1;
+					
+					&.day {
+						font-size: 3rem;
+					}
+					&.month {
+						font-size: 1.4rem;
+					}
+					&.year {
+						font-size: 2rem;
+					}
+				}
+			}
+		}
+	}
+	.post-excerpt,
+	.post-excerpt p {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	.read-more {
+		margin-top: $grid-padding;
+		border: 0 !important;		
+		@extend .action-btn;
+	}
+	
+	.post-figure {
+		@include img-opacity(.7);		
+				
+		img {
+			border: $border;
+			box-shadow: $shadow;
+			border-radius: 50%;			
+		}
+	}
+	
+	.post-content {
+		position: relative;
+	}
+
+}
+
+// ACF Post block
+
+.acf-block-post-item {
+	@extend .post-block;
+	display: block;
+	
+	.acf-block-post-content--1col & {
+		@include rwd(medium) {
+			display: flex;
+			justify-content: center;
+		}	
+	}
+		
+	.acf-block-post-title {
+		@extend .post-title;
+	}
+	
+	.acf-block-post-metas {
+		@extend .post-meta;
+	}
+
+	.acf-block-post-excerpt {
+		@extend .post-excerpt;
+	}	
+	.acf-block-post-figure {
+		@extend .post-figure;
+		width: 100%;
+		
+		img {
+			border-radius: 0;
+			
+			.acf-block-post-content--1col & {
+				border-radius: 50%;			
+			}			
+		}
+	}
+	
+	.acf-block-post-content {
+		@extend .post-content;
+		width: 100%;
+	}
+}
+
+
+
+// Misc
+
 .sticky {
 	display: block;
 }
@@ -23,7 +183,7 @@
 /* ------------------------- */
 
 .meta-comments {
-	
+	display: block;
 }
 
 .bypostauthor {
