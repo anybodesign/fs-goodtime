@@ -383,6 +383,27 @@ function fs_customize_register($wp_customize) {
 	// + + + + + + + + + + 
 
 	
+		// Blog Image
+		
+		$wp_customize->add_setting(
+			'bg_blog', 
+			array(
+				'sanitize_callback'	=> 'esc_url_raw'
+			)
+		);
+		$wp_customize->add_control( 
+			new WP_Customize_Image_control(
+				$wp_customize, 
+				'bg_blog', 
+				array(
+					'label'			=> __('Blog', 'good-time'),
+					'description'	=> __('Choose a picture for the blog page. (2048 x 625 pixels max.)', 'good-time'),
+					'section'		=> 'fs_pictures_section',
+					'settings'		=> 'bg_blog',
+				)
+			)
+		);
+		
 		// 404 Image
 		
 		$wp_customize->add_setting(
@@ -432,6 +453,7 @@ function fs_customizer_sanitize_btn_contrast( $input ) {
 
 // Customizer Colors Output
 
+/*
 function fs_colors() {
 	?>
 	<style>
@@ -453,3 +475,4 @@ function fs_colors() {
 	<?php
 }
 add_action('wp_head','fs_colors');
+*/
