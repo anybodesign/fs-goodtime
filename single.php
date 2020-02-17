@@ -13,10 +13,6 @@ get_header(); ?>
 					
 				<div class="page-wrap has-sidebar">
 					
-					<?php 
-						get_template_part( 'template-parts/page', 'banner' ); 
-					?>
-
 					<div class="page-content">
 	
 					<?php while (have_posts()) : the_post(); ?>

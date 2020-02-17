@@ -8,8 +8,6 @@
 	position: relative;
 	justify-content: center;
 	margin-bottom: $grid-padding*4;
-	//padding-bottom: $grid-padding;
-	//border-bottom: $primary-color 1px dashed;
 	
 	@include rwd(medium) {
 	
@@ -40,12 +38,6 @@
 		}	
 	}
 	.post-meta {
-		font-size: 1.6rem;
-		margin-bottom: $grid-padding;
-		
-		a {
-			@include link-style();			
-		}
 
 		.meta-date {
 			position: absolute;
@@ -155,6 +147,18 @@
 }
 
 
+// Single post
+
+.post-meta {
+	font-size: 1.6rem;
+	margin-bottom: $grid-padding;
+	
+	a {
+		@include link-style();			
+	}
+
+}
+
 
 // Misc
 
@@ -182,12 +186,138 @@
 /* = Comments
 /* ------------------------- */
 
-.meta-comments {
-	display: block;
+.comments-area {
+	margin-top: $grid-padding*4;
+	padding-top: $grid-padding*4;
+	border-top: $primary-color 1px dashed;
 }
+
+.comment-list {
+	padding-left: 0;
+	
+	.comment {
+		padding: $grid-padding;
+		
+		@include rwd(medium) {
+			display: flex;
+			flex-wrap: wrap;
+			
+			.comment-author {
+				margin-right: $grid-padding*2;
+			}
+		}		
+
+		.comment-author {
+			
+			img {
+				display: block;
+				width: 9.6rem;
+				height: auto;
+				border-radius: 50%;
+				margin-top: $grid-padding/2;
+			}
+		}
+
+		.comment-content {
+			
+			.comment-author-name {
+				font-family: $font-bold;
+				color: $primary-color;
+				font-size: 2.4rem;
+				
+				a {
+					text-decoration: none;
+					
+					&:hover,
+					&.focus-visible {
+						color: $text-color;
+					}
+				}
+			}
+			.comment-date {
+				time {
+					font-size: 1.6rem;
+				}
+				a {
+					text-decoration: none;
+				}
+			}
+			.pending {
+				display: block;
+				margin: $grid-padding 0;
+				background-color: $secondary-color;
+				padding: $grid-padding/2 $grid-padding;
+			}
+		}
+		
+		.reply {
+			width: 100%;
+			padding: $grid-padding 0;
+
+			a {
+				@include link-style();
+			}
+		}
+
+		
+		.children {
+			padding-left: $grid-padding*2;
+			border-left: $primary-color 2px solid;
+			list-style: none;
+		}
+	}
+}
+
 
 .bypostauthor {
 	display: block;
+}
+
+.meta-comments {
+	display: block;
+}
+.comment-form-cookies-consent {
+	@extend .formfield-checkbox;
+}
+
+.widget-title {
+	color: $primary-color;
+	font-family: $font-bold;
+	font-size: 2.4rem;
+	margin-bottom: $grid-padding;
+}
+.widget-container {
+	margin-bottom: $grid-padding*4;
+	
+	ul {
+		padding: 0;
+		list-style: none;
+		border-top: $text-color 1px solid;
+		
+		& > li {
+			display: block;
+			border-bottom: $text-color 1px solid;
+			
+			&.recentcomments {
+				padding: $grid-padding 0;
+			}
+			.comment-author-link {
+				font-family: $font-italic;
+			}
+			& a {
+				display: block;
+				text-decoration: none;
+				padding: $grid-padding 0;
+				transition: .3s ease-in-out;
+				
+				&:hover,
+				&.focus-visible {
+					padding-left: $grid-padding/2;
+					background-color: $secondary-color;
+				}	
+			}
+		}
+	}
 }
 
 

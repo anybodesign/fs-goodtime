@@ -12,15 +12,10 @@
 ?>
 
 					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-						
-						<?php if ( '' != get_the_post_thumbnail() ) { ?>
-						<figure class="post-figure">
-							<?php the_post_thumbnail('large-hd'); ?>
-						</figure>
-						<?php } ?>
-						
+
 						<div class="post-content">
 							<?php the_content(); ?>
 						</div>
+						<?php get_template_part('template-parts/post', 'meta'); ?>
 
 					</article>
