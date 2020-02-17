@@ -413,8 +413,15 @@ add_filter( 'image_size_names_choose', 'fs_custom_sizes' );
 
 function fs_bg_img() {
 	
-	if ( '' != get_the_post_thumbnail() ) {
-		$img_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large-hd' );
+	$bg_blog = get_theme_mod( 'bg_blog' );
+	$bg_404 = get_theme_mod( 'bg_404' );
+	$img_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large-hd' );
+	
+	if ( $bg_blog && is_home() ) {
+		$bg = ' style="background-image: url('.$bg_blog.')"';
+	} else if ( $bg_404 && is_404() ) {
+		$bg = ' style="background-image: url('.$bg_404.')"';	
+	} else if ( '' != get_the_post_thumbnail() ) {
 		$bg = ' style="background-image: url('.$img_url[0].')"';
 	} else {
 		$bg = null;	
