@@ -42,16 +42,13 @@
 		}
 	?>
 	
+	<?php if (!is_page_template( 'pagecustom-maintenance.php' )) { ?>
 	<header id="site_head" role="banner"<?php if ( !is_front_page() ) { fs_bg_img(); } ?>>
 		<div class="row inner">
 			<div class="header-content">
 				<?php 
 					get_template_part('template-parts/header', 'brand'); 
-				?>
-				<?php 
-					if ( ! is_page_template( 'pagecustom-maintenance.php' ) ) {
-						get_template_part('template-parts/header', 'nav');
-					}
+					get_template_part('template-parts/header', 'nav');
 				?>
 			</div>
 		</div>
@@ -63,14 +60,15 @@
 		</div>
 		
 	</header>
-
+	<?php } ?>
 
 		<main id="site_main" class="content-area" role="main">
 			
-			<?php if ( function_exists('bcn_display') && !is_front_page() ) { ?>
+			<?php if (!is_page_template( 'pagecustom-maintenance.php' )) { 
+					if ( function_exists('bcn_display') && !is_front_page() ) { ?>
 			<div class="breadcrumbs-nav">
 				<div class="inner">
 					<?php bcn_display(); ?>					
 				</div>
 			</div>
-			<?php } ?>
+			<?php } } ?>

@@ -29,17 +29,17 @@
 	.header-v1 & {
 		font-size: 6.4rem;
 		color: #fff;
-		
-		@include rwd(large) {
-			body:not([class*=home]) & {
-				position: absolute;
-				width: 66rem;
-				top: 50%;
-				left: 50%;
-				transform: translate(-30%, -50%);
-			}
+	}
+	@include rwd(large) {
+		body.header-v1:not([class*=home]) & {
+			position: absolute;
+			width: 66rem;
+			top: 50%;
+			left: 50%;
+			transform: translate(-30%, -50%);
 		}
 	}
+
 	
 	.search-term {
 		font-family: $font-bolditalic;
@@ -117,4 +117,19 @@
 			width: 25%;
 		}
 	}	
+}
+
+.coming-back-soon {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background-position: center center;
+	background-size: cover;
+	
+	.maintenance-message {
+		padding: $grid-padding*3;
+		background-color: #fff;
+	}
 }

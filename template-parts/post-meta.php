@@ -15,7 +15,7 @@
 								<span class="meta-category"><?php _e( 'in&nbsp;', 'good-time' ); the_category(', '); ?></span>
 								
 								<span class="meta-date">
-									<span class="meta-date-text"><?php _e( 'on&nbsp;', 'good-time' ); ?></span><span class="meta-date-time"><span class="day"><?php the_time( ('j') ); ?></span><span class="month"><?php the_time( ('F') ); ?></span><span class="year"><?php the_time( ('Y') ); ?></span></span>
+									<span class="meta-date-text"><?php _e( 'on&nbsp;', 'good-time' ); ?></span><span class="meta-date-time"><span class="day"><?php the_time( ('j') ); ?></span> <span class="month"><?php the_time( ('F') ); ?></span> <span class="year"><?php the_time( ('Y') ); ?></span></span>
 								</span>
 
 								<?php $comment = get_comments_number(); if ( $comment > 0 ) : ?>
