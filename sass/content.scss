@@ -27,22 +27,18 @@
 	margin: 0;
 	
 	.header-v1 & {
+		font-size: 6.4rem;
 		color: #fff;
-	}
-	
-	@include rwd(large) {
 		
-		body:not([class*=home]) & {
-			position: absolute;
-			width: 66rem;
-			top: 50%;
-			left: 50%;
-			transform: translate(-30%, -50%);
+		@include rwd(large) {
+			body:not([class*=home]) & {
+				position: absolute;
+				width: 66rem;
+				top: 50%;
+				left: 50%;
+				transform: translate(-30%, -50%);
+			}
 		}
-		
-		.header-v1 & {
-			font-size: 6.4rem;
-		}	
 	}
 	
 	.search-term {
@@ -67,6 +63,7 @@
 	& > p,
 	& > ul,
 	& > ol,
+	& > h1,
 	& > h2,
 	& > h3,
 	& > h4,	

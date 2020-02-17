@@ -14,11 +14,11 @@ get_header(); ?>
 				<div class="page-wrap">
 
 					<?php 
-						get_template_part( 'template-parts/page', 'banner' ); 
+						get_template_part( 'template-parts/header', 'banner' ); 
 					?>
 					
 					<div class="page-content">
-							
+						<h1><?php esc_html_e( 'Oops! That page can&rsquo;t be found', 'good-time' ); ?></h1>	
 						<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try a search?', 'good-time' ); ?></p>
 						<?php get_search_form(); ?>		
 																			

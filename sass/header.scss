@@ -28,7 +28,8 @@
 		z-index: 100;
 	}	
 
-	.home & {
+	.home & ,
+	.error404 & {
 		min-height: 50vh;
 	}
 }

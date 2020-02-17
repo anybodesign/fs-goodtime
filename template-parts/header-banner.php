@@ -19,8 +19,6 @@
 							the_archive_title();
 						} else if ( is_search() ) {
 							printf( esc_html__( 'Search Results for: %s', 'good-time' ), '<span class="search-term">' . get_search_query() . '</span>' );
-						} else if ( is_404() ) {
-							esc_html_e( 'Oops! That page can&rsquo;t be found', 'good-time' );
 						} else {
 							the_title(); 
 						}
