@@ -81,7 +81,7 @@
 		flex-direction: column;
 		align-items: flex-start;
 	}
-	.read-more {
+	.read-more-btn {
 		margin-top: $grid-padding;
 		border: 0 !important;		
 		@extend .action-btn;
@@ -280,45 +280,52 @@
 	@extend .formfield-checkbox;
 }
 
-.widget-title {
-	color: $primary-color;
-	font-family: $font-bold;
-	font-size: 2.4rem;
-	margin-bottom: $grid-padding;
-}
-.widget-container {
-	margin-bottom: $grid-padding*4;
-	
-	ul {
-		padding: 0;
-		list-style: none;
-		border-top: $text-color 1px solid;
+// Sidebar
+
+.page-sidebar {
+
+	.widget-title {
+		color: $primary-color;
+		font-family: $font-bold;
+		font-size: 2.4rem;
+		margin-bottom: $grid-padding;
+	}
+	.widget-container {
+		margin-bottom: $grid-padding*4;
 		
-		& > li {
-			display: block;
-			border-bottom: $text-color 1px solid;
+		ul {
+			padding: 0;
+			list-style: none;
+			border-top: $text-color 1px solid;
 			
-			&.recentcomments {
-				padding: $grid-padding 0;
-			}
-			.comment-author-link {
-				font-family: $font-italic;
-			}
-			& a {
+			& > li {
 				display: block;
-				text-decoration: none;
-				padding: $grid-padding 0;
-				transition: .3s ease-in-out;
+				border-bottom: $text-color 1px solid;
 				
-				&:hover,
-				&.focus-visible {
-					padding-left: $grid-padding/2;
-					background-color: $secondary-color;
-				}	
+				&.recentcomments {
+					padding: $grid-padding 0;
+				}
+				.comment-author-link {
+					font-family: $font-italic;
+				}
+				& a {
+					display: block;
+					text-decoration: none;
+					padding: $grid-padding 0;
+					transition: .3s ease-in-out;
+					
+					&:hover,
+					&.focus-visible {
+						padding-left: $grid-padding/2;
+						background-color: $secondary-color;
+					}	
+				}
 			}
 		}
 	}
+	
 }
+
 
 
 /* ------------------------- */
