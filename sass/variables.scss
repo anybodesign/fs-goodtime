@@ -23,9 +23,29 @@ $width-wide: 75em;	 		// @note: 1200px
 $width-xwide: 90em;	 		// @note: 1440px
 
 
-// Colors
+// -------------
+// = Colors
+// -------------
+
+
+// Default - violet
 
 $primary-color: #412F85;
 $secondary-color: #FFD910;
-$text-color: #23252B;
-$bg-color: #fff;
+$text-color: #23252b;
+$bg-color: #FFF;
+
+// Palette 2 - ocean
+
+$primary-color-2: #116395;
+$secondary-color-2: #88FFE8;
+
+// Palette 3 - meadow
+
+$primary-color-3: #308619;
+$secondary-color-3: $secondary-color;
+
+// Palette 4 - fall
+
+$primary-color-4: #6F4616;
+$secondary-color-4: #FFAA00;

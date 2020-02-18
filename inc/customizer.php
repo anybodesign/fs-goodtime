@@ -91,6 +91,33 @@ function fs_customize_register($fs_customize) {
 	// -
 	// + + + + + + + + + + 
 		
+		// Color palettes
+		
+		$fs_customize->add_setting(
+			'palette', 
+			array(
+				'default' => 'violet',
+				'sanitize_callback' => 'fs_customizer_sanitize_palette',
+			)
+		);
+		
+		$fs_customize->add_control(
+			'palette', 
+			array(
+				'type' => 'radio',
+				'label' => __( 'Color Themes', 'good-time' ),
+				'description' => __('Choose a color theme', 'good-time'),
+				'section' => 'colors',
+				'choices' => array(
+					'violet' => __( 'Violet', 'good-time' ),
+					'ocean' => __( 'Ocean', 'good-time' ),
+					'meadow' => __( 'Meadow', 'good-time' ),
+					'fall' => __( 'Fall', 'good-time' ),
+				),
+			)
+		);
+		
+		/*
 		// Primary color
 		
 		$fs_customize->add_setting(
@@ -164,7 +191,7 @@ function fs_customize_register($fs_customize) {
 				),
 			)
 		);
-
+		*/
 
 
 
@@ -220,6 +247,7 @@ function fs_customize_register($fs_customize) {
 			'hide_tagline', 
 			array(
 				'default'			=> false,
+				'transport'			=> 'postMessage',
 				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
 			)
 		);
@@ -300,8 +328,8 @@ function fs_customize_register($fs_customize) {
 		$fs_customize->add_setting(
 			'footer_text', 
 			array(
-				'transport'				=> 'postMessage',
 				'default'				=> '',
+				'transport'				=> 'postMessage',
 				'sanitize_callback'		=> 'sanitize_text_field'
 			)
 		);
@@ -322,6 +350,7 @@ function fs_customize_register($fs_customize) {
 			'display_wp', 
 			array(
 				'default'			=> false,
+				'transport'			=> 'postMessage',
 				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
 			)
 		);
@@ -479,36 +508,18 @@ function fs_customizer_sanitize_radio_layout( $input ) {
     }
     return $input;
 }
+function fs_customizer_sanitize_palette( $input ) {
+    if( !in_array( $input, array( 'violet', 'ocean', 'meadow', 'fall' ) ) ) {
+        $input = 'violet';
+    }
+    return $input;
+}
+
+/*
 function fs_customizer_sanitize_btn_contrast( $input ) {
     if( !in_array( $input, array( 'white', 'dark', 'white-dark', 'dark-white' ) ) ) {
         $input = 'white';
     }
     return $input;
 }
-
-
-// Customizer Colors Output
-
-/*
-function fs_colors() {
-	?>
-	<style>
-		.something { 
-			background-color: <?php echo get_theme_mod('primary_color', '#9c0'); ?> 
-		}
-		
-		.something { 
-			color: <?php echo get_theme_mod('primary_color', '#9c0'); ?> 
-		}
-		
-		.something {
-			background-color: <?php echo get_theme_mod('secondary_color', '#606060'); ?>
-		}
-		.something {
-			color: <?php echo get_theme_mod('secondary_color', '#606060'); ?>
-		}
-	</style>
-	<?php
-}
-add_action('wp_head','fs_colors');
 */

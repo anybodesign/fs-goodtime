@@ -1,3 +1,5 @@
+@import 'variables.scss';
+
 // Customizer
 
 #customize-control-site_logo,
@@ -11,10 +13,12 @@
 	margin-bottom: 1.5em;
 }
 
+#customize-control-palette,
 #customize-control-btn_contrast,
 #customize-control-layout_option {
 	
 	.customize-inside-control-row {
+		position: relative;
 		margin-left: 0;
 		
 		input[type=radio] {
@@ -24,17 +28,11 @@
 		input[type=radio]:checked + label {
 			font-weight: bold;
 		}
-		input[type=radio]:checked + label::before {
-			border-color: #777;
-			opacity: 1;
-		}
 		label::before {
 			content: '';
 			display: block;
-			width: 256px;
 			margin-bottom: 0.5em;
 			border: transparent 2px solid;
-			opacity: .5;
 			background-position: 0 0;
 			background-repeat: no-repeat;
 			background-size: contain;
@@ -43,6 +41,78 @@
 	
 }
 
+#customize-control-palette {
+	input[type=radio] {
+		
+		&:hover,
+		&:focus {
+			
+			& + label::before {
+				transform: scale(1.1);
+			}
+			& + label::after {
+				left: 35px;
+			}
+		}
+	}
+	label::before {
+		height: 40px;
+		width: 40px;
+		border-radius: 50%;
+		transition: .3s ease-in-out;
+	}
+	label::after {
+		content: '';
+		height: 30px;
+		width: 30px;
+		border-radius: 50%;
+		position: absolute;
+		top: 20px; 
+		left: 50px;
+		transition: .3s ease-in-out;
+	}
+	input[type=radio]:checked + label {
+		border-bottom: #777 2px solid;
+	}
+	
+	#_customize-input-palette-radio-violet + label::before {background-color: $primary-color;}	
+	#_customize-input-palette-radio-violet + label::after {background-color: $secondary-color;}	
+
+	#_customize-input-palette-radio-ocean + label::before {background-color: $primary-color-2;}	
+	#_customize-input-palette-radio-ocean + label::after {background-color: $secondary-color-2;}	
+
+	#_customize-input-palette-radio-meadow + label::before {background-color: $primary-color-3;}	
+	#_customize-input-palette-radio-meadow + label::after {background-color: $secondary-color-3;}	
+
+	#_customize-input-palette-radio-fall + label::before {background-color: $primary-color-4;}	
+	#_customize-input-palette-radio-fall + label::after {background-color: $secondary-color-4;}	
+		
+}
+
+#customize-control-layout_option {
+
+	input[type=radio]:checked + label::before {
+		border-color: #777;
+		opacity: 1;
+	}
+	
+	label::before {
+		opacity: .5;
+		width: 256px;
+		height: 144px;
+	}
+	#_customize-input-layout_option-radio-version1 + label::before {
+		background-image: url(../img/admin/version-1.png);
+	}
+	#_customize-input-layout_option-radio-version2 + label::before {
+		background-image: url(../img/admin/version-2.png);
+	}
+	#_customize-input-layout_option-radio-version3 + label::before {
+		background-image: url(../img/admin/version-3.png);
+	}	
+}
+
+/*
 #customize-control-btn_contrast {
 	
 	.customize-inside-control-row {
@@ -70,21 +140,7 @@
 	}	
 }
 
-#customize-control-layout_option {
-	
-	label::before {
-		height: 144px;
-	}
-	#_customize-input-layout_option-radio-version1 + label::before {
-		background-image: url(../img/admin/version-1.png);
-	}
-	#_customize-input-layout_option-radio-version2 + label::before {
-		background-image: url(../img/admin/version-2.png);
-	}
-	#_customize-input-layout_option-radio-version3 + label::before {
-		background-image: url(../img/admin/version-3.png);
-	}	
-}
+*/
 
 
 // ACF
