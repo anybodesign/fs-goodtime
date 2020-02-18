@@ -22,7 +22,6 @@ function fs_setup() {
 	
 	load_theme_textdomain( 'good-time', FS_THEME_DIR . '/languages' );
 	
-	
 	// Theme Support
 	
 	add_editor_style( array('css/editor-style.css') );
@@ -38,6 +37,53 @@ function fs_setup() {
 		'gallery',
 		'caption',
 	) );
+	
+	add_theme_support( 'customize-selective-refresh-widgets' );
+	
+/*
+	// https://codex.wordpress.org/Theme_Logo
+
+	add_theme_support( 'custom-logo', array(
+		'height'      => 100,
+		'width'       => 400,
+		'flex-height' => true,
+		'flex-width'  => true,
+		'header-text' => array( 'site-title', 'site-description' ),
+	));	
+	
+	// https://codex.wordpress.org/Custom_Backgrounds
+	
+	add_theme_support( 'custom-background', array(
+		'default-color'          => 'ffffff',
+		'default-image'          => '',
+		'default-repeat'         => 'repeat',
+		'default-position-x'     => 'left',
+	    'default-position-y'     => 'top',
+	    'default-size'           => 'auto',
+		'default-attachment'     => 'scroll',
+		'wp-head-callback'       => '_custom_background_cb',
+		'admin-head-callback'    => '',
+		'admin-preview-callback' => ''
+	));
+	
+	// https://codex.wordpress.org/Custom_Headers
+	
+	add_theme_support( 'custom-header', array(
+		'default-image'          => get_template_directory_uri() . '/img/header.jpg',
+		'width'                  => 0,
+		'height'                 => 0,
+		'flex-height'            => false,
+		'flex-width'             => true,
+		'uploads'                => true,
+		'random-default'         => false,
+		'header-text'            => true,
+		'default-text-color'     => '',
+		'wp-head-callback'       => '',
+		'admin-head-callback'    => '',
+		'admin-preview-callback' => '',
+	));
+*/
+
 
 	// Gutenberg support 
 	
