@@ -192,45 +192,7 @@ function fs_scripts_load() {
 				'3.4.1', 
 				true
 			);
-	
-			// Slick
-			/*
-			   	wp_enqueue_script( 
-				    	'slick', 
-				    	FS_THEME_URL . '/js/slick.min.js',
-				    	array('jquery'), 
-				    	'1.8', 
-				    	true
-			    );
-			    wp_enqueue_script( 
-				    	'slick-init', 
-				    	FS_THEME_URL . '/js/slick-init.js',
-				    	array('jquery'), 
-				    	false, 
-				    	true
-			    );
-			*/
-			
-			// Fancybox
-			
-			/*
-			   	wp_enqueue_script( 
-				    	'fancybox', 
-				    	FS_THEME_URL . '/js/jquery.fancybox.min.js',
-				    	array('jquery'), 
-				    	'3.1.20', 
-				    	true
-			    );
-			    wp_enqueue_script( 
-				    	'fancybox-init', 
-				    	FS_THEME_URL . '/js/fancybox-init.js',
-				    	array('fancybox'), 
-				    	false, 
-				    	true
-			    );
-			*/			
-			
-			
+
 			// Back 2 top
 			
 			if ( get_theme_mod('back2top') == true ) {
@@ -292,30 +254,6 @@ function fs_scripts_load() {
 		
 		// CSS
 
-			/* Enqueue your customl CSS here
-			
-			// Slick
-			
-				wp_enqueue_style( 
-					'slick', 
-					FS_THEME_URL . '/css/slick.css',
-					array(), 
-					'1.8', 
-					'screen' 
-				);
-			
-			// Fancybox
-	
-				wp_enqueue_style( 
-					'fancybox', 
-					FS_THEME_URL . '/css/jquery.fancybox.min.css',
-					array(), 
-					'3.1.20', 
-					'screen' 
-				);
-			
-			*/
-	
 			// Back to top
 	
 			if ( get_theme_mod('back2top') == true ) {
@@ -423,7 +361,7 @@ add_filter( 'excerpt_length', 'fs_custom_excerpt_length', 999 );
 // Excerpt link
 
 function fs_excerpt_more( $more ) {
-    return sprintf( '… <a class="read-more" href="%1$s" rel="nofollow">%2$s</a>',
+    return sprintf( '… <a class="read-more-btn" href="%1$s" rel="nofollow">%2$s</a>',
         get_permalink( get_the_ID() ),
         __( 'Read More', 'good-time' )
     );
