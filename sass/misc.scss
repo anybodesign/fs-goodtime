@@ -101,6 +101,8 @@
 // Back to top
 
 #back2top {
+	background-color: $primary-color;
+	
 	
 }
 
@@ -112,6 +114,9 @@
 
 .screen-reader-text {
 	@include a11y-hidden();
+}
+.out-of-reach {
+	display: none;
 }
 
 .clearfix {

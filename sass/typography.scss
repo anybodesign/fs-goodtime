@@ -505,27 +505,10 @@ input[type=submit] {
 	cursor: pointer;
 	transition: background .2s linear;
 
-		.dark-btns &,
-		.dark-white-btns & {
-			color: $text-color;
-		}
-		.white-btns &,
-		.white-dark-btns & {
-			color: #fff;
-		}
-	
 	&.focus-visible, 
 	&:hover {
 		background-color: $secondary-color;
-		
-		.dark-btns &,
-		.white-dark-btns & {
-			color: $text-color;
-		}
-		.white-btns &,
-		.dark-white-btns & {
-			color: #fff;
-		}
+		color: $text-color;
 	}
 	&:focus {
 		outline: none;
@@ -541,31 +524,11 @@ input[type=submit].white-btn {
 	@extend .action-btn;
 	
 	background-color: #fff;
-	color: $text-color !important;
+	color: $text-color;
 
 	&.focus-visible, 
 	&:hover {
 		background-color: $secondary-color;
-		color: #fff;
+		//color: #fff;
 	}	
 }
-
-
-
-/* ------------------------------
-//
-//  Print
-// 
-// ------------------------------ */
-
-
-@media print {
-	
-	// @fix: FF print issue
-	
-	[class*="col-"] { 
-		display: block; 
-		float: left;
-	}   
-
-}	
