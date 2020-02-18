@@ -8,31 +8,60 @@
  * @version 1.0
  */
  
- 
- // Customizer Settings
- 
-function fs_customize_register($wp_customize) {
-	 
+// Customizer JS
 
-	// Create Some Sections
+add_action( 'customize_preview_init', 'fs_customizer_scripts' );
+function fs_customizer_scripts() {
+	wp_enqueue_script(
+		'fs-customizer',
+	    	FS_THEME_URL . '/js/customizer.js',
+	    	array( 'customize-preview' ), 
+	    	false, 
+	    	true
+	);
+}
+ 
+// Customizer Settings
+
+add_action('customize_register', 'fs_customize_register'); 
+function fs_customize_register($fs_customize) {
+
+	// Title and Description
+
+	$fs_customize->get_setting( 'blogname' )->transport         = 'postMessage';
+	$fs_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
+
+	if ( isset( $fs_customize->selective_refresh ) ) {
+		$fs_customize->selective_refresh->add_partial( 'blogname', array(
+			'selector'        => array('.site-title', '.site-title a'),
+			'render_callback' => 'fs_customize_partial_blogname',
+		) );
+		$fs_customize->selective_refresh->add_partial( 'blogdescription', array(
+			'selector'        => '.site-desc',
+			'render_callback' => 'fs_customize_partial_blogdescription',
+		) );
+	}
+
+		
+	// Create Some Custom Sections
 	// -
-	// + + + + + + + + + + 
+	// + + + + + + + + + + + + + +  
 	
-	$wp_customize->add_section(
+	$fs_customize->add_section(
 		'fs_footer_section',
 		array(
 			'title'			=> __('Footer Options', 'good-time'),
 			'priority'		=> 50,
 		)
 	);
-	$wp_customize->add_section(
+	$fs_customize->add_section(
 		'fs_options_section',
 		array(
 			'title'			=> __('Theme Options', 'good-time'),
 			'priority'		=> 50,
 		)
 	);
-	$wp_customize->add_section(
+	$fs_customize->add_section(
 		'fs_layout_section', 
 		array(
 			'title' 		=> __('Layout Options', 'good-time'),
@@ -40,7 +69,7 @@ function fs_customize_register($wp_customize) {
 			'priority'		=> 50,
 		)
 	);
-	$wp_customize->add_section(
+	$fs_customize->add_section(
 		'fs_fonts_section', 
 		array(
 			'title' 		=> __('Theme Fonts', 'good-time'),
@@ -48,7 +77,7 @@ function fs_customize_register($wp_customize) {
 			'priority'		=> 50,
 		)
 	);
-	$wp_customize->add_section(
+	$fs_customize->add_section(
 		'fs_pictures_section', 
 		array(
 			'title' 		=> __('Theme Pictures', 'good-time'),
@@ -64,7 +93,7 @@ function fs_customize_register($wp_customize) {
 		
 		// Primary color
 		
-		$wp_customize->add_setting(
+		$fs_customize->add_setting(
 			'primary_color', 
 			array(
 				'default'			=> '',
@@ -74,9 +103,9 @@ function fs_customize_register($wp_customize) {
 				'transport'			=> 'refresh', // postMessage
 			)
 		);
-		$wp_customize->add_control(
+		$fs_customize->add_control(
 			new WP_Customize_Color_control(
-				$wp_customize, 
+				$fs_customize, 
 				'primary_color', 
 				array(
 					'label'		=> __('Primary color', 'good-time'),
@@ -88,7 +117,7 @@ function fs_customize_register($wp_customize) {
 				
 		// Secondary color
 		
-		$wp_customize->add_setting(
+		$fs_customize->add_setting(
 			'secondary_color', 
 			array(
 				'default'			=> '',
@@ -98,9 +127,9 @@ function fs_customize_register($wp_customize) {
 				'transport'			=> 'refresh', 
 			)
 		);
-		$wp_customize->add_control( 
+		$fs_customize->add_control( 
 			new WP_Customize_Color_control(
-				$wp_customize, 
+				$fs_customize, 
 				'secondary_color', 
 				array(
 					'label'		=> __('Secondary color', 'good-time'),
@@ -112,7 +141,7 @@ function fs_customize_register($wp_customize) {
 				
 		// Buttons Contrast
 		
-		$wp_customize->add_setting(
+		$fs_customize->add_setting(
 			'btn_contrast', 
 			array(
 				'default' => 'white',
@@ -120,7 +149,7 @@ function fs_customize_register($wp_customize) {
 			)
 		);
 		
-		$wp_customize->add_control(
+		$fs_customize->add_control(
 			'btn_contrast', 
 			array(
 				'type' => 'radio',
@@ -145,15 +174,15 @@ function fs_customize_register($wp_customize) {
 
 		// Site logo
 		
-		$wp_customize->add_setting(
+		$fs_customize->add_setting(
 			'site_logo', 
 			array(
 				'sanitize_callback'	=> 'esc_url_raw'
 			)
 		);
-		$wp_customize->add_control(
+		$fs_customize->add_control(
 			new WP_Customize_Image_control(
-				$wp_customize, 
+				$fs_customize, 
 				'site_logo', 
 				array(
 					'label'			=> __('Site Logo', 'good-time'),
@@ -166,14 +195,14 @@ function fs_customize_register($wp_customize) {
 		
 		// Site logo - Mobile
 		
-		$wp_customize->add_setting(
+		$fs_customize->add_setting(
 			'site_logo_mobile', array(
 				'sanitize_callback'		=> 'esc_url_raw'
 			)
 		);
-		$wp_customize->add_control( 
+		$fs_customize->add_control( 
 			new WP_Customize_Image_control(
-				$wp_customize, 
+				$fs_customize, 
 				'site_logo_mobile', 
 				array(
 					'label'			=> __('Site Logo - Mobile', 'good-time'),
@@ -187,14 +216,14 @@ function fs_customize_register($wp_customize) {
 
 		// Hide tagline
 		
-		$wp_customize->add_setting(
+		$fs_customize->add_setting(
 			'hide_tagline', 
 			array(
 				'default'			=> false,
 				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
 			)
 		);
-		$wp_customize->add_control(
+		$fs_customize->add_control(
 			'hide_tagline', 
 			array(
 				'type'			=> 'checkbox',
@@ -211,15 +240,15 @@ function fs_customize_register($wp_customize) {
 
 		// Footer pictures
 		
-		$wp_customize->add_setting(
+		$fs_customize->add_setting(
 			'footer_picture', 
 			array(
 				'sanitize_callback'	=> 'esc_url_raw'
 			)
 		);
-		$wp_customize->add_control(
+		$fs_customize->add_control(
 			new WP_Customize_Image_control(
-				$wp_customize, 
+				$fs_customize, 
 				'footer_picture', 
 				array(
 					'label'			=> __('Footer picture', 'good-time'),
@@ -230,15 +259,15 @@ function fs_customize_register($wp_customize) {
 			)
 		);
 		
-		$wp_customize->add_setting(
+		$fs_customize->add_setting(
 			'footer_deco', 
 			array(
 				'sanitize_callback'	=> 'esc_url_raw'
 			)
 		);
-		$wp_customize->add_control(
+		$fs_customize->add_control(
 			new WP_Customize_Image_control(
-				$wp_customize, 
+				$fs_customize, 
 				'footer_deco', 
 				array(
 					'label'			=> __('Footer decoration', 'good-time'),
@@ -251,14 +280,14 @@ function fs_customize_register($wp_customize) {
 			
 		// Footer text
 		
-		$wp_customize->add_setting(
+		$fs_customize->add_setting(
 			'footer_text_color', 
 			array(
 				'default'			=> false,
 				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
 			)
 		);
-		$wp_customize->add_control(
+		$fs_customize->add_control(
 			'footer_text_color', 
 			array(
 				'type'			=> 'checkbox',
@@ -268,14 +297,15 @@ function fs_customize_register($wp_customize) {
 			)
 		);		
 		
-		$wp_customize->add_setting(
+		$fs_customize->add_setting(
 			'footer_text', 
 			array(
+				'transport'				=> 'postMessage',
 				'default'				=> '',
 				'sanitize_callback'		=> 'sanitize_text_field'
 			)
 		);
-		$wp_customize->add_control(
+		$fs_customize->add_control(
 			'footer_text', 
 			array(
 				'label'			=> __('Custom footer text', 'good-time'),
@@ -288,14 +318,14 @@ function fs_customize_register($wp_customize) {
 		
 		// WP Credits
 		
-		$wp_customize->add_setting(
+		$fs_customize->add_setting(
 			'display_wp', 
 			array(
 				'default'			=> false,
 				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
 			)
 		);
-		$wp_customize->add_control(
+		$fs_customize->add_control(
 			'display_wp', 
 			array(
 				'type'			=> 'checkbox',
@@ -312,14 +342,14 @@ function fs_customize_register($wp_customize) {
 		
 		// Back to top
 	
-		$wp_customize->add_setting(
+		$fs_customize->add_setting(
 			'back2top', 
 			array(
 				'default'			=> false,
 				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
 			)
 		);
-		$wp_customize->add_control(
+		$fs_customize->add_control(
 			'back2top', 
 			array(
 				'type'			=> 'checkbox',
@@ -331,14 +361,14 @@ function fs_customize_register($wp_customize) {
 			
 		// Sticky Nav
 		
-		$wp_customize->add_setting(
+		$fs_customize->add_setting(
 			'stickynav', 
 			array(
 				'default'			=> false,
 				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
 			)
 		);
-		$wp_customize->add_control(
+		$fs_customize->add_control(
 			'stickynav', 
 			array(
 				'type'			=> 'checkbox',
@@ -355,7 +385,7 @@ function fs_customize_register($wp_customize) {
 
 		// Header & Main nav
 
-		$wp_customize->add_setting(
+		$fs_customize->add_setting(
 			'layout_option', 
 			array(
 				'default' => 'version1',
@@ -363,7 +393,7 @@ function fs_customize_register($wp_customize) {
 			)
 		);
 		
-		$wp_customize->add_control(
+		$fs_customize->add_control(
 			'layout_option', 
 			array(
 				'type' => 'radio',
@@ -385,15 +415,15 @@ function fs_customize_register($wp_customize) {
 	
 		// Blog Image
 		
-		$wp_customize->add_setting(
+		$fs_customize->add_setting(
 			'bg_blog', 
 			array(
 				'sanitize_callback'	=> 'esc_url_raw'
 			)
 		);
-		$wp_customize->add_control( 
+		$fs_customize->add_control( 
 			new WP_Customize_Image_control(
-				$wp_customize, 
+				$fs_customize, 
 				'bg_blog', 
 				array(
 					'label'			=> __('Blog', 'good-time'),
@@ -406,15 +436,15 @@ function fs_customize_register($wp_customize) {
 		
 		// 404 Image
 		
-		$wp_customize->add_setting(
+		$fs_customize->add_setting(
 			'bg_404', 
 			array(
 				'sanitize_callback'	=> 'esc_url_raw'
 			)
 		);
-		$wp_customize->add_control( 
+		$fs_customize->add_control( 
 			new WP_Customize_Image_control(
-				$wp_customize, 
+				$fs_customize, 
 				'bg_404', 
 				array(
 					'label'			=> __('404 error', 'good-time'),
@@ -426,10 +456,16 @@ function fs_customize_register($wp_customize) {
 		);	
 
 }
-add_action('customize_register', 'fs_customize_register');
 
 
-// Sanitize
+// Callbacks, Sanitize
+
+function fs_customize_partial_blogname() {
+	bloginfo( 'name' );
+}
+function fs_customize_partial_blogdescription() {
+	bloginfo( 'description' );
+}
 
 function fs_customizer_sanitize_checkbox( $input ) {
 	if ( $input === true || $input === '1' ) {
