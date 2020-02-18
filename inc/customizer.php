@@ -116,83 +116,6 @@ function fs_customize_register($fs_customize) {
 				),
 			)
 		);
-		
-		/*
-		// Primary color
-		
-		$fs_customize->add_setting(
-			'primary_color', 
-			array(
-				'default'			=> '',
-				'sanitize_callback'	=> 'sanitize_hex_color',
-				'capability'		=> 'edit_theme_options',
-				'type'				=> 'theme_mod',
-				'transport'			=> 'refresh', // postMessage
-			)
-		);
-		$fs_customize->add_control(
-			new WP_Customize_Color_control(
-				$fs_customize, 
-				'primary_color', 
-				array(
-					'label'		=> __('Primary color', 'good-time'),
-					'section'	=> 'colors',
-					'settings'	=> 'primary_color',
-				)
-			)
-		);
-				
-		// Secondary color
-		
-		$fs_customize->add_setting(
-			'secondary_color', 
-			array(
-				'default'			=> '',
-				'sanitize_callback'	=> 'sanitize_hex_color',
-				'capability'		=> 'edit_theme_options',
-				'type'				=> 'theme_mod',
-				'transport'			=> 'refresh', 
-			)
-		);
-		$fs_customize->add_control( 
-			new WP_Customize_Color_control(
-				$fs_customize, 
-				'secondary_color', 
-				array(
-					'label'		=> __('Secondary color', 'good-time'),
-					'section'	=> 'colors',
-					'settings'	=> 'secondary_color',
-				)
-			)
-		);
-				
-		// Buttons Contrast
-		
-		$fs_customize->add_setting(
-			'btn_contrast', 
-			array(
-				'default' => 'white',
-				'sanitize_callback' => 'fs_customizer_sanitize_btn_contrast',
-			)
-		);
-		
-		$fs_customize->add_control(
-			'btn_contrast', 
-			array(
-				'type' => 'radio',
-				'label' => __( 'Buttons contrast setting', 'good-time' ),
-				'description' => __('Select the desired color for plain/hovered buttons.', 'good-time'),
-				'section' => 'colors',
-				'choices' => array(
-					'white' => __( 'White text', 'good-time' ),
-					'dark' => __( 'Dark text', 'good-time' ),
-					'white-dark' => __( 'White + Dark', 'good-time' ),
-					'dark-white' => __( 'Dark + White', 'good-time' ),
-				),
-			)
-		);
-		*/
-
 
 
 	// Site identity
@@ -514,12 +437,3 @@ function fs_customizer_sanitize_palette( $input ) {
     }
     return $input;
 }
-
-/*
-function fs_customizer_sanitize_btn_contrast( $input ) {
-    if( !in_array( $input, array( 'white', 'dark', 'white-dark', 'dark-white' ) ) ) {
-        $input = 'white';
-    }
-    return $input;
-}
-*/
