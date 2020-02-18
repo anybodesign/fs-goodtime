@@ -228,6 +228,10 @@
 			padding: $grid-padding*4;
 			width: 75%;
 			margin: 4.8rem auto 0 auto;
+			
+			.header-v3 & {
+				margin-top: $grid-padding*2;
+			}
 		}
 	}
 	[class*=edito-picture--] {
@@ -284,7 +288,7 @@
 // Text+Img
 
 .acf-block--textimg {
-	margin: $grid-padding*2 0;
+	margin: $grid-padding*2 auto;
 	
 	@include rwd(large) {
 		

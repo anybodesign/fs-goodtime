@@ -80,11 +80,9 @@
 			flex-direction: column;
 		}
 		.header-v2 & {
-			
+			border-bottom: #fff 1px solid;
 		}
-		.header-v3 & {
-			
-		}
+		.header-v3 & {}
 	}
 	
 	& > li {
@@ -100,10 +98,18 @@
 
 			}
 			.header-v2 & {
-				margin-left: $grid-padding;
+				color: #fff;
+				border: 0;
+				margin-left: $grid-padding*3;
+				
+				&:first-child {
+					margin-left: 0;
+				}
 			}
 			.header-v3 & {
-				
+				color: #fff;
+				border: 0;
+				margin: 0 $grid-padding*1.5;
 			}
 		}
 		
@@ -112,15 +118,11 @@
 			display: block;
 			padding: $grid-padding/1.5 $grid-padding*3;
 			transition: .3s ease-in-out;
-			
-			.header-v1 & {
 
-			}
-			.header-v2 & {
-
-			}
+			.header-v2 &,
 			.header-v3 & {
-				
+				padding: $grid-padding 0;
+				border-bottom: transparent 4px solid;
 			}
 		}
 		& > a:hover, 
@@ -131,6 +133,13 @@
 				
 				.header-v1 & {
 					background-color: transparentize($primary-color, .8);
+				}
+				.header-v2 & {
+					border-bottom-color: #fff;
+				}
+				.header-v3 & {
+					color: $secondary-color;
+					border-bottom-color: $secondary-color;
 				}
 			}
 		}
@@ -392,22 +401,27 @@
 		display: block;
 		position: relative;
 		background-color: transparentize($primary-color, .8);
-		padding: $grid-padding*1.75 $grid-padding;
-		
+		padding: $grid-padding*.5 $grid-padding;
 		font-size: 1.6rem;
 		color: $text-color;
+
+		.inner {
+			padding: $grid-padding 0;				
+		}
 
 	}
 	
 	
 	@include rwd(large) {
+		padding: $grid-padding*1.5 $grid-padding;
 		
 		.header-v1 & {
 			
 			.inner {
-				padding-left: 15rem;				
+				padding: 0 0 0 15rem;				
 			}
 		}
+
 	}
 }
 

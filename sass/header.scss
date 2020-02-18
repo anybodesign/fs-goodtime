@@ -22,6 +22,19 @@
 		opacity: .5;
 		z-index: 1;
 	}
+
+	body:not([class*=home]).header-v1 &::after {
+		background-image: linear-gradient(to top, #000 0%, rgba(0,0,0,0) 100%);
+	}
+	body:not([class*=home]).header-v2 &::after {
+		background-image: linear-gradient(to top, #000 50%, rgba(0,0,0,0) 100%);
+		opacity: .6;
+	}
+	body:not([class*=home]).header-v3 &::after {
+		background-image: linear-gradient(to top, #000 0%, rgba(0,0,0,0) 50%);
+		opacity: .6;
+	}		
+	
 			
 	& > .row {
 		position: relative;
@@ -44,7 +57,7 @@
 	width: 100%;
 	background-color: #fff;
 	
-	&::after {
+	.header-v1 &::after {
 		content: '';
 		display: block;
 		width: 100%;
@@ -68,8 +81,34 @@
 			flex-direction: row;
 			max-width: $max-width;
 			margin: 0 auto;
-			padding: $grid-padding*2 0;
+			padding: $grid-padding 0;
 			background-color: transparent;
+		}
+		.header-v3 & {
+			flex-direction: column;
+			justify-content: flex-end;
+			align-items: center;
+			max-width: $max-width;
+			margin: 0 auto;
+			padding: 0 $grid-padding;
+			background-color: transparent;
+			
+			&::after {
+				content: '';
+				display: block;
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				transform: translateY(30%);
+				background: url(img/ui/logo-shadow.png) bottom center no-repeat;
+				background-size: contain;
+				z-index: -1;
+			}
+		}
+		.home.header-v3 & {
+			min-height: 50vh;
 		}
 	}
 	
@@ -88,8 +127,12 @@
 		position: relative;
 		z-index: 2;
 	}
+	
 	.home & {
-		position: relative;
+		position: absolute;
+		top: 0;
+		left: 0;		
+		height: 60vh;
 	}
 	.home &::after {
 		content: '';
@@ -103,13 +146,9 @@
 		opacity: .5;
 		z-index: 1;
 	}
-	
-	.home & {
-		position: absolute;
-		top: 0;
-		left: 0;		
-		height: 60vh;
-	}	
+	.home.header-v2 &::after {
+		opacity: .7;
+	}
 	
 	@include rwd(large) {
 		padding: 0;
@@ -117,10 +156,14 @@
 		.home & {
 			height: 100vh;			
 		}	
-		.header-v1 & {
-			&::after {
-				background-image: linear-gradient(to right, #000 0%, rgba(0,0,0,0) 50%);
-			}
+		.header-v1 &::after {
+			background-image: linear-gradient(to right, #000 0%, rgba(0,0,0,0) 50%);
+		}
+		.header-v2 &::after {
+			background-image: linear-gradient(to bottom, #000 20%, rgba(0,0,0,0) 50%);
+		}
+		.header-v3 &::after {
+			background-image: linear-gradient(to top, #000 20%, rgba(0,0,0,0) 70%);
 		}		
 	}
 }
@@ -169,6 +212,13 @@
 }
 .site-brand {
 	padding: $grid-padding;
+	
+	@include rwd(large) {
+		
+		.header-v3 & {
+			padding-bottom: 0;
+		}
+	}
 }
 
 
