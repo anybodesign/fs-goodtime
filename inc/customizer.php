@@ -232,23 +232,6 @@ function fs_customize_register($fs_customize) {
 		// Footer text
 		
 		$fs_customize->add_setting(
-			'footer_text_color', 
-			array(
-				'default'			=> false,
-				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
-			)
-		);
-		$fs_customize->add_control(
-			'footer_text_color', 
-			array(
-				'type'			=> 'checkbox',
-				'label'			=> __('Dark colored footer text', 'good-time'),
-				'section'		=> 'fs_footer_section',
-				'settings'		=> 'footer_text_color',
-			)
-		);		
-		
-		$fs_customize->add_setting(
 			'footer_text', 
 			array(
 				'default'				=> '',
