@@ -101,6 +101,7 @@
 // Images
 
 .wp-block-image {
+	margin-bottom: 0;
 	
 	& img {
 		max-width: none;
@@ -108,6 +109,12 @@
 	
 	&.alignfull {
 		width: 100%;
+		padding: 0;
+		
+		img {
+			border: 0;
+			box-shadow: none;
+		}
 	}	
 }
 
@@ -232,7 +239,7 @@
 // Text+Img
 
 .acf-block--textimg {
-	margin: $grid-padding*2 auto;
+	padding: $grid-padding*2 $grid-padding;
 	
 	@include rwd(large) {
 		
@@ -321,7 +328,8 @@
 // Testimonials
 
 .acf-block--testimonial {
-	margin: $grid-padding*2 auto;
+	padding: $grid-padding*4 $grid-padding;
+	margin: $grid-padding auto;
 	
 	.testimonial-picture {
 		img {
@@ -365,7 +373,8 @@
 // Advanced List
 
 .acf-block--advanced-list {
-
+	padding: $grid-padding*4 $grid-padding;
+	
 	.acf-block-list-item {
 		padding-bottom: $grid-padding;
 	}
