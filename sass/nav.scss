@@ -123,6 +123,7 @@
 			.header-v3 & {
 				padding: $grid-padding 0;
 				border-bottom: transparent 4px solid;
+				transition: border .3s ease-in-out;
 			}
 		}
 		& > a:hover, 
@@ -148,6 +149,80 @@
 		}
 	}
 }
+
+// Sticky Nav
+
+.sticky-nav {
+
+	@include rwd(large) {
+		
+		#site_head > .row {
+			position: fixed;
+			width: 100%;
+			max-width: none;
+			margin: 0;
+			top: 0;
+			left: 0;
+			background-color: #fff;
+			
+			animation: drop-in .8s;
+			z-index: 100;
+		
+			.header-content {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				align-items: center;
+				width: $max-width;
+				margin: 0 auto;
+				padding: 0;
+				min-height: 0;
+				
+				&::after {
+					content: none;
+				}		
+				
+				.site-brand {
+					padding: 0 $grid-padding;				
+				}
+				.main-menu {
+					flex-direction: row;
+					border: 0;
+					
+					& > li {
+						border: 0;
+						margin: 0;
+						color: $primary-color;
+						
+						& > a {
+							padding: $grid-padding $grid-padding*2; 
+							border: 0;
+						}
+						& > a:hover, 
+						& > a.focus-visible,
+						&.current-menu-item > a {
+							color: $primary-color;
+							background-color: transparentize($primary-color, .8);
+						}							
+						
+					}
+				}
+			}
+		}
+
+		&.admin-bar {
+			
+			#site_head > .row {
+				top: 46px;
+				
+				@include rwd(782px) {
+					top: 32px;
+				}
+			}
+		}
+	}
+}
+
 
 
 // Sub-Menus behaviors

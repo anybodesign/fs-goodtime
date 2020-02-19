@@ -202,6 +202,11 @@
 	@include rwd(large) {
 		.logo.has-mobile-logo { display: block; }
 		.logo-mobile { display: none; }
+		
+		.sticky-nav & {
+			.logo.has-mobile-logo { display: none; }
+			.logo-mobile { display: block; }
+		}
 	}
 
 }
@@ -219,37 +224,6 @@
 		
 		.header-v3 & {
 			padding-bottom: 0;
-		}
-	}
-}
-
-
-
-// Sticky Nav
-
-.sticky-nav {
-
-	@include rwd(large) {
-		#site_head {
-			position: fixed;
-			width: 100%;
-			top: 0;
-			left: 0;
-			
-			animation: drop-in .8s;
-			z-index: 100;		
-			
-		}
-		
-		&.admin-bar {
-			
-			#site_head {
-				top: 46px;
-				
-				@include rwd(782px) {
-					top: 32px;
-				}
-			}
 		}
 	}
 }
