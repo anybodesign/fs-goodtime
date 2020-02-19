@@ -211,68 +211,12 @@
 			max-width: $max-width;
 		}
 	}
-}
-
-
-// Edito
-
-.acf-block--edito {
 	
-	.edito-content {
-		position: relative;
-		padding: $grid-padding*2;
-		background-color: #fff;
-		z-index: 5;
-		
-		@include rwd(large) {
-			padding: $grid-padding*4;
-			width: 75%;
-			margin: 4.8rem auto 0 auto;
-			
-			.header-v3 & {
-				margin-top: $grid-padding*2;
-			}
-		}
-	}
-	[class*=edito-picture--] {
-		position: absolute;
-		display: none;
-		
-		img {
-			border: $border;
-			box-shadow: $shadow;
-		}
-		
-		@include rwd(large) {
-			display: block;
-		}
-	}
-	@include rwd(large) {
-		.edito-picture--left {
-			top: 6rem;
-			left: 0;
-			width: 30rem;
-			transform: rotate(-5deg);
-			z-index: 1;
-		}
-		.edito-picture--right {
-			top: 8rem;
-			right: 0;
-			width: 15rem;
-			transform: rotate(7deg);
-			z-index: 10;
-		}
-	}
-	@include rwd(wide) {
-		.edito-picture--left {
-			left: -15rem;
-		}
-		.edito-picture--right {
-			right: -5rem;
-			width: 20rem;
-		}
+	&[data-scroll="in"] {
+		animation: slide-up .5s ease-in-out;
 	}
 }
+
 
 // Text 
 

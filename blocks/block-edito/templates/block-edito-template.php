@@ -7,7 +7,7 @@
 
 ?>
 						
-			<section class="acf-block--edito">
+			<section class="acf-block--edito" data-scroll>
 				<div class="acf-block-container">
 
 					<?php if ( $title || $text ) { ?>
