@@ -609,6 +609,30 @@ if( class_exists('acf') ) {
 	  return 'good-time';
 	}
 	add_filter('acf/settings/l10n_textdomain', 'fs_custom_acf_settings_textdomain');
+
+
+	// ACF colors
+	
+	add_action('acf/input/admin_footer', 'fs_acf_color_palette_script');	
+
+	function fs_acf_color_palette_script() {
+
+		if ( get_theme_mod('palette') == 'violet' ) { $colors = '["#412F85", "#FFD910", "rgba(65,47,133,0.10)", "rgba(255,217,16,0.10)"]'; }
+		else if ( get_theme_mod('palette') == 'ocean' ) { $colors = '["#116395", "#88FFE8", "rgba(17,99,149,0.10)", "rgba(136,255,232,0.20)"]'; }
+		else if ( get_theme_mod('palette') == 'meadow' ) { $colors = '["#308619", "#FFD910", "rgba(48,134,25,0.10)", "rgba(255,217,16,0.10)"]'; } 
+		else if ( get_theme_mod('palette') == 'fall' ) { $colors = '["#6F4616", "#FFAA00", "rgba(111,70,22,0.10)", "rgba(255,170,0,0.10)"]'; } 
+		else $colors = '["#412F85", "#FFD910", "rgba(65,47,133,0.10)", "rgba(255,217,16,0.10)"]'; 
+
+	 ?>
+	    <script type="text/javascript">
+	    (function($){
+			acf.add_filter('color_picker_args', function( args, field ){			
+			    args.palettes = <?php echo $colors; ?>
+			    return args;			
+			});	
+	    })(jQuery);
+	    </script>
+	<?php }
 		
 }
 
