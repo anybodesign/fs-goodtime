@@ -104,6 +104,7 @@
 				transform: translateY(30%);
 				background: url(img/ui/logo-shadow.png) bottom center no-repeat;
 				background-size: contain;
+				pointer-events: none;
 				z-index: -1;
 			}
 		}

@@ -113,7 +113,7 @@
 			}
 		}
 		
-		a {
+		& a {
 			text-decoration: none;
 			display: block;
 			padding: $grid-padding/1.5 $grid-padding*3;
@@ -126,9 +126,9 @@
 				transition: border .3s ease-in-out;
 			}
 		}
-		& > a:hover, 
-		& > a.focus-visible,
-		&.current-menu-item > a {
+		& a:hover, 
+		& a.focus-visible,
+		&.current-menu-item a {
 			
 			@include rwd(large) {
 				
@@ -248,11 +248,24 @@
 		}
 		
 		&:hover > .sub-menu {
-			left: auto;
 			opacity: 1;
+
+			.header-v1 & {
+				left: 100%;
+				top: 0;
+			}
+			.header-v2 &,
+			.header-v3 & {
+				left: auto;
+			}
 			
 			& > li {
 				display: block;
+				font-size: 1.8rem;
+				
+				& > a {
+					padding: $grid-padding;
+				}
 			}
 		}
 	}
@@ -261,23 +274,39 @@
 .sub-menu-opened + .sub-menu {
 	transform: scaleY(1);
 	height: auto;
+	padding-bottom: $grid-padding;
 	
 	& > li {
 		display: block;
 	}
 	
 	@include rwd(large) {
-		left: auto;
 		opacity: 1;
+		padding-bottom: 0;
+
+		.header-v1 & {
+			left: 100%;
+			top: 0;
+		}
+		.header-v2 &,
+		.header-v3 & {
+			left: auto;
+		}
 		
 		& > li {
 			display: block;
+			font-size: 1.8rem;
+			
+			& > a {
+				padding: $grid-padding;
+			}
 		}
 	}
 }
 
 .sub-menu {
 	position: relative;
+	background-color: #fff;
 	height: 1px;
 	transform: scaleY(0);
 	transform-origin: center top;
@@ -294,10 +323,19 @@
 		min-width: 100%;
 		z-index: 100;
 		transition: opacity .2s ease-in-out;
+		
+		background-image: linear-gradient(to right, #f0f0f0 0%, #fff 20%);
+
+		.header-v2 &,
+		.header-v3 & {
+			background-image: linear-gradient(to bottom, #f0f0f0 0%, #fff 35%);
+		}
+		
 	}
 
 	& > li {
-		
+		white-space: nowrap;
+
 		@include rwd(wide) {
 			display: none;
 		}
@@ -305,11 +343,13 @@
 		
 		a {
 			display: block;
+			border: 0 !important;
 		}
 		a:hover, 
 		a.focus-visible,
 		&.current-menu-item a {
-			
+			color: $text-color !important;
+			background-color: transparentize($primary-color, .8);
 		}
 	}
 	
@@ -325,7 +365,7 @@
 
 .sub-menu-unfold {
 	position: absolute;
-	top: 0; 
+	top: $grid-padding*1.5; 
 	right: 0;
 	display: block;
 	height: 2.2rem; 
@@ -354,8 +394,13 @@
 		left: 3px;
 		width: 16px; 
 		height: 3px;
-		background-color: $primary-color;
+		background-color: $text-color;
 		transition: transform .2s ease-in-out;
+		
+		.header-v2 &,
+		.header-v3 & {
+			background-color: #fff;
+		}
 	}
 	&::after {
 		transform: rotate(-90deg);
@@ -376,8 +421,15 @@
 		width: 1.6rem;
 		top: 50%; 
 		margin-top: -.8rem;
+		right: $grid-padding;
 		border-radius: .8rem;
-		
+
+		.header-v2 &,
+		.header-v3 & {
+			margin-top: -1rem;
+			right: -1.8rem;
+		}	
+			
 		&::after, 
 		&::before {
 			top: 7px; 
