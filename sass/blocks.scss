@@ -10,12 +10,24 @@
 		
 	&.has-primary-color-background-color {
 		background-color: $primary-color;
+
+		// Color Themes
+		@include custom-primary(background-color);
+		
 	}
 	&.has-secondary-color-background-color {
 		background-color: $secondary-color;
+
+		// Color Themes
+		@include custom-secondary(background-color);
+		
 	}
 	&.has-white-color-background-color {
 		background-color: #fff;
+
+		// Color Themes
+		@include custom-white(background-color);
+		
 	}
 	&.has-black-color-background-color {
 		background-color: $text-color;
@@ -23,12 +35,24 @@
 	
 	&.has-text-color.has-primary-color-color {
 		color: $primary-color;
+
+		// Color Themes
+		@include custom-primary(color);
+		
 	}
 	&.has-text-color.has-secondary-color-color {
 		color: $secondary-color;
+
+		// Color Themes
+		@include custom-secondary(color);
+		
 	}
 	&.has-text-color.has-white-color-color {
 		color: #fff;
+
+		// Color Themes
+		@include custom-white(color);
+		
 	}
 	&.has-text-color.has-black-color-color {
 		color: $text-color;
@@ -139,6 +163,10 @@
 		text-decoration: none;
 		border-bottom: $secondary-color 2px solid;
 		transition: border .2s ease-in-out;
+
+		// Color Themes
+		@include custom-secondary(border-bottom-color);
+		
 		
 		&:hover {
 			border-bottom-width: 4px;
@@ -187,6 +215,10 @@
 	 border: 0;
 	 height: 1px;
 	 background-color: $primary-color;
+
+	// Color Themes
+	@include custom-primary(background-color);
+	 
 	 
 	 .page-content > & {
 		 max-width: $max-width/2.5;
@@ -198,6 +230,10 @@
 	 &.is-style-dots::before {
 		 color: $primary-color;
 		 font-size: 4rem;
+
+		// Color Themes
+		@include custom-primary(color);
+		 
 	 }
  }
 
@@ -275,6 +311,10 @@
 	@include rwd(large) {
 		.acf-block-gallery-caption {
 			background-color: transparentize($primary-color, .3) !important;
+			
+			// Color Themes
+			@include custom-alpha(background-color, .3);
+			
 		}
 		
 		.acf-block-gallery-item {
@@ -342,12 +382,20 @@
 	.testimonial-content {
 		padding-left: $grid-padding*2;
 		border-left: $primary-color 2px solid;
+
+		// Color Themes
+		@include custom-primary(border-left-color);
+		
 	}
 	.testimonal-title {
 		font-family: $font-title;
 		color: $primary-color;
 		font-size: 3.8rem;
 		margin: 0;
+
+		// Color Themes
+		@include custom-primary(color);
+		
 	}
 	blockquote {
 		margin-bottom: $grid-padding;
@@ -381,6 +429,10 @@
 	.list-featured {
 		color: $primary-color;
 		font-family: $font-bold;
+
+		// Color Themes
+		@include custom-primary(color);
+		
 	}
 	.list-legend {
 		padding-top: $grid-padding;

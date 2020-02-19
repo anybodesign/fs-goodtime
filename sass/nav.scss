@@ -15,7 +15,7 @@
 		position: fixed; 
 		top: -65px;
 		padding: $grid-padding;
-		background-color: #000;
+		background-color: $text-color;
 		font-family: $font-bold;
 		color: #fff;
 		text-decoration: none;
@@ -90,6 +90,10 @@
 		display: block;
 		color: $primary-color;
 		border-top: $primary-color 1px dashed;
+
+		// Color Themes
+		@include custom-primary(color);
+		@include custom-primary(border-top-color);
 		
 		@include rwd(large) {
 			font-size: 1.8rem;
@@ -134,13 +138,26 @@
 				
 				.header-v1 & {
 					background-color: transparentize($primary-color, .8);
+
+					// Color Themes
+					@include custom-alpha(background-color, .8);
+					
 				}
 				.header-v2 & {
 					border-bottom-color: #fff;
+
+					// Color Themes
+					@include custom-white(border-bottom-color);
+					
 				}
 				.header-v3 & {
 					color: $secondary-color;
 					border-bottom-color: $secondary-color;
+
+					// Color Themes
+					@include custom-secondary(color);
+					@include custom-secondary(border-bottom-color);
+					
 				}
 			}
 		}
@@ -193,6 +210,9 @@
 						border: 0;
 						margin: 0;
 						color: $primary-color;
+
+						// Color Themes
+						@include custom-primary(color);
 						
 						& > a {
 							padding: $grid-padding $grid-padding*2; 
@@ -203,6 +223,11 @@
 						&.current-menu-item > a {
 							color: $primary-color;
 							background-color: transparentize($primary-color, .8);
+
+							// Color Themes
+							@include custom-primary(color);
+							@include custom-alpha(background-color, .8);
+							
 						}							
 						
 					}
@@ -350,6 +375,10 @@
 		&.current-menu-item a {
 			color: $text-color !important;
 			background-color: transparentize($primary-color, .8);
+
+			// Color Themes
+			@include custom-alpha(background-color, .8);
+			
 		}
 	}
 	
@@ -460,6 +489,10 @@
 	cursor: pointer;
 	z-index: 200;
 
+	// Color Themes
+	@include custom-primary(color);
+	
+
 	span,
 	span::before,
 	span::after {
@@ -469,6 +502,10 @@
 		margin: 0;
 		border-top: $primary-color 2px solid;
 		transition: .3s linear;
+
+		// Color Themes
+		@include custom-primary(border-top-color);
+		
 	}
 	span {
 		width: 2.4rem;
@@ -531,6 +568,9 @@
 		padding: $grid-padding*.5 $grid-padding;
 		font-size: 1.6rem;
 		color: $text-color;
+
+		// Color Themes
+		@include custom-alpha(background-color, .8);
 
 		.inner {
 			padding: $grid-padding 0;				

@@ -27,6 +27,10 @@
 	.post-title {
 		color: $primary-color;
 		margin-bottom: $grid-padding/2;
+
+		// Color Themes
+		@include custom-primary(color);
+		
 		
 		a {
 			text-decoration: none;
@@ -48,6 +52,10 @@
 			text-align: center;
 			font-family: $font-bold;
 			transform: translateY(-120%);
+
+			// Color Themes
+			@include custom-secondary(background-color);
+			
 			
 			@include rwd(medium) {
 				transform: translateX(-120%);
@@ -189,6 +197,10 @@
 	margin-top: $grid-padding*4;
 	padding-top: $grid-padding*4;
 	border-top: $primary-color 1px dashed;
+
+	// Color Themes
+	@include custom-primary(border-top-color);
+	
 }
 
 .comment-list {
@@ -223,6 +235,10 @@
 				font-family: $font-bold;
 				color: $primary-color;
 				font-size: 2.4rem;
+
+				// Color Themes
+				@include custom-primary(color);
+				
 				
 				a {
 					text-decoration: none;
@@ -246,6 +262,10 @@
 				margin: $grid-padding 0;
 				background-color: $secondary-color;
 				padding: $grid-padding/2 $grid-padding;
+
+				// Color Themes
+				@include custom-secondary(background-color);
+				
 			}
 		}
 		
@@ -263,6 +283,10 @@
 			padding-left: $grid-padding*2;
 			border-left: $primary-color 2px solid;
 			list-style: none;
+
+			// Color Themes
+			@include custom-primary(border-left-color);
+			
 		}
 	}
 }
@@ -288,6 +312,10 @@
 		font-family: $font-bold;
 		font-size: 2.4rem;
 		margin-bottom: $grid-padding;
+
+		// Color Themes
+		@include custom-primary(color);
+		
 	}
 	.widget-container {
 		margin-bottom: $grid-padding*4;
@@ -317,11 +345,19 @@
 					&.focus-visible {
 						padding-left: $grid-padding/2;
 						background-color: $secondary-color;
+
+						// Color Themes
+						@include custom-secondary(background-color);
+						
 					}	
 				}
 				&.current-cat a {
 					padding-left: $grid-padding/2;
 					background-color: $secondary-color;
+
+					// Color Themes
+					@include custom-secondary(background-color);
+					
 				}
 			}
 		}

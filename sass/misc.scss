@@ -2,61 +2,6 @@
 /* = Plugins
 /* ------------------------- */
 
-// Slick
-
-.slick-dots {
-	position: absolute;
-	bottom: -50px;
-	left: 0;
-	width: 100%;
-	margin: 0;
-	padding: 1em 0; 
-	list-style: none;
-	text-align: center;
-	
-	li {
-		display: inline-block;
-		padding: .5em !important;
-		margin: 0;
-		
-		&::before {
-			content: none !important;
-		}
-		
-		button {
-			padding: 0;
-			display: block;
-			width: 16px; 
-			height: 16px;
-			margin: 0 8px;
-			border-radius: 16px;
-			border: $primary-color 2px solid;
-			background-color: $secondary-color;
-			//outline: none !important;
-			
-			@include a11y-hide();
-			transition: .2s ease-in-out;
-			
-			&:hover, &.focus-visible {
-				transform: scale(1.4);
-				background-color: $primary-color;
-				//outline: none;
-			}
-		
-		}
-		
-		&.slick-active button {
-			background-color: $primary-color;
-		}
-		&.slick-disabled {
-			visibility: hidden;
-		}
-
-	}
-}
-
-// Fancybox
-
 // Pagenavi
 
 .wp-pagenavi {
@@ -64,6 +9,9 @@
 	border-top: $primary-color 1px dashed;
 	display: flex;
 	font-size: 1.8rem;
+
+	// Color Themes
+	@include custom-primary(border-top-color);	
 	
 	span, a {
 		font-family: $font-bold;
@@ -76,12 +24,20 @@
 		text-decoration: none;
 		background-color: $secondary-color;
 		transition: .2s ease-in-out;
+
+		// Color Themes
+		@include custom-secondary(background-color);
+		
 	}
 	span.current,
 	a:hover,
 	a.focus-visible {
 		background-color: transparent;
 		color: $primary-color;
+
+		// Color Themes
+		@include custom-primary(color);
+		
 	}
 	.nextpostslink,
 	.previouspostslink {
@@ -103,6 +59,8 @@
 #back2top {
 	background-color: $primary-color;
 	
+	// Color Themes
+	@include custom-primary(background-color);
 	
 }
 

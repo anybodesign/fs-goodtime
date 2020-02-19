@@ -79,6 +79,10 @@ h1, h2, h3, h4, h5, h6,
 	font-weight: normal;
 	margin: 0 0 .75em 0;
 	
+	// Color Themes
+	@include custom-primary(color);
+
+	
 	b, strong {
 		font-weight: normal;
 	}
@@ -259,7 +263,6 @@ figure {
 	position: relative;
 	max-width: 100%;
 	margin: 0 0 $grid-padding 0;
-	//overflow: hidden;
 
 	img {
 		display: block;
@@ -292,6 +295,10 @@ figure {
 			border-radius: 80px;
 			background-color: transparentize( $primary-color, .1 );
 			transition: .4s ease-in-out;
+
+			// Color Themes
+			@include custom-alpha();
+			
 		}
 		&::after {
 			width: 0; height: 0;
@@ -307,6 +314,10 @@ figure {
 		&:hover::before {
 			transform: translateX(-50%) translateY(-50%) scale(1.2);
 			background-color: $primary-color;
+
+			// Color Themes
+			@include custom-primary(background-color);
+			
 		}
 		& img {
 			transition: opacity .2s ease-in-out;
@@ -400,6 +411,10 @@ table {
 }
 thead {
 	background-color: $primary-color;
+	
+	// Color Themes
+	@include custom-primary(background-color);
+	
 }
 th {
 	color: #fff;
@@ -411,6 +426,10 @@ td, th {
 	margin-bottom: 0;
 	padding: $grid-padding;
 	border: $primary-color 1px solid;
+
+	// Color Themes
+	@include custom-primary(border-color);
+	
 	
 	thead &, 
 	tbody &, 
@@ -420,6 +439,10 @@ td, th {
 	tbody &:first-child,
 	thead & {
 		border-top: $primary-color 1px solid;
+
+		// Color Themes
+		@include custom-primary(border-top-color);
+		
 	}
 	
 }
@@ -505,10 +528,18 @@ input[type=submit] {
 	cursor: pointer;
 	transition: background .2s linear;
 
+	// Color Themes
+	@include custom-primary(background-color);
+	
+
 	&.focus-visible, 
 	&:hover {
 		background-color: $secondary-color;
 		color: $text-color;
+
+		// Color Themes
+		@include custom-secondary(background-color);
+		
 	}
 	&:focus {
 		outline: none;
@@ -526,9 +557,15 @@ input[type=submit].white-btn {
 	background-color: #fff;
 	color: $text-color;
 
+	// Color Themes
+	@include custom-white(background-color);
+
 	&.focus-visible, 
 	&:hover {
 		background-color: $secondary-color;
-		//color: #fff;
+
+		// Color Themes
+		@include custom-secondary(background-color);
+		
 	}	
 }

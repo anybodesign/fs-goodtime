@@ -10,6 +10,9 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 
+	// Color Themes
+	@include custom-primary(background-color);
+
 	body:not([class*=home]) &::after {
 		content: '';
 		display: block;
@@ -178,6 +181,9 @@
 	font-size: 2.8rem;
 	font-family: $font-bold;
 	color: $primary-color;
+
+	// Color Themes
+	@include custom-primary(color);
 	
 	a,
 	img {

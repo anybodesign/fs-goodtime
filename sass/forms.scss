@@ -41,7 +41,11 @@ select {
 	&.focus-visible {
 		background-color: $primary-color;
 		color: #fff;
-		border-color: #fff;  	
+		border-color: #fff; 
+
+		// Color Themes
+		@include custom-primary(background-color);
+		 	
 	}
 	&:focus {
 		outline: none;
@@ -92,6 +96,10 @@ legend {
 	padding-bottom: $grid-padding;
 	margin-bottom: $grid-padding*2;
 	border-bottom: $primary-color 2px solid;
+
+	// Color Themes
+	@include custom-primary(border-bottom-color);
+	
 }
 
 
@@ -194,6 +202,10 @@ legend {
 	border-radius: 100%;
 	opacity: 0;
 	transition: opacity .2s linear;
+
+	// Color Themes
+	@include custom-primary(background-color);
+	
 }
 .formfield-radio input[type="radio"]:checked + label::after,
 .formfield-radio input[type="radio"]:checked + span::after {
@@ -212,6 +224,11 @@ legend {
 	opacity: 0;
 	transform: rotate(-45deg);
 	transition: opacity .2s linear;
+
+	// Color Themes
+	@include custom-primary(border-left-color);
+	@include custom-primary(border-bottom-color);
+	
 }
 .formfield-checkbox input[type="checkbox"]:checked + label::after,
 .formfield-checkbox input[type="checkbox"]:checked + span::after  {
@@ -230,6 +247,10 @@ span.wpcf7-list-item {
 .formfield-radio input[type="radio"].focus-visible + span,
 .formfield-radio input[type="checkbox"].focus-visible + span {
 	border-bottom: $primary-color 1px dashed;
+
+	// Color Themes
+	@include custom-primary(border-bottom-color);
+	
 }
 
 .formfield-radio input[type="radio"].focus-visible + span::after,
@@ -263,6 +284,10 @@ span.wpcf7-list-item {
 		border-width: 6px;
 		border-style: solid;
 		pointer-events: none;
+
+		// Color Themes
+		@include custom-primary(border-top-color);
+		
 	}
 	
 	& select {

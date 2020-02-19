@@ -7,6 +7,9 @@
 	margin-top: 10rem;
 	padding: $grid-padding*3 0;
 	background-color: $primary-color;
+
+	// Color Themes
+	@include custom-primary(background-color);
 	
 	p, li, label {
 		color: #fff;
