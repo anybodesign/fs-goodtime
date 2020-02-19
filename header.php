@@ -55,7 +55,7 @@
 		</div>
 		
 		<div class="header-banner"<?php if ( is_front_page() ) { fs_bg_img(); } ?>>
-			<?php if ( get_theme_mod('layout_option') == 'version1' ) { ?>
+			<?php if ( get_theme_mod('layout_option') != 'version2' || get_theme_mod('layout_option') != 'version3' ) { ?>
 				<?php get_template_part( 'template-parts/header', 'banner' ); ?>
 			<?php } ?>
 		</div>
