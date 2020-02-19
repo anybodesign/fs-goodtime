@@ -9,20 +9,20 @@ define( 'FS_THEME_URL', get_template_directory_uri() );
 if ( get_theme_mod('palette') == 'ocean' ) { 
 	$primary = '#116395';
 	$secondary = '#88FFE8';
-	$alpha1 = 'rgba(17,99,149,0.10)';
-	$alpha2 = 'rgba(136,255,232,0.20)';
+	$alpha1 = '#E7EFF4';
+	$alpha2 = '#E7FFFA';
 }
 else if ( get_theme_mod('palette') == 'meadow' ) { 
 	$primary = '#308619';
 	$secondary = '#FFD910';
-	$alpha1 = 'rgba(48,134,25,0.10)';
-	$alpha2 = 'rgba(255,217,16,0.10)';
+	$alpha1 = '#EAF2E8';
+	$alpha2 = '#FFFBE7';
 } 
 else if ( get_theme_mod('palette') == 'fall' ) { 
 	$primary = '#6F4616';
 	$secondary = '#FFAA00';
-	$alpha1 = 'rgba(111,70,22,0.10)';
-	$alpha2 = 'rgba(255,170,0,0.10)';
+	$alpha1 = '#F0ECE7';
+	$alpha2 = '#FFF6E5';
 }
 else {
 	
@@ -30,8 +30,8 @@ else {
 	
 	$primary = '#412F85';
 	$secondary = '#FFD910';
-	$alpha1 = 'rgba(65,47,133,0.10)';
-	$alpha2 = 'rgba(255,217,16,0.10)';
+	$alpha1 = '#ECEAF2';
+	$alpha2 = '#FFFBE7';
 }	
 	
 
