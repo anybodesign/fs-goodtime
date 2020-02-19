@@ -32,7 +32,7 @@
 	else if ( get_theme_mod('layout_option') == 'version3' ) { $header = 'header-v3'; } 
 	else { $header = 'header-v1'; }
 ?>
-<body <?php body_class( array($palette, $header) ); ?>>
+<body <?php body_class( array($palette) ); ?>>
 <?php wp_body_open(); ?>
 
 <div id="wrapper">
@@ -44,7 +44,7 @@
 	?>
 	
 	<?php if (!is_page_template( 'pagecustom-maintenance.php' )) { ?>
-	<header id="site_head" role="banner"<?php if ( !is_front_page() ) { fs_bg_img(); } ?>>
+	<header id="site_head" class="<?php echo $header; ?>" role="banner"<?php if ( !is_front_page() ) { fs_bg_img(); } ?>>
 		<div class="row inner">
 			<div class="header-content">
 				<?php 
