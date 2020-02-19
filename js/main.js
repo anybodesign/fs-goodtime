@@ -87,14 +87,24 @@ jQuery(document).ready(function($) {
 		$(this).parent().removeClass('focus');
 	});
 
+	// Scroll-out
 
+	function adddatascroll() {
+
+		$('[class*="acf-block--"]').each(function() {
+			$(this).attr('data-scroll', 'out');
+		});
+	}
+	$(window).on('load',function() {		
+		adddatascroll();
+	});
 				
 
 	// Responsive Video Players (Youtube, Vimeo)
 			
-	function resizevid(){
+	function resizevid() {
 
-		$("iframe").each(function() {
+		$('iframe').each(function() {
 			
 			if($(this).is("[src*=youtube], [src*=vimeo]")) {
 				var yt_width = $(this).width();

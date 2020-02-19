@@ -218,7 +218,7 @@ function fs_scripts_load() {
 					true
 				);
 			}
-			
+						
 			// Other stuff
 			
 			wp_enqueue_script(
@@ -250,6 +250,25 @@ function fs_scripts_load() {
 		    if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 				wp_enqueue_script( 'comment-reply' );
 			}
+
+			// Scroll-Out
+			
+			wp_enqueue_script(
+				'scrollout', 
+				FS_THEME_URL . '/js/scroll-out.min.js', 
+				array(), 
+				'2.2.3', 
+				true
+			);
+		
+			function fs_scrollout_js() {
+				print '
+				<script>
+					ScrollOut();
+				</script>
+				';
+			}
+			add_action('wp_footer', 'fs_scrollout_js', 100);
 			
 		
 		// CSS
