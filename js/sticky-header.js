@@ -13,13 +13,25 @@ var head_height = header.offsetHeight;
 function stickyhead() {
 	
 	if (window.innerWidth > 959) {
-		//if (window.pageYOffset > window.innerHeight/2) {
-		if (window.pageYOffset > head_height) {
-			body.classList.add('sticky-nav');
-			//body.setAttribute('style', 'padding-top:'+head_height+'px;');
+		
+		if (body.classList.contains('home')) {
+
+			if (window.pageYOffset > head_height) {
+				body.classList.add('sticky-nav');
+			} else {
+				body.classList.remove('sticky-nav');
+			}
+
 		} else {
-			body.classList.remove('sticky-nav');
-			//body.removeAttribute('style');
+
+			if (window.pageYOffset > head_height) {
+				body.classList.add('sticky-nav');
+				body.setAttribute('style', 'padding-top:'+head_height+'px;');
+			} else {
+				body.classList.remove('sticky-nav');
+				body.removeAttribute('style');
+			}
+			
 		}
 	}
 	
