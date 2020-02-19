@@ -117,7 +117,7 @@
 			text-decoration: none;
 			display: block;
 			padding: $grid-padding/1.5 $grid-padding*3;
-			transition: .3s ease-in-out;
+			transition: background .3s ease-in-out;
 
 			.header-v2 &,
 			.header-v3 & {
