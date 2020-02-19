@@ -3,6 +3,36 @@
 define( 'FS_THEME_VERSION', '1.0' );
 define( 'FS_THEME_DIR', get_template_directory() );
 define( 'FS_THEME_URL', get_template_directory_uri() );
+
+// Colors 
+
+if ( get_theme_mod('palette') == 'ocean' ) { 
+	$primary = '#116395';
+	$secondary = '#88FFE8';
+	$alpha1 = 'rgba(17,99,149,0.10)';
+	$alpha2 = 'rgba(136,255,232,0.20)';
+}
+else if ( get_theme_mod('palette') == 'meadow' ) { 
+	$primary = '#308619';
+	$secondary = '#FFD910';
+	$alpha1 = 'rgba(48,134,25,0.10)';
+	$alpha2 = 'rgba(255,217,16,0.10)';
+} 
+else if ( get_theme_mod('palette') == 'fall' ) { 
+	$primary = '#6F4616';
+	$secondary = '#FFAA00';
+	$alpha1 = 'rgba(111,70,22,0.10)';
+	$alpha2 = 'rgba(255,170,0,0.10)';
+}
+else {
+	
+	// Default 
+	
+	$primary = '#412F85';
+	$secondary = '#FFD910';
+	$alpha1 = 'rgba(65,47,133,0.10)';
+	$alpha2 = 'rgba(255,217,16,0.10)';
+}	
 	
 
 // ------------------------
@@ -17,6 +47,10 @@ if ( ! function_exists( 'fs_setup' ) ) :
 
 function fs_setup() {
 	
+	global $primary;
+	global $secondary;
+	global $alpha1;
+	global $alpha2;
 	
 	// I18n
 	
@@ -104,18 +138,29 @@ function fs_setup() {
 	        'color' => '#ffffff',
 	    ),
 
-	    // Customizer colors
+	    // Custom colors
 	    
 	    array(
 	        'name' => esc_html__( 'Primary color', 'good-time' ),
 	        'slug' => 'primary-color',
-	        'color' => get_theme_mod('primary_color', '#412F85'),
+	        'color' => $primary,
 	    ),
 	    array(
 	        'name' => esc_html__( 'Secondary color', 'good-time' ),
 	        'slug' => 'secondary-color',
-	        'color' => get_theme_mod('secondary_color', '#606060'),
-	    ),	    
+	        'color' => $secondary,
+	    ),
+	    array(
+	        'name' => esc_html__( 'Alpha color 1', 'good-time' ),
+	        'slug' => 'alpha-color-1',
+	        'color' => $alpha1,
+	    ),
+	    array(
+	        'name' => esc_html__( 'Alpha color 2', 'good-time' ),
+	        'slug' => 'alpha-color-2',
+	        'color' => $alpha2,
+	    ),
+ 	    
 	));	
 	
 	add_theme_support( 'disable-custom-colors' );
@@ -617,17 +662,17 @@ if( class_exists('acf') ) {
 
 	function fs_acf_color_palette_script() {
 
-		if ( get_theme_mod('palette') == 'violet' ) { $colors = '["#412F85", "#FFD910", "rgba(65,47,133,0.10)", "rgba(255,217,16,0.10)"]'; }
-		else if ( get_theme_mod('palette') == 'ocean' ) { $colors = '["#116395", "#88FFE8", "rgba(17,99,149,0.10)", "rgba(136,255,232,0.20)"]'; }
-		else if ( get_theme_mod('palette') == 'meadow' ) { $colors = '["#308619", "#FFD910", "rgba(48,134,25,0.10)", "rgba(255,217,16,0.10)"]'; } 
-		else if ( get_theme_mod('palette') == 'fall' ) { $colors = '["#6F4616", "#FFAA00", "rgba(111,70,22,0.10)", "rgba(255,170,0,0.10)"]'; } 
-		else { $colors = '["#412F85", "#FFD910", "rgba(65,47,133,0.10)", "rgba(255,217,16,0.10)"]'; }
-
+		global $primary;
+		global $secondary;
+		global $alpha1;
+		global $alpha2;
+		
+		$colors = ' "'.$primary.'", "'.$secondary.'", "'.$alpha1.'", "'.$alpha2.'" ';
 	 ?>
 	    <script type="text/javascript">
 	    (function($){
 			acf.add_filter('color_picker_args', function( args, field ){			
-			    args.palettes = <?php echo $colors; ?>
+			    args.palettes = [ <?php echo $colors; ?> ]
 			    return args;			
 			});	
 	    })(jQuery);
