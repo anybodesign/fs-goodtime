@@ -2,6 +2,30 @@
 // = Mixins
 // -------------------------
 
+// Color Themes
+
+@mixin custom-primary($prop: background-color) {
+	.palette-2 & { #{$prop}: $primary-color-2; }
+	.palette-3 & { #{$prop}: $primary-color-3; }
+	.palette-4 & { #{$prop}: $primary-color-4; }
+}
+@mixin custom-secondary($prop: background-color) {
+	.palette-2 & { #{$prop}: $secondary-color-2; }
+	.palette-3 & { #{$prop}: $secondary-color-3; }
+	.palette-4 & { #{$prop}: $secondary-color-4; }
+}
+@mixin custom-alpha($prop: background-color, $op: .1) {
+	.palette-2 & { #{$prop}: transparentize($primary-color-2, $op); }
+	.palette-3 & { #{$prop}: transparentize($primary-color-3, $op); }
+	.palette-4 & { #{$prop}: transparentize($primary-color-4, $op); }
+}
+@mixin custom-white($prop: background-color) {
+	.palette-2 &, 
+	.palette-3 &, 
+	.palette-4 & { 
+		#{$prop}: #fff; 
+	}
+}
 
 // Link Style
 
@@ -12,6 +36,8 @@
 	border-bottom: $primary-color 2px solid;
 	transition: .2s ease-in-out;
 	
+	@include custom-primary(border-bottom-color);
+	
 	&:hover {
 		border-bottom-width: 4px;
 	}
@@ -20,7 +46,6 @@
 		color: #fff;
 	}
 	&:visited {
-		color: $text-color;
 		border-bottom-color: $text-color;
 		border-bottom-width: 1px;
 	}
