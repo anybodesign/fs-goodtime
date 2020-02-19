@@ -21,15 +21,16 @@
 	<?php wp_head(); ?>
 </head>
 <?php 
-	if ( get_theme_mod('palette') == 'violet' ) { $palette = 'palette-2'; }
-	else if ( get_theme_mod('palette') == 'ocean' ) { $palette = 'palette-3'; }
-	else if ( get_theme_mod('palette') == 'meadow' ) { $palette = 'palette-4'; } 
-	else { $palette = null; }
+	if ( get_theme_mod('palette') == 'violet' ) { $palette = 'palette-1'; }
+	else if ( get_theme_mod('palette') == 'ocean' ) { $palette = 'palette-2'; }
+	else if ( get_theme_mod('palette') == 'meadow' ) { $palette = 'palette-3'; } 
+	else if ( get_theme_mod('palette') == 'fall' ) { $palette = 'palette-4'; } 
+	else { $palette = 'palette-1'; }
 	
 	if ( get_theme_mod('layout_option') == 'version1' ) { $header = 'header-v1'; }
 	else if ( get_theme_mod('layout_option') == 'version2' ) { $header = 'header-v2'; }
 	else if ( get_theme_mod('layout_option') == 'version3' ) { $header = 'header-v3'; } 
-	else { $header = null; }
+	else { $header = 'header-v1'; }
 ?>
 <body <?php body_class( array($palette, $header) ); ?>>
 <?php wp_body_open(); ?>
