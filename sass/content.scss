@@ -31,7 +31,7 @@
 		color: #fff;
 	}
 	@include rwd(large) {
-		body.header-v1:not([class*=home]) & {
+		body:not([class*=home]) .header-v1 & {
 			position: absolute;
 			width: 66rem;
 			top: 50%;
