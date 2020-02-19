@@ -425,29 +425,31 @@
 	}
 }
 
-// Widget nav menu
+// Widget nav menu (footer)
 
-.widget_nav_menu {
-	
-	.menu {
-		& > li {
-			
-			& > a {
-				display: block;
-				text-decoration: none;
-				padding: $grid-padding 0;
-				border-bottom: #fff 1px solid;
-				background-color: transparent;
-				transition: .3s ease-in-out;
+.widgets-area {
+	.widget_nav_menu {
+		
+		.menu {
+			& > li {
 				
-				&:hover,
-				&.focus-visible {
-					background-color: rgba(255, 255, 255, 0.1);
-					padding-left: $grid-padding/2;
+				& > a {
+					display: block;
+					text-decoration: none;
+					padding: $grid-padding 0;
+					border-bottom: #fff 1px solid;
+					background-color: transparent;
+					transition: .3s ease-in-out;
+					
+					&:hover,
+					&.focus-visible {
+						background-color: rgba(255, 255, 255, 0.1);
+						padding-left: $grid-padding/2;
+					}
 				}
 			}
 		}
-	}
+	}	
 }
 
 

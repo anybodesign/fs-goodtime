@@ -159,7 +159,6 @@
 
 }
 
-
 // Misc
 
 .sticky {
@@ -319,6 +318,10 @@
 						padding-left: $grid-padding/2;
 						background-color: $secondary-color;
 					}	
+				}
+				&.current-cat a {
+					padding-left: $grid-padding/2;
+					background-color: $secondary-color;
 				}
 			}
 		}
