@@ -42,6 +42,18 @@
 }
 
 #customize-control-palette {
+	display: flex !important;
+	flex-wrap: wrap;
+	
+	.customize-control-title,
+	.customize-control-description,
+	.customize-control-notifications-container {
+		width: 100%;
+	}
+	.customize-inside-control-row {
+		width: 50%;
+	}
+	
 	input[type=radio] {
 		
 		&:hover,
