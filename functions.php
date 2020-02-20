@@ -30,7 +30,7 @@ else if ( get_theme_mod('palette') == 'summer' ) {
 	$alpha1 = '#FAE5E5';
 	$alpha2 = '#FFF6E5';
 }
-else if ( get_theme_mod('palette') == 'winyard' ) { 
+else if ( get_theme_mod('palette') == 'vineyard' ) { 
 	$primary = '#A6113B';
 	$secondary = '#BBEE01';
 	$alpha1 = '#FAE5EB';

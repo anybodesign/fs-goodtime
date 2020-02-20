@@ -114,7 +114,7 @@ function fs_customize_register($fs_customize) {
 					'fall' 			=> __( 'Fall', 'good-time' ),
 					'summer' 		=> __( 'Summer', 'good-time' ),
 					'winter' 		=> __( 'Winter', 'good-time' ),
-					'winyard' 		=> __( 'Winyard', 'good-time' ),
+					'vineyard' 		=> __( 'Vineyard', 'good-time' ),
 					'darkpink' 		=> __( 'Dark Pink', 'good-time' ),
 					'darkyellow' 	=> __( 'Dark Yellow', 'good-time' ),
 				),
@@ -419,7 +419,7 @@ function fs_customizer_sanitize_radio_layout( $input ) {
     return $input;
 }
 function fs_customizer_sanitize_palette( $input ) {
-    if( !in_array( $input, array( 'violet', 'spring', 'summer', 'fall', 'winter', 'winyard', 'darkpink', 'darkyellow'  ) ) ) {
+    if( !in_array( $input, array( 'violet', 'spring', 'summer', 'fall', 'winter', 'vineyard', 'darkpink', 'darkyellow'  ) ) ) {
         $input = 'violet';
     }
     return $input;

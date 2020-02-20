@@ -26,7 +26,7 @@
 	else if ( get_theme_mod('palette') == 'spring' ) { $palette = 'palette-3'; } 
 	else if ( get_theme_mod('palette') == 'fall' ) { $palette = 'palette-4'; } 
 	else if ( get_theme_mod('palette') == 'summer' ) { $palette = 'palette-5'; } 
-	else if ( get_theme_mod('palette') == 'winyard' ) { $palette = 'palette-6'; } 
+	else if ( get_theme_mod('palette') == 'vineyard' ) { $palette = 'palette-6'; } 
 	else if ( get_theme_mod('palette') == 'darkpink' ) { $palette = 'palette-7'; } 
 	else if ( get_theme_mod('palette') == 'darkyellow' ) { $palette = 'palette-8'; } 
 	else { $palette = 'palette-1'; }

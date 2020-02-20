@@ -536,7 +536,7 @@ input[type=submit] {
 		color: #fff;
 
 		// Color Themes
-		@include custom-secondary(background-color);
+		@include custom-primary(background-color);
 		
 	}
 	&:focus {
