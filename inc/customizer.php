@@ -104,15 +104,19 @@ function fs_customize_register($fs_customize) {
 		$fs_customize->add_control(
 			'palette', 
 			array(
-				'type' => 'radio',
-				'label' => __( 'Color Themes', 'good-time' ),
-				'description' => __('Choose a color theme', 'good-time'),
-				'section' => 'colors',
-				'choices' => array(
-					'violet' => __( 'Violet', 'good-time' ),
-					'ocean' => __( 'Ocean', 'good-time' ),
-					'meadow' => __( 'Meadow', 'good-time' ),
-					'fall' => __( 'Fall', 'good-time' ),
+				'type' 			=> 'radio',
+				'label' 		=> __( 'Color Themes', 'good-time' ),
+				'description'	=> __('Choose a color theme', 'good-time'),
+				'section' 		=> 'colors',
+				'choices' 		=> array(
+					'violet' 		=> __( 'Violette', 'good-time' ),
+					'spring' 		=> __( 'Spring', 'good-time' ),
+					'fall' 			=> __( 'Fall', 'good-time' ),
+					'summer' 		=> __( 'Summer', 'good-time' ),
+					'winter' 		=> __( 'Winter', 'good-time' ),
+					'winyard' 		=> __( 'Winyard', 'good-time' ),
+					'darkpink' 		=> __( 'Dark Pink', 'good-time' ),
+					'darkyellow' 	=> __( 'Dark Yellow', 'good-time' ),
 				),
 			)
 		);
@@ -415,7 +419,7 @@ function fs_customizer_sanitize_radio_layout( $input ) {
     return $input;
 }
 function fs_customizer_sanitize_palette( $input ) {
-    if( !in_array( $input, array( 'violet', 'ocean', 'meadow', 'fall' ) ) ) {
+    if( !in_array( $input, array( 'violet', 'spring', 'summer', 'fall', 'winter', 'winyard', 'darkpink', 'darkyellow'  ) ) ) {
         $input = 'violet';
     }
     return $input;

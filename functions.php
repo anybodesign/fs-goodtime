@@ -6,13 +6,13 @@ define( 'FS_THEME_URL', get_template_directory_uri() );
 
 // Colors 
 
-if ( get_theme_mod('palette') == 'ocean' ) { 
+if ( get_theme_mod('palette') == 'winter' ) { 
 	$primary = '#116395';
 	$secondary = '#88FFE8';
 	$alpha1 = '#E7EFF4';
 	$alpha2 = '#E7FFFA';
 }
-else if ( get_theme_mod('palette') == 'meadow' ) { 
+else if ( get_theme_mod('palette') == 'spring' ) { 
 	$primary = '#308619';
 	$secondary = '#FFD910';
 	$alpha1 = '#EAF2E8';
@@ -23,6 +23,30 @@ else if ( get_theme_mod('palette') == 'fall' ) {
 	$secondary = '#FFAA00';
 	$alpha1 = '#F0ECE7';
 	$alpha2 = '#FFF6E5';
+}
+else if ( get_theme_mod('palette') == 'summer' ) { 
+	$primary = '#D50000';
+	$secondary = '#FFAA00';
+	$alpha1 = '#FAE5E5';
+	$alpha2 = '#FFF6E5';
+}
+else if ( get_theme_mod('palette') == 'winyard' ) { 
+	$primary = '#A6113B';
+	$secondary = '#BBEE01';
+	$alpha1 = '#FAE5EB';
+	$alpha2 = '#F8FDE5';
+}
+else if ( get_theme_mod('palette') == 'darkpink' ) { 
+	$primary = '#283046';
+	$secondary = '#FF4D73';
+	$alpha1 = '#E9EAEC';
+	$alpha2 = '#FFEDF1';
+}
+else if ( get_theme_mod('palette') == 'darkyellow' ) { 
+	$primary = '#283046';
+	$secondary = '#FF0';
+	$alpha1 = '#E9EAEC';
+	$alpha2 = '#FFFFE5';
 }
 else {
 	
