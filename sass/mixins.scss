@@ -43,6 +43,13 @@
 	}
 }
 
+// Max width small
+
+@mixin max-width-small() {
+	max-width: $max-width;
+	padding-right: 30rem;
+}
+
 // Link Style
 
 @mixin link-style() {

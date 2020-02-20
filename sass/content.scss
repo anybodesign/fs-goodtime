@@ -49,13 +49,9 @@
 
 .page-wrap {
 	
-	body:not([class*=home]) & {
+	body:not([class*=home]):not([class*=maintenance]) & {
 		margin-top: $grid-padding*4;
 	}
-	
-	.page-template-pagecustom-maintenance & {
-		margin-top: 0;
-	}	
 }
 
 .page-content {
@@ -71,17 +67,16 @@
 	& > p,
 	& > ul,
 	& > ol,
-	& > h1,
+	& > h1:not([class*=page-title]),
 	& > h2,
 	& > h3,
 	& > h4,	
 	& > h5,
 	& > h6,
 	& > form {
-		max-width: $max-width-small;
 		
-		@include rwd($max-width-small) {
-			padding: 0;
+		@include rwd(large) {
+			@include max-width-small();
 		}
 	} 
 			

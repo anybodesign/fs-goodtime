@@ -266,8 +266,9 @@
 .acf-block--text {
 	
 	.acf-block-text--1col {
-		max-width: $max-width-small;;
-		margin: 0 auto;
+		@include rwd(large) {
+			@include max-width-small();
+		}
 	}
 }
 
