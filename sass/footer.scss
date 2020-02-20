@@ -73,10 +73,13 @@
 
 
 .footer-content {
-	display: flex;
-	align-items: baseline;
 	width: 100%;
 	padding: $grid-padding;
+	
+	@include rwd(large) {
+		display: flex;
+		align-items: baseline;
+	}
 }
 
 .footer-copyright {
@@ -85,7 +88,11 @@
 }
 
 .footer-nav {
+	display: block;
 	
+	@include rwd(large) {
+		margin-left: $grid-padding
+	}
 }
 .footer-menu {
 	margin: 0;
