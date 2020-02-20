@@ -425,11 +425,7 @@ td, th {
 	vertical-align: middle;
 	margin-bottom: 0;
 	padding: $grid-padding;
-	border: $primary-color 1px solid;
-
-	// Color Themes
-	@include custom-primary(border-color);
-	
+	border: $text-color 1px solid;
 	
 	thead &, 
 	tbody &, 
@@ -438,11 +434,7 @@ td, th {
 	}
 	tbody &:first-child,
 	thead & {
-		border-top: $primary-color 1px solid;
-
-		// Color Themes
-		@include custom-primary(border-top-color);
-		
+		border-top: $text-color 1px solid;
 	}
 	
 }
