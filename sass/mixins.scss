@@ -49,10 +49,10 @@
 
 	text-decoration: none;
 	color: $text-color;
-	border-bottom: $primary-color 2px solid;
+	border-bottom: $secondary-color 2px solid;
 	transition: .2s ease-in-out;
 	
-	@include custom-primary(border-bottom-color);
+	@include custom-secondary(border-bottom-color);
 	
 	&:hover {
 		border-bottom-width: 4px;

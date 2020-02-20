@@ -144,16 +144,15 @@
 		& a:hover, 
 		& a.focus-visible,
 		&.current-menu-item a {
+			color: $text-color;
+			background-color: $secondary-color;
+
+			// Color Themes
+			@include custom-secondary(background-color);
+			
 			
 			@include rwd(large) {
-				
-				.header-v1 & {
-					background-color: transparentize($primary-color, .8);
 
-					// Color Themes
-					@include custom-alpha(background-color, .8);
-					
-				}
 				.header-v2 & {
 					border-bottom-color: #fff;
 
@@ -413,7 +412,7 @@
 .sub-menu-unfold {
 	position: absolute;
 	top: $grid-padding; 
-	right: 0;
+	right: .5rem;
 	display: block;
 	height: 2.2rem; 
 	width: 2.2rem;
@@ -438,29 +437,39 @@
 		display: block;
 		position: absolute;
 		top: 10px; 
-		left: 3px;
+		left: 0;
 		width: 16px; 
 		height: 3px;
-		background-color: $text-color;
+		background-color: $primary-color;
 		transition: transform .2s ease-in-out;
+		
+		// Color Themes
+		@include custom-primary(background-color);
 		
 		.header-v2 &,
 		.header-v3 & {
 			background-color: #fff;
 		}
 	}
+	&::before {
+		transform: rotate(-45deg);
+		left: 1rem;
+	}
 	&::after {
-		transform: rotate(-90deg);
+		transform: rotate(45deg);
 	}
 	span {
 		@include a11y-hidden();
 	}
 	
-	&.sub-menu-opened::after {
-		transform: rotate(45deg);
-	}
-	&.sub-menu-opened::before {
-		transform: rotate(-45deg);
+	&.sub-menu-opened {
+		&::before {
+			transform: rotate(45deg);
+			left: 1rem;
+		}
+		&::after {
+			transform: rotate(-45deg);
+		}		
 	}
 	
 	@include rwd(large) {
