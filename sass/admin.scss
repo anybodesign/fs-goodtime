@@ -32,7 +32,6 @@
 			content: '';
 			display: block;
 			margin-bottom: 0.5em;
-			border: transparent 2px solid;
 			background-position: 0 0;
 			background-repeat: no-repeat;
 			background-size: contain;
@@ -90,37 +89,51 @@
 	#_customize-input-palette-radio-violet + label::before {background-color: $primary-color;}	
 	#_customize-input-palette-radio-violet + label::after {background-color: $secondary-color;}	
 
-	#_customize-input-palette-radio-ocean + label::before {background-color: $primary-color-2;}	
-	#_customize-input-palette-radio-ocean + label::after {background-color: $secondary-color-2;}	
+	#_customize-input-palette-radio-winter + label::before {background-color: $primary-color-2;}	
+	#_customize-input-palette-radio-winter + label::after {background-color: $secondary-color-2;}	
 
-	#_customize-input-palette-radio-meadow + label::before {background-color: $primary-color-3;}	
-	#_customize-input-palette-radio-meadow + label::after {background-color: $secondary-color-3;}	
+	#_customize-input-palette-radio-spring + label::before {background-color: $primary-color-3;}	
+	#_customize-input-palette-radio-spring + label::after {background-color: $secondary-color-3;}	
 
 	#_customize-input-palette-radio-fall + label::before {background-color: $primary-color-4;}	
 	#_customize-input-palette-radio-fall + label::after {background-color: $secondary-color-4;}	
+
+	#_customize-input-palette-radio-summer + label::before {background-color: $primary-color-5;}	
+	#_customize-input-palette-radio-summer + label::after {background-color: $secondary-color-5;}	
+
+	#_customize-input-palette-radio-vineyard + label::before {background-color: $primary-color-6;}	
+	#_customize-input-palette-radio-vineyard + label::after {background-color: $secondary-color-6;}	
+
+	#_customize-input-palette-radio-darkpink + label::before {background-color: $primary-color-7;}	
+	#_customize-input-palette-radio-darkpink + label::after {background-color: $secondary-color-7;}	
+
+	#_customize-input-palette-radio-darkyellow + label::before {background-color: $primary-color-8;}	
+	#_customize-input-palette-radio-darkyellow + label::after {background-color: $secondary-color-8;}	
 		
 }
 
 #customize-control-layout_option {
-
+	
+	input[type=radio]:checked + label {
+		border-bottom: #777 2px solid;
+	}
 	input[type=radio]:checked + label::before {
-		border-color: #777;
-		opacity: 1;
+		filter: grayscale(0);
 	}
 	
 	label::before {
-		opacity: .5;
+		filter: grayscale(100);
 		width: 256px;
 		height: 144px;
 	}
 	#_customize-input-layout_option-radio-version1 + label::before {
-		background-image: url(../img/admin/version-1.png);
+		background-image: url(../img/admin/version-1.jpg);
 	}
 	#_customize-input-layout_option-radio-version2 + label::before {
-		background-image: url(../img/admin/version-2.png);
+		background-image: url(../img/admin/version-2.jpg);
 	}
 	#_customize-input-layout_option-radio-version3 + label::before {
-		background-image: url(../img/admin/version-3.png);
+		background-image: url(../img/admin/version-3.jpg);
 	}	
 }
 
