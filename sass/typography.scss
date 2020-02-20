@@ -548,7 +548,7 @@ input[type=submit] {
 
 .white-btn,
 button.white-btn,
-input[type="button"].white-btn,
+input[type=button].white-btn,
 input[type=submit].white-btn {
 	@extend .action-btn;
 	background-color: #fff;

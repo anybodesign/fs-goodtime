@@ -189,7 +189,7 @@ function fs_customize_register($fs_customize) {
 		);
 	
 
-	// Site identity
+	// Footer Options
 	// -
 	// + + + + + + + + + + 
 

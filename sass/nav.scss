@@ -150,10 +150,15 @@
 
 			// Color Themes
 			@include custom-secondary(background-color);
-			
+
+			.header-v2 &,
+			.header-v3 & {
+				background-color: transparent;
+				color: #fff;
+			}							
 			
 			@include rwd(large) {
-
+				
 				.header-v2 & {
 					border-bottom-color: #fff;
 
@@ -391,11 +396,16 @@
 		a:hover, 
 		a.focus-visible,
 		&.current-menu-item a {
-			color: $text-color !important;
-			background-color: transparentize($primary-color, .8);
-
-			// Color Themes
-			@include custom-alpha(background-color, .8);
+			
+			.header-v1 &,
+			.header-v2 &,
+			.header-v3 & {
+				color: $text-color !important;
+				background-color: transparentize($primary-color, .8);
+	
+				// Color Themes
+				@include custom-alpha(background-color, .8);
+			}			
 			
 		}
 	}
