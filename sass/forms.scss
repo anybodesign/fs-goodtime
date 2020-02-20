@@ -143,6 +143,14 @@ input[type="submit"] {
 	
 	@include rwd(medium) {
 		display: flex;
+		
+		& > * {
+			width: 50%;
+		}
+		& [class*="formfield-"] {
+			margin-top: 0;
+			margin-bottom: 0;
+		}
 	}
 }
 
@@ -342,72 +350,6 @@ span.wpcf7-list-item {
 
 // -------------------------
 //
-// = Gravity Forms
-//
-// -------------------------
-
-// If you use the Gravity Forms Plugin (CSS disabled)
-
-.gform_fields,
-.gfield_checkbox {
-	padding: 0;
-	list-style: none;
-}
-.gfield {
-	margin-bottom: 1em;
-}
-.gfield_visibility_ {
-	display: none;
-	position: absolute !important;
-	left: -9000px;
-}
-.ginput_container_checkbox {
-	padding: $grid-padding*2 0;
-}
-
-.gform_wrapper {
-	input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]) {
-		padding: $grid-padding !important;
-		margin-bottom: 0 !important;
-	}
-}
-
-// Checkbox, Radio & Select
-
-.gfield_checkbox li {
-	@extend .formfield-checkbox;
-}
-.gfield_radio li {
-	@extend .formfield-radio;
-}
-.ginput_container_select {
-	@extend .formfield-select--container;
-	margin-bottom: 0;
-	
-	select {
-		line-height: normal !important;
-		padding: $grid-padding !important;		
-	}
-}
-
-// Submit
-
-input[type="submit"].gform_button {
-	@extend .action-btn;
-}
-
-// Honeypot
-
-.gform_validation_container, .gform_wrapper .gform_validation_container, body .gform_wrapper .gform_body ul.gform_fields li.gfield.gform_validation_container, body .gform_wrapper li.gform_validation_container, body .gform_wrapper ul.gform_fields li.gfield.gform_validation_container {
-	display: none!important;
-	position: absolute!important;
-	left: -9000px;
-}
-
-
-
-// -------------------------
-//
 // = ContactForm 7
 //
 // -------------------------
@@ -420,10 +362,15 @@ div.wpcf7-response-output {
 	font-family: $font-regular;
 }
 span.wpcf7-not-valid-tip {
-	color: #c00;
-	margin-top: -.5em;
-	padding-top: .25em;
-	border-top: #c00 1px solid;
+	color: #fff;
+	font-family: $font-bold;
+	margin-top: -1em;
+	padding: .25em;
+	background-color: #c00;
+}
+input.wpcf7-not-valid {
+	border-color: #c00;
+	border-width: 2px;
 }
 div.wpcf7-validation-errors {
 	border: 0 !important; 
@@ -433,7 +380,7 @@ div.wpcf7-validation-errors {
 div.wpcf7-mail-sent-ok {
 	border: 0 !important; 
 	background-color: #9c0; 
-	color: #fff !important;
+	color: $text-color !important;
 }
 input[type="submit"].wpcf7-submit {
 	@extend .action-btn;
