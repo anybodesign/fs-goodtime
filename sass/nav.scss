@@ -51,18 +51,26 @@
 	position: absolute;
 	top: 0; 
 	left: 0;
-	width: 50%;
+	width: 100%;
 	padding: $grid-padding;
 	padding-top: 7rem;
 	background-color: #fff;
+	background-image: linear-gradient(to bottom, #ccc 0%, #fff 30%);
 	
-	transform: translateX(-105%);
+	transform: translateY(-100%);
 	transition: transform .4s ease-in-out;
-	z-index: 100;
+	z-index: -1;
 	
 	.menu-opened + & {
-		transform: translateX(0);
+		transform: translateY(0);
 	}
+	
+	.header-v1 & {
+		padding-top: 10rem;
+	}
+	
+	@include rwd(small) { width: 75%; }
+	@include rwd(medium) { width: 50%; }
 	
 	@include rwd(large) {
 		position: relative;
@@ -71,13 +79,16 @@
 		padding: 0;
 		width: auto;
 		background-color: transparent;
+		background-image: none;
 		transform: none;
-
+		z-index: 100;
+		
 		display: flex;
 		flex-wrap: wrap;
 		
 		.header-v1 & {
 			flex-direction: column;
+			padding-top: 0;
 		}
 		.header-v2 & {
 			border-bottom: #fff 1px solid;
@@ -89,11 +100,11 @@
 		position: relative;
 		display: block;
 		color: $primary-color;
-		border-top: $primary-color 1px dashed;
+		border-top: transparentize($primary-color, .6) 1px dashed;
 
 		// Color Themes
 		@include custom-primary(color);
-		@include custom-primary(border-top-color);
+		@include custom-alpha(border-top-color, .6);
 		
 		@include rwd(large) {
 			font-size: 1.8rem;
@@ -349,22 +360,29 @@
 		z-index: 100;
 		transition: opacity .2s ease-in-out;
 		
-		background-image: linear-gradient(to right, #f0f0f0 0%, #fff 20%);
+		background-image: linear-gradient(to right, #ddd 0%, #fff 8%);
 
 		.header-v2 &,
 		.header-v3 & {
-			background-image: linear-gradient(to bottom, #f0f0f0 0%, #fff 35%);
+			background-image: none;
 		}
 		
 	}
 
 	& > li {
 		white-space: nowrap;
+		border-top: transparentize($primary-color, .8) 1px solid;
 
+		// Color Themes
+		@include custom-alpha(border-top-color, .8);
+		
+		&:first-child {
+			border-top: 0;
+		}
+		
 		@include rwd(wide) {
 			display: none;
 		}
-		
 		
 		a {
 			display: block;
@@ -394,7 +412,7 @@
 
 .sub-menu-unfold {
 	position: absolute;
-	top: $grid-padding*1.5; 
+	top: $grid-padding; 
 	right: 0;
 	display: block;
 	height: 2.2rem; 
