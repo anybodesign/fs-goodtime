@@ -22,15 +22,24 @@
 </head>
 <?php 
 	if ( get_theme_mod('palette') == 'violet' ) { $palette = 'palette-1'; }
-	else if ( get_theme_mod('palette') == 'ocean' ) { $palette = 'palette-2'; }
-	else if ( get_theme_mod('palette') == 'meadow' ) { $palette = 'palette-3'; } 
+	else if ( get_theme_mod('palette') == 'winter' ) { $palette = 'palette-2'; }
+	else if ( get_theme_mod('palette') == 'spring' ) { $palette = 'palette-3'; } 
 	else if ( get_theme_mod('palette') == 'fall' ) { $palette = 'palette-4'; } 
+	else if ( get_theme_mod('palette') == 'summer' ) { $palette = 'palette-5'; } 
+	else if ( get_theme_mod('palette') == 'winyard' ) { $palette = 'palette-6'; } 
+	else if ( get_theme_mod('palette') == 'darkpink' ) { $palette = 'palette-7'; } 
+	else if ( get_theme_mod('palette') == 'darkyellow' ) { $palette = 'palette-8'; } 
 	else { $palette = 'palette-1'; }
+
+	$head1 = get_theme_mod('layout_option') == 'version1';
+	$head2 = get_theme_mod('layout_option') == 'version2';
+	$head3 = get_theme_mod('layout_option') == 'version3';
 	
-	if ( get_theme_mod('layout_option') == 'version1' ) { $header = 'header-v1'; }
-	else if ( get_theme_mod('layout_option') == 'version2' ) { $header = 'header-v2'; }
-	else if ( get_theme_mod('layout_option') == 'version3' ) { $header = 'header-v3'; } 
+	if ( $head1 ) { $header = 'header-v1'; }
+	else if ( $head2 ) { $header = 'header-v2'; }
+	else if ( $head3 ) { $header = 'header-v3'; } 
 	else { $header = 'header-v1'; }
+	
 ?>
 <body <?php body_class( array($palette) ); ?>>
 <?php wp_body_open(); ?>
@@ -55,9 +64,13 @@
 		</div>
 		
 		<div class="header-banner"<?php if ( is_front_page() ) { fs_bg_img(); } ?>>
-			<?php if ( get_theme_mod('layout_option') != 'version2' || get_theme_mod('layout_option') != 'version3' ) { ?>
-				<?php get_template_part( 'template-parts/header', 'banner' ); ?>
-			<?php } ?>
+			<?php 
+				if ( $head2 || $head3 ) {
+					// :-)
+				} else {
+					get_template_part( 'template-parts/page', 'title' );
+				} 
+			?>
 		</div>
 		
 	</header>

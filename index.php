@@ -13,14 +13,11 @@ get_header(); ?>
 
 				<div class="page-wrap has-sidebar">
 					
+					<div class="page-content">
 					<?php 
-						get_template_part( 'template-parts/page', 'banner' ); 
+						get_template_part( 'template-parts/page', 'title' ); 
 					?>
 
-					<div class="page-content">
-					
-					<?php // The Loop ?>
-					
 					<?php if ( have_posts() ) : ?>		
 			
 						<?php while ( have_posts() ) : the_post(); ?>
@@ -40,8 +37,7 @@ get_header(); ?>
 						<?php get_template_part( 'template-parts/nothing' ); ?>
 				
 					<?php endif; ?>	
-						
-	
+
 					</div>
 
 
