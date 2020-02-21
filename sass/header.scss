@@ -185,6 +185,16 @@
 	// Color Themes
 	@include custom-primary(color);
 	
+	.header-v3 & {
+		color: #fff;
+		text-align: center;
+		font-size: 3.6rem;
+		
+		@include rwd(large) {
+			font-size: 5.8rem;
+		}
+	}
+	
 	a,
 	img {
 		display: block;
@@ -196,6 +206,13 @@
 		&:hover,
 		&.focus-visible {
 			color: $text-color;
+			
+			.header-v3 & {
+				color: $secondary-color;
+
+				// Color Themes
+				@include custom-secondary(color);
+			}
 			
 			img {
 				opacity: .7;
@@ -223,14 +240,13 @@
 	margin: 0;
 	font-size: 1.8rem;
 	line-height: 1.2;
+
+	.header-v3 & {
+		color: #fff;
+		text-align: center;
+		font-size: 2.2rem;		
+	}	
 }
 .site-brand {
 	padding: $grid-padding;
-	
-	@include rwd(large) {
-		
-		.header-v3 & {
-			padding-bottom: 0;
-		}
-	}
 }

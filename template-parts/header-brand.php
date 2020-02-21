@@ -2,18 +2,18 @@
 
 			<?php // The Logo & Site Titles ?>
 			
-			<div class="site-brand">
+			<div class="site-brand<?php if ( get_theme_mod('site_logo') || get_theme_mod('site_logo_mobile') ) { echo ' has-logo'; } ?>">
 				
 				<?php if ( is_front_page() ) { ?>
 				<h1 class="site-title">
-					<?php get_template_part('template-parts/header', 'brand-logo'); ?>
+					<?php get_template_part( 'template-parts/header', 'brand-logo' ); ?>
 				</h1>
 				
 				<?php } else { ?>
 				
 				<p class="site-title">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php _e('Go to Home Page', 'good-time'); ?>">
-					<?php get_template_part('template-parts/header', 'brand-logo'); ?>
+					<?php get_template_part( 'template-parts/header', 'brand-logo' ); ?>
 					</a>
 				</p>
 				<?php } ?>
@@ -21,7 +21,7 @@
 				<?php 
 					$site_desc = get_bloginfo( 'description', 'display' );
 					if ( $site_desc ) { ?>
-					<p class="site-desc<?php if(get_theme_mod( 'hide_tagline' )) { echo ' screen-reader-text'; }?>"><?php echo $site_desc; ?></p>
+					<p class="site-desc<?php if ( get_theme_mod( 'hide_tagline' ) ) { echo ' screen-reader-text'; }?>"><?php echo $site_desc; ?></p>
 				<?php } ?>
 							
 			</div>
