@@ -241,7 +241,8 @@
 						}
 						& > a:hover, 
 						& > a.focus-visible,
-						&.current-menu-item > a {
+						&.current-menu-item > a,
+						&.current-menu-ancestor > a {
 							color: $primary-color;
 							background-color: transparentize($primary-color, .8);
 
