@@ -29,12 +29,9 @@
 	body:not([class*=home]) .header-v1 &::after {
 		background-image: linear-gradient(to top, #000 0%, rgba(0,0,0,0) 100%);
 	}
-	body:not([class*=home]) .header-v2 &::after {
-		background-image: linear-gradient(to top, #000 50%, rgba(0,0,0,0) 100%);
-		opacity: .6;
-	}
+	body:not([class*=home]) .header-v2 &::after,
 	body:not([class*=home]) .header-v3 &::after {
-		background-image: linear-gradient(to top, #000 0%, rgba(0,0,0,0) 50%);
+		background-image: linear-gradient(to top, #000 0%, rgba(0,0,0,0) 125%);
 		opacity: .6;
 	}		
 	
@@ -102,7 +99,7 @@
 				width: 100%;
 				height: 100%;
 				position: absolute;
-				top: 0;
+				top: -5rem;
 				left: 0;
 				transform: translateY(30%);
 				background: url(img/ui/logo-shadow.png) bottom center no-repeat;
@@ -113,6 +110,10 @@
 		}
 		.home .header-v3 & {
 			min-height: 50vh;
+			
+			&::after {
+				top: -2rem;				
+			}
 		}
 	}
 	
@@ -181,19 +182,24 @@
 	font-size: 2.8rem;
 	font-family: $font-bold;
 	color: $primary-color;
+	text-align: right;
 
 	// Color Themes
 	@include custom-primary(color);
 	
-	.header-v3 & {
-		color: #fff;
-		text-align: center;
-		font-size: 3.6rem;
-		
-		@include rwd(large) {
+	@include rwd(large) {
+		text-align: left;	
+
+		body:not([class*=sticky]) .header-v2 & {
+			color: #fff;
+		}
+		body:not([class*=sticky]) .header-v3 & {
+			color: #fff;
+			text-align: center;
 			font-size: 5.8rem;
 		}
 	}
+	
 	
 	a,
 	img {
@@ -207,6 +213,7 @@
 		&.focus-visible {
 			color: $text-color;
 			
+			.header-v2 &,
 			.header-v3 & {
 				color: $secondary-color;
 
@@ -240,12 +247,22 @@
 	margin: 0;
 	font-size: 1.8rem;
 	line-height: 1.2;
+	text-align: right;
+	
+	@include rwd(large) {
+		text-align: left;
 
-	.header-v3 & {
-		color: #fff;
-		text-align: center;
-		font-size: 2.2rem;		
-	}	
+		body:not([class*=sticky]) .header-v2 & {
+			color: #fff;
+		}	
+		body:not([class*=sticky]) .header-v3 & {
+			font-size: 2.2rem;
+			text-align: center;
+			color: #fff;
+		}	
+
+	}
+	
 }
 .site-brand {
 	padding: $grid-padding;

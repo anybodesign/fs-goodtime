@@ -52,7 +52,7 @@
 	top: 0; 
 	left: 0;
 	width: 100%;
-	padding: $grid-padding;
+	padding: 0;
 	padding-top: 7rem;
 	background-color: #fff;
 	background-image: linear-gradient(to bottom, #ccc 0%, #fff 30%);
@@ -133,12 +133,14 @@
 			display: block;
 			padding: $grid-padding/1.5 $grid-padding*3;
 			transition: background .3s ease-in-out;
-
-			.header-v2 &,
-			.header-v3 & {
-				padding: $grid-padding 0;
-				border-bottom: transparent 4px solid;
-				transition: border .3s ease-in-out;
+			
+			@include rwd(large) {
+				.header-v2 &,
+				.header-v3 & {
+					padding: $grid-padding 0;
+					border-bottom: transparent 4px solid;
+					transition: border .3s ease-in-out;
+				}
 			}
 		}
 		& a:hover, 
@@ -151,14 +153,14 @@
 			// Color Themes
 			@include custom-secondary(background-color);
 
-			.header-v2 &,
-			.header-v3 & {
-				background-color: transparent;
-				color: #fff;
-			}							
-			
 			@include rwd(large) {
-				
+
+				.header-v2 &,
+				.header-v3 & {
+					background-color: transparent;
+					color: #fff;
+				}							
+								
 				.header-v2 & {
 					border-bottom-color: #fff;
 
@@ -215,8 +217,11 @@
 					content: none;
 				}		
 				
-				.site-brand {
+				.site-brand.has-logo {
 					padding: 0 $grid-padding;				
+				}
+				.site-brand {
+					padding: $grid-padding;
 				}
 				.main-menu {
 					flex-direction: row;
@@ -423,7 +428,7 @@
 .sub-menu-unfold {
 	position: absolute;
 	top: $grid-padding; 
-	right: .5rem;
+	right: $grid-padding;
 	display: block;
 	height: 2.2rem; 
 	width: 2.2rem;
@@ -457,9 +462,11 @@
 		// Color Themes
 		@include custom-primary(background-color);
 		
-		.header-v2 &,
-		.header-v3 & {
-			background-color: #fff;
+		@include rwd(large) {
+			.header-v2 &,
+			.header-v3 & {
+				background-color: #fff;
+			}
 		}
 	}
 	&::before {
@@ -639,7 +646,12 @@
 		@include custom-alpha(background-color, .8);
 
 		.inner {
-			padding: $grid-padding 0;				
+			padding: $grid-padding 0;
+			
+			.header-v2 &,
+			.header-v3 & {
+				padding: 0 $grid-padding;
+			}				
 		}
 
 	}
@@ -651,7 +663,7 @@
 		.header-v1 & {
 			
 			.inner {
-				padding: 0 0 0 15rem;				
+				padding: 0 0 0 16rem;				
 			}
 		}
 
