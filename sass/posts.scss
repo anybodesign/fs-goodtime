@@ -42,7 +42,7 @@
 		}	
 	}
 	.post-meta {
-
+		
 		.meta-date {
 			position: absolute;
 			top: $grid-padding; 
@@ -160,6 +160,16 @@
 .post-meta {
 	font-size: 1.6rem;
 	margin-bottom: $grid-padding;
+
+	.single & {
+		margin-top: $grid-padding*3;
+		padding-top: $grid-padding*3;
+		border-top: transparentize($primary-color, .1) 1px solid;
+		
+		// Color Themes
+		@include custom-alpha(border-top-color, .7);
+	}
+
 	
 	a {
 		@include link-style();			
@@ -241,12 +251,14 @@
 
 .comments-area {
 	margin-top: $grid-padding*4;
+}
+.comment-reply-title,
+.comments-title {
 	padding-top: $grid-padding*4;
 	border-top: $primary-color 1px dashed;
 
 	// Color Themes
-	@include custom-primary(border-top-color);
-	
+	@include custom-primary(border-top-color);	
 }
 
 .comment-list {

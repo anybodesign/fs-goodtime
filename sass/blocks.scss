@@ -139,6 +139,12 @@
 			border: 0;
 			box-shadow: none;
 		}
+	}
+	
+	figcaption {
+		padding: $grid-padding;
+		margin-top: $grid-padding;
+		margin-bottom: $grid-padding*2;		
 	}	
 }
 
