@@ -7,7 +7,7 @@
 
 ?>
 						
-			<section class="acf-block--edito" data-scroll>
+			<section class="acf-block--edito alignfull" data-scroll>
 				<div class="acf-block-container">
 
 					<?php if ( $title || $text ) { ?>
