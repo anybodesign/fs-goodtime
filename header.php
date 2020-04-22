@@ -9,8 +9,18 @@
  * @since 1.0
  * @version 1.0
  */
+ 	if ( get_theme_mod('palette') == 'violet' ) { $palette = 'palette-1'; }
+	else if ( get_theme_mod('palette') == 'winter' ) { $palette = 'palette-2'; }
+	else if ( get_theme_mod('palette') == 'spring' ) { $palette = 'palette-3'; } 
+	else if ( get_theme_mod('palette') == 'fall' ) { $palette = 'palette-4'; } 
+	else if ( get_theme_mod('palette') == 'summer' ) { $palette = 'palette-5'; } 
+	else if ( get_theme_mod('palette') == 'vineyard' ) { $palette = 'palette-6'; } 
+	else if ( get_theme_mod('palette') == 'darkpink' ) { $palette = 'palette-7'; } 
+	else if ( get_theme_mod('palette') == 'darkyellow' ) { $palette = 'palette-8'; } 
+	else { $palette = 'palette-1'; }
+	
 ?><!DOCTYPE html>
-<html <?php language_attributes(); ?>>
+<html <?php language_attributes(); ?> class="<?php echo $palette; ?>">
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,16 +31,6 @@
 	<?php wp_head(); ?>
 </head>
 <?php 
-	if ( get_theme_mod('palette') == 'violet' ) { $palette = 'palette-1'; }
-	else if ( get_theme_mod('palette') == 'winter' ) { $palette = 'palette-2'; }
-	else if ( get_theme_mod('palette') == 'spring' ) { $palette = 'palette-3'; } 
-	else if ( get_theme_mod('palette') == 'fall' ) { $palette = 'palette-4'; } 
-	else if ( get_theme_mod('palette') == 'summer' ) { $palette = 'palette-5'; } 
-	else if ( get_theme_mod('palette') == 'vineyard' ) { $palette = 'palette-6'; } 
-	else if ( get_theme_mod('palette') == 'darkpink' ) { $palette = 'palette-7'; } 
-	else if ( get_theme_mod('palette') == 'darkyellow' ) { $palette = 'palette-8'; } 
-	else { $palette = 'palette-1'; }
-
 	$head1 = get_theme_mod('layout_option') == 'version1';
 	$head2 = get_theme_mod('layout_option') == 'version2';
 	$head3 = get_theme_mod('layout_option') == 'version3';
@@ -41,7 +41,7 @@
 	else { $header = 'header-v1'; }
 	
 ?>
-<body <?php body_class( array($palette) ); ?>>
+<body <?php body_class( array() ); ?>>
 <?php wp_body_open(); ?>
 
 <div id="wrapper" class="<?php echo $header; ?>">
