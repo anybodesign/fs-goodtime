@@ -8,7 +8,7 @@ define( 'FS_THEME_URL', get_template_directory_uri() );
 
 if ( get_theme_mod('palette') == 'winter' ) { 
 	$primary = '#116395';
-	$secondary = '#88FFE8';
+	$secondary = '#FFD910';
 	$alpha1 = '#E7EFF4';
 	$alpha2 = '#E7FFFA';
 }
