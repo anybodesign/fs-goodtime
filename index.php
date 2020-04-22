@@ -25,13 +25,21 @@ get_header(); ?>
 							<?php get_template_part( 'template-parts/post', 'block' ); ?>
 			
 						<?php endwhile; ?>
-			
-						<?php if ( function_exists('wp_pagenavi') ) { ?>
-							<div class="post-navigation">
-							<?php wp_pagenavi(); ?>	
-							</div>
-						<?php } ?>
-			
+						
+						<div class="post-navigation">
+						<?php 
+							if ( function_exists('wp_pagenavi') ) {
+								wp_pagenavi();
+							} else {
+								the_posts_pagination(array(
+									'prev_text'          => __( 'Previous page', 'fs-goodtime' ),
+									'next_text'          => __( 'Next page', 'fs-goodtime' ),
+									'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'fs-goodtime' ) . ' </span>',
+								));
+							} 
+						?>
+						</div>
+						
 					<?php else : ?>
 	
 						<?php get_template_part( 'template-parts/nothing' ); ?>

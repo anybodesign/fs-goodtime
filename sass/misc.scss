@@ -2,49 +2,6 @@
 /* = Plugins
 /* ------------------------- */
 
-// Pagenavi
-
-.wp-pagenavi {
-	padding: $grid-padding*2 0;
-	border-top: $primary-color 1px dashed;
-	display: flex;
-	font-size: 1.8rem;
-
-	// Color Themes
-	@include custom-primary(border-top-color);	
-	
-	span, a {
-		font-family: $font-bold;
-		display: block;
-		padding: $grid-padding/2 $grid-padding;
-		margin: 0 $grid-padding 0 0;
-		line-height: 1; 
-	}
-	a {
-		text-decoration: none;
-		background-color: $secondary-color;
-		transition: .2s ease-in-out;
-
-		// Color Themes
-		@include custom-secondary(background-color);
-		
-	}
-	span.current,
-	a:hover,
-	a.focus-visible {
-		background-color: transparent;
-		color: $primary-color;
-
-		// Color Themes
-		@include custom-primary(color);
-		
-	}
-	.nextpostslink,
-	.previouspostslink {
-		@include a11y-hidden();
-	}
-	
-}
 
 
 /* ------------------------- */
