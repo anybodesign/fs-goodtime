@@ -223,6 +223,12 @@
 				.site-brand {
 					padding: $grid-padding;
 				}
+				.site-title {
+					img {
+						max-height: 4.5rem;
+						width: auto;
+					}
+				}
 				.main-menu {
 					flex-direction: row;
 					border: 0;
