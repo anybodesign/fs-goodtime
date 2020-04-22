@@ -485,6 +485,7 @@ add_filter( 'image_size_names_choose', 'fs_custom_sizes' );
 
 function fs_bg_img() {
 	
+	$bg_default = get_theme_mod( 'bg_default' );
 	$bg_blog = get_theme_mod( 'bg_blog' );
 	$bg_404 = get_theme_mod( 'bg_404' );
 	$img_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large-hd' );
@@ -495,6 +496,8 @@ function fs_bg_img() {
 		$bg = ' style="background-image: url('.$bg_404.')"';	
 	} else if ( '' != get_the_post_thumbnail() ) {
 		$bg = ' style="background-image: url('.$img_url[0].')"';
+	} else if ( $bg_default ) {
+		$bg = ' style="background-image: url('.$bg_default.')"';
 	} else {
 		$bg = null;	
 	}

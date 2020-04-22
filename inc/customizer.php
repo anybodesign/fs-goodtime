@@ -352,6 +352,27 @@ function fs_customize_register($fs_customize) {
 	// + + + + + + + + + + 
 
 	
+		// Default Image
+		
+		$fs_customize->add_setting(
+			'bg_default', 
+			array(
+				'sanitize_callback'	=> 'esc_url_raw'
+			)
+		);
+		$fs_customize->add_control( 
+			new WP_Customize_Image_control(
+				$fs_customize, 
+				'bg_default', 
+				array(
+					'label'			=> __('Default banner', 'good-time'),
+					'description'	=> __('Choose a default banner picture. (2048 x 625 pixels max.)', 'good-time'),
+					'section'		=> 'fs_pictures_section',
+					'settings'		=> 'bg_default',
+				)
+			)
+		);
+		
 		// Blog Image
 		
 		$fs_customize->add_setting(
