@@ -5,6 +5,10 @@
 
 // Structure 
 
+#site_main {
+	position: relative;
+	z-index: 2;	
+}
 
 .page-wrap {
 	
@@ -62,6 +66,10 @@
 		width: 100%;
 		padding: 0 $grid-padding;
 		@include center();
+		
+		.home & {
+			background-color: #fff;
+		}
 	}
 	
 	& > p,

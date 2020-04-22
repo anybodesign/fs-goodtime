@@ -140,6 +140,7 @@
 		top: 0;
 		left: 0;		
 		height: 60vh;
+		z-index: 1;
 	}
 	.home &::after {
 		content: '';
@@ -161,7 +162,7 @@
 		padding: 0;
 		
 		.home & {
-			height: 100vh;			
+			height: 98vh;			
 		}	
 		.header-v1 &::after {
 			background-image: linear-gradient(to right, #000 0%, rgba(0,0,0,0) 50%);
