@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Good Time\n"
-"POT-Creation-Date: 2020-02-20 14:58+0100\n"
-"PO-Revision-Date: 2020-02-20 14:58+0100\n"
+"POT-Creation-Date: 2020-04-22 16:04+0200\n"
+"PO-Revision-Date: 2020-04-22 16:04+0200\n"
 "Last-Translator: Thomas Villain <atelier@anybodesign.com>\n"
 "Language-Team: Thomas Villain <atelier@anybodesign.com>\n"
 "Language: fr_FR\n"
@@ -180,60 +180,60 @@ msgstr "Vidéo taille moyenne"
 msgid "Video Full"
 msgstr "Vidéo plein écran"
 
-#: functions.php:509
+#: functions.php:512
 msgid "First Widgets Column"
 msgstr "Première colonne de widgets"
 
-#: functions.php:518
+#: functions.php:521
 msgid "Second Widgets Column"
 msgstr "Deuxième colonne de widgets"
 
-#: functions.php:527
+#: functions.php:530
 msgid "Third Widgets Column"
 msgstr "Troisième colonne de widgets"
 
-#: functions.php:536
+#: functions.php:539
 msgid "Blog Widgets"
 msgstr "Widget du blog"
 
-#: functions.php:552
+#: functions.php:555
 msgid "Search for:"
 msgstr "Rechercher :"
 
-#: functions.php:553
+#: functions.php:556
 msgid "Keywords"
 msgstr "Mots clés"
 
-#: functions.php:554
+#: functions.php:557
 msgid "Search"
 msgstr "Chercher"
 
-#: functions.php:573
+#: functions.php:576
 msgid "Edit"
 msgstr "Modifier"
 
-#: functions.php:587
+#: functions.php:590
 #, php-format
 msgid "%1$s at %2$s"
 msgstr "%1$s à %2$s"
 
-#: functions.php:593
+#: functions.php:596
 msgid "Your comment is awaiting moderation."
 msgstr "Votre commentaire est en attente de modération."
 
-#: functions.php:602
+#: functions.php:605
 msgid "Reply"
 msgstr "Répondre"
 
-#: functions.php:625
+#: functions.php:628
 msgid "Text intro"
 msgstr "Texte d’intro"
 
-#: functions.php:631
+#: functions.php:634
 msgid "Text mentions"
 msgstr "Mentions"
 
-#: functions.php:637
+#: functions.php:640
 msgid "Action button"
 msgstr "Bouton d’action"
 
@@ -389,18 +389,27 @@ msgid "Version 3"
 msgstr "Version 3"
 
 #: inc/customizer.php:368
+msgid "Default banner"
+msgstr "Bannière par défaut"
+
+#: inc/customizer.php:369
+msgid "Choose a default banner picture. (2048 x 625 pixels max.)"
+msgstr ""
+"Choisissez une image par défaut pour la bannière. (2048 x 625 pixels max.)"
+
+#: inc/customizer.php:389
 msgid "Blog"
 msgstr "Blog"
 
-#: inc/customizer.php:369
+#: inc/customizer.php:390
 msgid "Choose a picture for the blog page. (2048 x 625 pixels max.)"
 msgstr "Choisissez une image pour la page actualités. (2048 x 625 pixels max.)"
 
-#: inc/customizer.php:389
+#: inc/customizer.php:410
 msgid "404 error"
 msgstr "Erreur 404"
 
-#: inc/customizer.php:390
+#: inc/customizer.php:411
 msgid "Choose a picture for the 404 error page. (2048 x 625 pixels max.)"
 msgstr ""
 "Choisissez une image pour la page d’erreur 404. (2048 x 625 pixels max.)"
@@ -548,9 +557,8 @@ msgstr "https://anybodesign.com/"
 msgid "Maintenance"
 msgstr "Maintenance"
 
-#. Template Name of the plugin/theme
-msgid "Style Guide"
-msgstr "Style Guide"
+#~ msgid "Style Guide"
+#~ msgstr "Style Guide"
 
 #~ msgid "Ocean"
 #~ msgstr "Océan"
