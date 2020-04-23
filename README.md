@@ -4,6 +4,10 @@ A WordPress Theme for all good times in life :)
 
 ## Changelog
 
+### 1.2.1 - 2020.04.23
+* Bugfix: Customizer options
+* Bugfix: Text domain
+
 ### 1.2 - 2020.04.23
 * Welcome title and text options
 * Bugfix: HTML/CSS
