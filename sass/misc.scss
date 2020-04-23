@@ -15,6 +15,7 @@
 
 #back2top {
 	background-color: $primary-color;
+	z-index: 200;
 	
 	// Color Themes
 	@include custom-primary(background-color);
