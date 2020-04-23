@@ -284,13 +284,13 @@ function fs_customize_register($fs_customize) {
 		// Home title
 		
 		$fs_customize->add_setting('welcome_title', array(
-			'default'			=> __('Aloha :)', 'fs-goodtime'),
+			'default'			=> __('Aloha :)', 'good-time'),
 			'transport'			=> 'postMessage',
 			'sanitize_callback'	=> 'sanitize_text_field',		
 		));
 		$fs_customize->add_control('welcome_title', array(
-			'label'			=> __('Front page welcome title', 'fs-goodtime'),
-			'description'	=> __('Add a custom title instead of “Aloha :)”', 'fs-goodtime'),
+			'label'			=> __('Front page welcome title', 'good-time'),
+			'description'	=> __('Add a custom title instead of “Aloha :)”', 'good-time'),
 			'section'		=> 'fs_front_section',
 			'settings'		=> 'welcome_title',
 		));
@@ -298,14 +298,14 @@ function fs_customize_register($fs_customize) {
 		// Home text
 		
 		$fs_customize->add_setting('welcome_text', array(
-			'default'			=> __('Welcome and have a good time','fs-goodtime'),
+			'default'			=> __('Welcome and have a good time','good-time'),
 			'transport'			=> 'postMessage',
 			'sanitize_callback'	=> 'sanitize_text_field',		
 		));
 		$fs_customize->add_control('welcome_text', array(
 			'type'			=> 'textarea',
-			'label'			=> __('Front page welcome text', 'fs-goodtime'),
-			'description'	=> __('Add a custom text instead of “Welcome and have a good time”', 'fs-goodtime'),
+			'label'			=> __('Front page welcome text', 'good-time'),
+			'description'	=> __('Add a custom text instead of “Welcome and have a good time”', 'good-time'),
 			'section'		=> 'fs_front_section',
 			'settings'		=> 'welcome_text',
 		));
@@ -333,20 +333,19 @@ function fs_customize_register($fs_customize) {
 		// Scroll down
 
 		$fs_customize->add_setting(
-			'scrolldown', 
+			'back2top', 
 			array(
-				'default'			=> true,
-				'transport'			=> 'postMessage',
+				'default'			=> false,
 				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
 			)
 		);
 		$fs_customize->add_control(
-			'scrolldown', 
+			'back2top', 
 			array(
 				'type'			=> 'checkbox',
-				'label'			=> __('Display a Scroll Down button', 'good-time'),
-				'section'		=> 'fs_front_section',
-				'settings'		=> 'scrolldown',
+				'label'			=> __('Display a Back to top button', 'good-time'),
+				'section'		=> 'fs_options_section',
+				'settings'		=> 'back2top',
 			)
 		);
 		

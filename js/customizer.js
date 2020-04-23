@@ -26,10 +26,10 @@
     wp.customize('hide_tagline', function( value ){
         value.bind( function( to ) {
             if( to ){
-                $( '.site-desc' ).hide();
+                $( '.site-desc' ).hide().addClass('screen-reader-text');
             }
             else{
-                $( '.site-desc' ).show();
+                $( '.site-desc' ).show().removeClass('screen-reader-text');
             }
         });
     });
@@ -51,9 +51,11 @@
         value.bind( function( to ) {
             if( to ){
                 $( '.fs-welcome' ).hide();
+                	$( '#wrapper' ).removeClass('has-welcome-title');
             }
             else{
                 $( '.fs-welcome' ).show();
+                	$( '#wrapper' ).addClass('has-welcome-title');
             }
         });
     });
