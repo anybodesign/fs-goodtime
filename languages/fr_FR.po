@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Good Time\n"
-"POT-Creation-Date: 2020-04-22 16:04+0200\n"
-"PO-Revision-Date: 2020-04-22 16:04+0200\n"
+"POT-Creation-Date: 2020-04-23 14:02+0200\n"
+"PO-Revision-Date: 2020-04-23 14:03+0200\n"
 "Last-Translator: Thomas Villain <atelier@anybodesign.com>\n"
 "Language-Team: Thomas Villain <atelier@anybodesign.com>\n"
 "Language: fr_FR\n"
@@ -238,12 +238,12 @@ msgid "Action button"
 msgstr "Bouton d’action"
 
 #: inc/customizer.php:53
-msgid "Footer Options"
-msgstr "Options du pied de page"
-
-#: inc/customizer.php:60
 msgid "Theme Options"
 msgstr "Options du thème"
+
+#: inc/customizer.php:60
+msgid "Front Page Options"
+msgstr "Options de la page d’accueil"
 
 #: inc/customizer.php:67
 msgid "Layout Options"
@@ -256,74 +256,62 @@ msgstr ""
 "principale."
 
 #: inc/customizer.php:75
-msgid "Theme Fonts"
-msgstr "Polices du thème"
+msgid "Footer Options"
+msgstr "Options du pied de page"
 
-#: inc/customizer.php:76
-msgid "Choose a font combination for the site."
-msgstr "Choisissez une combinaison de polices pour le site."
-
-#: inc/customizer.php:83
-msgid "Theme Pictures"
-msgstr "Images du thème"
-
-#: inc/customizer.php:84
-msgid "Select default banner pictures."
-msgstr "Sélection des images par défaut pour la bannière."
-
-#: inc/customizer.php:108
+#: inc/customizer.php:109
 msgid "Color Themes"
 msgstr "Thèmes couleur"
 
-#: inc/customizer.php:109
+#: inc/customizer.php:110
 msgid "Choose a color theme"
 msgstr "Choisissez un thème de couleur"
 
-#: inc/customizer.php:112
+#: inc/customizer.php:113
 msgid "Violette"
 msgstr "Violette"
 
-#: inc/customizer.php:113
+#: inc/customizer.php:114
 msgid "Spring"
 msgstr "Printemps"
 
-#: inc/customizer.php:114
+#: inc/customizer.php:115
 msgid "Fall"
 msgstr "Automne"
 
-#: inc/customizer.php:115
+#: inc/customizer.php:116
 msgid "Summer"
 msgstr "Été"
 
-#: inc/customizer.php:116
+#: inc/customizer.php:117
 msgid "Winter"
 msgstr "Hiver"
 
-#: inc/customizer.php:117
+#: inc/customizer.php:118
 msgid "Vineyard"
 msgstr "Vigne"
 
-#: inc/customizer.php:118
+#: inc/customizer.php:119
 msgid "Dark Pink"
 msgstr "Noir et rose"
 
-#: inc/customizer.php:119
+#: inc/customizer.php:120
 msgid "Dark Yellow"
 msgstr "Noir et jaune"
 
-#: inc/customizer.php:142
+#: inc/customizer.php:143
 msgid "Site Logo"
 msgstr "Logo du site"
 
-#: inc/customizer.php:143
+#: inc/customizer.php:144
 msgid "Your logo, displayed instead of the website title."
 msgstr "Votre logo, affiché à la place du titre du site."
 
-#: inc/customizer.php:162
+#: inc/customizer.php:163
 msgid "Site Logo - Mobile"
 msgstr "Logo du site - mobile"
 
-#: inc/customizer.php:163
+#: inc/customizer.php:164
 msgid ""
 "Specific version of the logo for mobile devices. If none, the default logo "
 "will be used."
@@ -331,85 +319,115 @@ msgstr ""
 "Version spécifique du logo pour appareils mobiles. Si non renseigné, le logo "
 "par défaut sera utilisé."
 
-#: inc/customizer.php:185
+#: inc/customizer.php:186
 msgid "Hide the website tagline"
 msgstr "Masquer le slogan du site"
 
-#: inc/customizer.php:209
+#: inc/customizer.php:210
 msgid "Footer picture"
 msgstr "Image du pied de page"
 
-#: inc/customizer.php:210
+#: inc/customizer.php:211
 msgid "A small picture displayed in the first widgets column"
 msgstr "Une petite image affichée dans la première colonne de widgets"
 
-#: inc/customizer.php:228
+#: inc/customizer.php:229
 msgid "Footer decoration"
 msgstr "Décoration du pied de page"
 
-#: inc/customizer.php:229
+#: inc/customizer.php:230
 msgid "An optional decoration at the bottom of the first widgets column"
 msgstr "Une décoration optionnelle au bas de la première colonne de widgets"
 
-#: inc/customizer.php:249
+#: inc/customizer.php:250
 msgid "Custom footer text"
 msgstr "Texte de pied de page personnalisé"
 
-#: inc/customizer.php:250
+#: inc/customizer.php:251
 msgid "Add a custom text instead of the year and blog name"
 msgstr ""
 "Ajouter un texte personnalisé au lieu de l’année en cours et du nom de blog"
 
-#: inc/customizer.php:271
+#: inc/customizer.php:272
 msgid "Display WordPress Link"
 msgstr "Afficher le lien WordPress"
 
-#: inc/customizer.php:295
-msgid "Display a Back to top button"
-msgstr "Afficher un bouton Haut de page"
+#: inc/customizer.php:287 template-parts/header-welcome.php:3
+msgid "Aloha :)"
+msgstr "Aloha :)"
 
-#: inc/customizer.php:314
+#: inc/customizer.php:292
+msgid "Front page welcome title"
+msgstr "Titre de bienvenue de la page d'accueil"
+
+#: inc/customizer.php:293
+msgid "Add a custom title instead of “Aloha :)”"
+msgstr "Ajouter un titre personnalisé au lieu de \"Aloha :)\""
+
+#: inc/customizer.php:301 template-parts/header-welcome.php:4
+msgid "Welcome and have a good time"
+msgstr "Bienvenue et passez un bon moment"
+
+#: inc/customizer.php:307
+msgid "Front page welcome text"
+msgstr "Texte de bienvenue de la page d'accueil"
+
+#: inc/customizer.php:308
+msgid "Add a custom text instead of “Welcome and have a good time”"
+msgstr ""
+"Ajouter un texte personnalisé au lieu de \"Bienvenue et passez un bon moment"
+"\""
+
+#: inc/customizer.php:327 inc/customizer.php:347
+msgid "Display a Scroll Down button"
+msgstr "Afficher un bouton pour défiler vers le bas"
+
+#: inc/customizer.php:367
+msgid "Hide welcome text & title"
+msgstr "Masquer le titre et le texte de bienvenue"
+
+#: inc/customizer.php:386
 msgid "Make the header sticky"
 msgstr "Rendre l'en-tête collant"
 
-#: inc/customizer.php:339
+#: inc/customizer.php:411
 msgid "Layout version"
 msgstr "Version de mise en page"
 
-#: inc/customizer.php:342
+#: inc/customizer.php:414
 msgid "Version 1"
 msgstr "Version 1"
 
-#: inc/customizer.php:343
+#: inc/customizer.php:415
 msgid "Version 2"
 msgstr "Version 2"
 
-#: inc/customizer.php:344
+#: inc/customizer.php:416
 msgid "Version 3"
 msgstr "Version 3"
 
-#: inc/customizer.php:368
+#: inc/customizer.php:440
 msgid "Default banner"
 msgstr "Bannière par défaut"
 
-#: inc/customizer.php:369
+#: inc/customizer.php:441
 msgid "Choose a default banner picture. (2048 x 625 pixels max.)"
 msgstr ""
 "Choisissez une image par défaut pour la bannière. (2048 x 625 pixels max.)"
 
-#: inc/customizer.php:389
+#: inc/customizer.php:461
 msgid "Blog"
 msgstr "Blog"
 
-#: inc/customizer.php:390
+#: inc/customizer.php:462
 msgid "Choose a picture for the blog page. (2048 x 625 pixels max.)"
 msgstr "Choisissez une image pour la page actualités. (2048 x 625 pixels max.)"
 
-#: inc/customizer.php:410
+#: inc/customizer.php:482
 msgid "404 error"
 msgstr "Erreur 404"
 
-#: inc/customizer.php:411
+#: inc/customizer.php:483
 msgid "Choose a picture for the 404 error page. (2048 x 625 pixels max.)"
 msgstr ""
 "Choisissez une image pour la page d’erreur 404. (2048 x 625 pixels max.)"
@@ -458,6 +476,18 @@ msgstr "Il n’y a aucun historique des mises à jour disponible."
 msgid "Unfold Sub-Menu"
 msgstr "Déplier le sous-menu"
 
+#: index.php:35
+msgid "Previous page"
+msgstr "Page précédente"
+
+#: index.php:36
+msgid "Next page"
+msgstr "Page suivante"
+
+#: index.php:37
+msgid "Page"
+msgstr "Page"
+
 #: template-parts/header-brand.php:15
 msgid "Go to Home Page"
 msgstr "Aller à la page d'accueil"
@@ -473,6 +503,10 @@ msgstr "Aller au contenu principal"
 #: template-parts/header-skiplinks.php:8
 msgid "Go to main menu"
 msgstr "Aller au menu principal"
+
+#: template-parts/header-welcome.php:22
+msgid "Scroll Down"
+msgstr "Défiler vers le bas"
 
 #: template-parts/nothing.php:14
 msgid "Nothing Found"
@@ -557,6 +591,18 @@ msgstr "https://anybodesign.com/"
 msgid "Maintenance"
 msgstr "Maintenance"
 
+#~ msgid "Theme Fonts"
+#~ msgstr "Polices du thème"
+
+#~ msgid "Choose a font combination for the site."
+#~ msgstr "Choisissez une combinaison de polices pour le site."
+
+#~ msgid "Theme Pictures"
+#~ msgstr "Images du thème"
+
+#~ msgid "Select default banner pictures."
+#~ msgstr "Sélection des images par défaut pour la bannière."
+
 #~ msgid "Style Guide"
 #~ msgstr "Style Guide"
 
@@ -583,15 +629,6 @@ msgstr "Maintenance"
 
 #~ msgid "Dark + White"
 #~ msgstr "Sombre et blanc"
-
-#~ msgid "Previous page"
-#~ msgstr "Page précédente"
-
-#~ msgid "Next page"
-#~ msgstr "Page suivante"
-
-#~ msgid "Page"
-#~ msgstr "Page"
 
 #~ msgid "by&nbsp;"
 #~ msgstr "par&nbsp;"
