@@ -33,9 +33,9 @@ get_header(); ?>
 								wp_pagenavi();
 							} else {
 								the_posts_pagination(array(
-									'prev_text'          => __( 'Previous page', 'fs-goodtime' ),
-									'next_text'          => __( 'Next page', 'fs-goodtime' ),
-									'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'fs-goodtime' ) . ' </span>',
+									'prev_text'          => __( 'Previous page', 'good-time' ),
+									'next_text'          => __( 'Next page', 'good-time' ),
+									'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'good-time' ) . ' </span>',
 								));
 							} 
 						?>
