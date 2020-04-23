@@ -263,6 +263,10 @@
 			.logo.has-mobile-logo { display: none; }
 			.logo-mobile { display: block; }
 		}
+		
+		.header-v1 & .logo {
+			padding: 0 $grid-padding*2;
+		}
 	}
 
 }
