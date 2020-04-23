@@ -99,9 +99,15 @@
 		@include img-opacity(.7);		
 				
 		img {
+			width: 100%;
 			border: $border;
 			box-shadow: $shadow;
-			border-radius: 50%;			
+			border-radius: 50%;
+			max-width: 28rem;
+			
+			@include rwd(large) {
+				max-width: none;
+			}			
 		}
 	}
 	

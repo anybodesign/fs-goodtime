@@ -216,32 +216,39 @@
 
 // Separators
 
- .wp-block-separator {
-	 margin: $grid-padding*4 auto;
-	 border: 0;
-	 height: 1px;
-	 background-color: $primary-color;
-
+hr,
+.wp-block-separator {
+	margin: $grid-padding*4 auto;
+	border: 0;
+	height: 1px;
+	background-color: $primary-color;
+	
 	// Color Themes
 	@include custom-primary(background-color);
-	 
-	 
-	 .page-content > & {
-		 max-width: $max-width/2.5;
-	 }
-	 .page-content > &.is-style-wide {
-		 max-width: $max-width;
-	 }
-	 
-	 &.is-style-dots::before {
-		 color: $primary-color;
-		 font-size: 4rem;
-
+	
+	&, 
+	.page-content > & {
+		max-width: 20rem;
+		
+		@include rwd(large) {
+			max-width: 40rem;
+		}
+	}
+	.page-content > &.is-style-wide {
+		
+		@include rwd(large) {
+			max-width: $max-width;
+		}
+	}
+	
+	&.is-style-dots::before {
+		color: $primary-color;
+		font-size: 4rem;
+		
 		// Color Themes
 		@include custom-primary(color);
-		 
-	 }
- }
+	}
+}
 
 
 // ACF Blocks Stuff
