@@ -1,7 +1,7 @@
 <?php if ( !defined('ABSPATH') ) die(); 
 
-	$h_title = get_theme_mod('welcome_title', __('Aloha :)', 'fs-goodtime') );
-	$h_text = get_theme_mod('welcome_text', __('Welcome and have a good time', 'fs-goodtime') );	
+	$h_title = get_theme_mod('welcome_title', __('Aloha :)', 'good-time') );
+	$h_text = get_theme_mod('welcome_text', __('Welcome and have a good time', 'good-time') );	
 	$scroll = get_theme_mod('scrolldown');
 ?>
 

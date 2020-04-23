@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Good Time\n"
-"POT-Creation-Date: 2020-04-23 14:02+0200\n"
-"PO-Revision-Date: 2020-04-23 14:03+0200\n"
+"POT-Creation-Date: 2020-04-23 14:48+0200\n"
+"PO-Revision-Date: 2020-04-23 14:49+0200\n"
 "Last-Translator: Thomas Villain <atelier@anybodesign.com>\n"
 "Language-Team: Thomas Villain <atelier@anybodesign.com>\n"
 "Language: fr_FR\n"
@@ -378,56 +378,60 @@ msgstr ""
 "Ajouter un texte personnalisé au lieu de \"Bienvenue et passez un bon moment"
 "\""
 
-#: inc/customizer.php:327 inc/customizer.php:347
+#: inc/customizer.php:327
 msgid "Display a Scroll Down button"
 msgstr "Afficher un bouton pour défiler vers le bas"
 
-#: inc/customizer.php:367
+#: inc/customizer.php:346
+msgid "Display a Back to top button"
+msgstr "Afficher un bouton retour haut de page"
+
+#: inc/customizer.php:366
 msgid "Hide welcome text & title"
 msgstr "Masquer le titre et le texte de bienvenue"
 
-#: inc/customizer.php:386
+#: inc/customizer.php:385
 msgid "Make the header sticky"
 msgstr "Rendre l'en-tête collant"
 
-#: inc/customizer.php:411
+#: inc/customizer.php:410
 msgid "Layout version"
 msgstr "Version de mise en page"
 
-#: inc/customizer.php:414
+#: inc/customizer.php:413
 msgid "Version 1"
 msgstr "Version 1"
 
-#: inc/customizer.php:415
+#: inc/customizer.php:414
 msgid "Version 2"
 msgstr "Version 2"
 
-#: inc/customizer.php:416
+#: inc/customizer.php:415
 msgid "Version 3"
 msgstr "Version 3"
 
-#: inc/customizer.php:440
+#: inc/customizer.php:439
 msgid "Default banner"
 msgstr "Bannière par défaut"
 
-#: inc/customizer.php:441
+#: inc/customizer.php:440
 msgid "Choose a default banner picture. (2048 x 625 pixels max.)"
 msgstr ""
 "Choisissez une image par défaut pour la bannière. (2048 x 625 pixels max.)"
 
-#: inc/customizer.php:461
+#: inc/customizer.php:460
 msgid "Blog"
 msgstr "Blog"
 
-#: inc/customizer.php:462
+#: inc/customizer.php:461
 msgid "Choose a picture for the blog page. (2048 x 625 pixels max.)"
 msgstr "Choisissez une image pour la page actualités. (2048 x 625 pixels max.)"
 
-#: inc/customizer.php:482
+#: inc/customizer.php:481
 msgid "404 error"
 msgstr "Erreur 404"
 
-#: inc/customizer.php:483
+#: inc/customizer.php:482
 msgid "Choose a picture for the 404 error page. (2048 x 625 pixels max.)"
 msgstr ""
 "Choisissez une image pour la page d’erreur 404. (2048 x 625 pixels max.)"
@@ -476,15 +480,15 @@ msgstr "Il n’y a aucun historique des mises à jour disponible."
 msgid "Unfold Sub-Menu"
 msgstr "Déplier le sous-menu"
 
-#: index.php:35
+#: index.php:36
 msgid "Previous page"
 msgstr "Page précédente"
 
-#: index.php:36
+#: index.php:37
 msgid "Next page"
 msgstr "Page suivante"
 
-#: index.php:37
+#: index.php:38
 msgid "Page"
 msgstr "Page"
 
