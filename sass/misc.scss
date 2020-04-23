@@ -2,13 +2,45 @@
 /* = Plugins
 /* ------------------------- */
 
+// Fancybox
 
+.fancybox-toolbar {
+	
+	.admin-bar & {
+		top: 46px;
+		
+		@include rwd($admin-bar) {
+			top: 32px;
+		}
+	}	
+}
 
-/* ------------------------- */
-/* = Misc
-/* ------------------------- */
+.fancybox-button {
+	background-color: $primary-color;
 
-.error-404 {}
+	// Color Themes
+	@include custom-primary(background-color);
+	
+	&[disabled],
+	&[disabled]:hover {
+		opacity: 0 !important;	
+	}
+	
+	.fancybox-navigation & {
+		height: 4.4rem;
+		width: 4.4rem;
+		padding: 0;
+	}
+	
+	svg path { fill: #fff; }
+
+	&:hover,
+	&.focus-visible {
+		background-color: #fff !important;
+		
+		svg path { fill: $text-color; }
+	}
+}
 
 
 // Back to top
