@@ -40,11 +40,12 @@
 	else if ( $head3 ) { $header = 'header-v3'; } 
 	else { $header = 'header-v1'; }
 	
+	$welcome = get_theme_mod('hide_welcome');
 ?>
 <body <?php body_class( array() ); ?>>
 <?php wp_body_open(); ?>
 
-<div id="wrapper" class="<?php echo $header; ?>">
+<div id="wrapper" class="<?php echo $header; if ($welcome != true) { echo ' has-welcome-title'; } ?>">
 
 	<?php
 		if ( ! is_page_template( 'pagecustom-maintenance.php' ) ) {
@@ -69,7 +70,11 @@
 					// :-)
 				} else {
 					get_template_part( 'template-parts/page', 'title' );
-				} 
+				}
+				
+				if ( $welcome != true && is_front_page() ) {
+					get_template_part( 'template-parts/header', 'welcome' );
+				}
 			?>
 		</div>
 		

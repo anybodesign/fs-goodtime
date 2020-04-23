@@ -34,18 +34,10 @@
 		background-image: linear-gradient(to top, #000 0%, rgba(0,0,0,0) 125%);
 		opacity: .6;
 	}		
-	
 			
 	& > .row {
 		position: relative;
 		z-index: 100;
-	}	
-
-	.home & {
-		min-height: 50vh;
-	}
-	.page-template-pagecustom-maintenance & {
-		height: 100vh;
 	}	
 }
 .header-content {
@@ -68,7 +60,6 @@
 		background: url(img/ui/nav-bg.png) center top no-repeat;
 		background-size: 100% 100%;
 	}
-	
 	
 	@include rwd(large) {
 		
@@ -119,8 +110,6 @@
 	
 }
 
-
-
 .header-banner {
 	width: 100%;
 	padding: $grid-padding*4 $grid-padding;
@@ -139,7 +128,6 @@
 		position: absolute;
 		top: 0;
 		left: 0;		
-		height: 60vh;
 		z-index: 1;
 	}
 	.home &::after {
@@ -154,6 +142,9 @@
 		opacity: .5;
 		z-index: 1;
 	}
+	.home .has-welcome-title &::after {
+		background-image: linear-gradient(to bottom, #000 35%, rgba(0,0,0,0) 100%);
+	}
 	.home .header-v2 &::after {
 		opacity: .7;
 	}
@@ -161,20 +152,53 @@
 	@include rwd(large) {
 		padding: 0;
 		
-		.home & {
-			height: 98vh;			
-		}	
 		.header-v1 &::after {
 			background-image: linear-gradient(to right, #000 0%, rgba(0,0,0,0) 50%);
+		}
+		.header-v1.has-welcome-title &::after {
+			background-image: linear-gradient(to bottom, #000 35%, rgba(0,0,0,0) 100%);
 		}
 		.header-v2 &::after {
 			background-image: linear-gradient(to bottom, #000 20%, rgba(0,0,0,0) 50%);
 		}
 		.header-v3 &::after {
 			background-image: linear-gradient(to top, #000 20%, rgba(0,0,0,0) 70%);
-		}		
+		}
+		.header-v3.has-welcome-title &::after {
+			background-image: linear-gradient(to top, #000 35%, rgba(0,0,0,0) 100%);
+		}
+				
 	}
 }
+
+// Banner height
+
+#site_head {
+	
+	.home & {
+		min-height: 50vh;
+	}
+	.home .has-welcome-title &,
+	.page-template-pagecustom-maintenance & {
+		height: 100vh;
+	}	
+}
+.header-banner {
+	
+	.home & {
+		height: 60vh;
+		
+		@include rwd(large) {
+			height: 100vh;			
+		}
+	}
+	.home .has-welcome-title & {
+		height: 100vh;
+	}
+}
+
+
+// Titles
 
 .site-title {
 	display: block;
@@ -267,4 +291,100 @@
 }
 .site-brand {
 	padding: $grid-padding;
+}
+
+// Welcome message
+
+.has-welcome-title {
+	
+	.header-banner {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	
+	&.header-v2 .header-banner,
+	&.header-v3 .header-banner {
+		justify-content: center;
+	}
+
+	&.header-v3 .header-banner {
+		
+		@include rwd(large) {
+			justify-content: flex-end;
+		}
+	}
+	
+}
+
+.fs-welcome {
+	padding: $grid-padding*2;
+	
+	.header-v1 & {
+		@include rwd(large) {
+			width: $max-width;
+			padding-left: 28rem;
+		}
+	}
+	.header-v3 & {
+		@include rwd(large) {
+			height: 50vh;
+			padding: $grid-padding*4 $grid-padding*2;
+		}
+	}
+	
+	.fs-welcome-title,
+	.fs-welcome-text {
+		color: #fff;
+
+		.header-v1 & {
+
+			@include rwd(large) {
+			}
+		}
+		
+		.header-v2 &,
+		.header-v3 & {
+			text-align: center;
+
+			@include rwd(large) {
+				text-align: center;
+			}
+		}
+	}
+	
+	.fs-welcome-title {
+		margin-bottom: 0;
+	}
+	.fs-welcome-text {
+		
+	}
+
+
+	.scroll-down {
+		display: block;
+		padding: 0;
+		background-color: transparent;
+		transition: transform .3s ease-in-out;
+		
+		img {
+			width: 4.4rem;
+			height: 4.4rem;
+			transform: rotate(180deg);
+		}
+		
+		&:hover,
+		&.focus-visible {
+			background-color: transparent;
+			transform: scale(1.2);
+		}
+		
+		.header-v2 &,
+		.header-v3 & {
+			margin: 0 auto;
+		}
+	}
+	
+	
 }

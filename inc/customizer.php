@@ -48,17 +48,17 @@ function fs_customize_register($fs_customize) {
 	// + + + + + + + + + + + + + +  
 	
 	$fs_customize->add_section(
-		'fs_footer_section',
-		array(
-			'title'			=> __('Footer Options', 'good-time'),
-			'priority'		=> 50,
-		)
-	);
-	$fs_customize->add_section(
 		'fs_options_section',
 		array(
 			'title'			=> __('Theme Options', 'good-time'),
-			'priority'		=> 50,
+			'priority'		=> 20,
+		)
+	);
+	$fs_customize->add_section(
+		'fs_front_section', 
+		array(
+			'title' 		=> __('Front Page Options', 'good-time'),
+			'priority'		=> 30,
 		)
 	);
 	$fs_customize->add_section(
@@ -66,9 +66,17 @@ function fs_customize_register($fs_customize) {
 		array(
 			'title' 		=> __('Layout Options', 'good-time'),
 			'description' 	=> __('Choose the layout of the site header and main navigation.', 'good-time'),
+			'priority'		=> 40,
+		)
+	);
+	$fs_customize->add_section(
+		'fs_footer_section',
+		array(
+			'title'			=> __('Footer Options', 'good-time'),
 			'priority'		=> 50,
 		)
 	);
+/*
 	$fs_customize->add_section(
 		'fs_fonts_section', 
 		array(
@@ -77,14 +85,7 @@ function fs_customize_register($fs_customize) {
 			'priority'		=> 50,
 		)
 	);
-	$fs_customize->add_section(
-		'fs_pictures_section', 
-		array(
-			'title' 		=> __('Theme Pictures', 'good-time'),
-			'description' 	=> __('Select default banner pictures.', 'good-time'),
-			'priority'		=> 50,
-		)
-	);
+*/
 
 
 	// Colors
@@ -278,23 +279,94 @@ function fs_customize_register($fs_customize) {
 	// Theme Options
 	// -
 	// + + + + + + + + + + 
+
+
+		// Home title
 		
-		// Back to top
-	
+		$fs_customize->add_setting('welcome_title', array(
+			'default'			=> __('Aloha :)', 'fs-goodtime'),
+			'transport'			=> 'postMessage',
+			'sanitize_callback'	=> 'sanitize_text_field',		
+		));
+		$fs_customize->add_control('welcome_title', array(
+			'label'			=> __('Front page welcome title', 'fs-goodtime'),
+			'description'	=> __('Add a custom title instead of “Aloha :)”', 'fs-goodtime'),
+			'section'		=> 'fs_front_section',
+			'settings'		=> 'welcome_title',
+		));
+		
+		// Home text
+		
+		$fs_customize->add_setting('welcome_text', array(
+			'default'			=> __('Welcome and have a good time','fs-goodtime'),
+			'transport'			=> 'postMessage',
+			'sanitize_callback'	=> 'sanitize_text_field',		
+		));
+		$fs_customize->add_control('welcome_text', array(
+			'type'			=> 'textarea',
+			'label'			=> __('Front page welcome text', 'fs-goodtime'),
+			'description'	=> __('Add a custom text instead of “Welcome and have a good time”', 'fs-goodtime'),
+			'section'		=> 'fs_front_section',
+			'settings'		=> 'welcome_text',
+		));
+		
+		// Scroll down
+
 		$fs_customize->add_setting(
-			'back2top', 
+			'scrolldown', 
 			array(
-				'default'			=> false,
+				'default'			=> true,
+				'transport'			=> 'postMessage',
 				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
 			)
 		);
 		$fs_customize->add_control(
-			'back2top', 
+			'scrolldown', 
 			array(
 				'type'			=> 'checkbox',
-				'label'			=> __('Display a Back to top button', 'good-time'),
-				'section'		=> 'fs_options_section',
-				'settings'		=> 'back2top',
+				'label'			=> __('Display a Scroll Down button', 'good-time'),
+				'section'		=> 'fs_front_section',
+				'settings'		=> 'scrolldown',
+			)
+		);
+		
+		// Scroll down
+
+		$fs_customize->add_setting(
+			'scrolldown', 
+			array(
+				'default'			=> true,
+				'transport'			=> 'postMessage',
+				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+			)
+		);
+		$fs_customize->add_control(
+			'scrolldown', 
+			array(
+				'type'			=> 'checkbox',
+				'label'			=> __('Display a Scroll Down button', 'good-time'),
+				'section'		=> 'fs_front_section',
+				'settings'		=> 'scrolldown',
+			)
+		);
+		
+		// Hide Welcome
+
+		$fs_customize->add_setting(
+			'hide_welcome', 
+			array(
+				'default'			=> false,
+				'transport'			=> 'postMessage',
+				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+			)
+		);
+		$fs_customize->add_control(
+			'hide_welcome', 
+			array(
+				'type'			=> 'checkbox',
+				'label'			=> __('Hide welcome text & title', 'good-time'),
+				'section'		=> 'fs_front_section',
+				'settings'		=> 'hide_welcome',
 			)
 		);
 			
@@ -367,7 +439,7 @@ function fs_customize_register($fs_customize) {
 				array(
 					'label'			=> __('Default banner', 'good-time'),
 					'description'	=> __('Choose a default banner picture. (2048 x 625 pixels max.)', 'good-time'),
-					'section'		=> 'fs_pictures_section',
+					'section'		=> 'fs_options_section',
 					'settings'		=> 'bg_default',
 				)
 			)
@@ -388,7 +460,7 @@ function fs_customize_register($fs_customize) {
 				array(
 					'label'			=> __('Blog', 'good-time'),
 					'description'	=> __('Choose a picture for the blog page. (2048 x 625 pixels max.)', 'good-time'),
-					'section'		=> 'fs_pictures_section',
+					'section'		=> 'fs_options_section',
 					'settings'		=> 'bg_blog',
 				)
 			)
@@ -409,7 +481,7 @@ function fs_customize_register($fs_customize) {
 				array(
 					'label'			=> __('404 error', 'good-time'),
 					'description'	=> __('Choose a picture for the 404 error page. (2048 x 625 pixels max.)', 'good-time'),
-					'section'		=> 'fs_pictures_section',
+					'section'		=> 'fs_options_section',
 					'settings'		=> 'bg_404',
 				)
 			)

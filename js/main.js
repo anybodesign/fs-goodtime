@@ -98,6 +98,14 @@ jQuery(document).ready(function($) {
 	$(window).on('load',function() {		
 		adddatascroll();
 	});
+
+	// Scroll Down
+	
+	$('.scroll-down').on('click', function () {
+		var $height = $('html, body').height();
+		$('html, body').animate({scrollTop: $height}, 800);
+	});	
+	
 				
 
 	// Responsive Video Players (Youtube, Vimeo)

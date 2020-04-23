@@ -95,7 +95,7 @@
 
 		<?php if ( get_theme_mod('back2top') == true ) { ?>
 			<button id="back2top" title="<?php _e('Back to top','good-time'); ?>">
-				<img src="<?php bloginfo( 'template_directory' ); ?>/img/ui/back-to-top.svg" alt="">
+				<img src="<?php echo FS_THEME_URL; ?>/img/ui/arrow.svg" alt="">
 			</button>
 		<?php } ?>
 

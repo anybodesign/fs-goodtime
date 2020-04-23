@@ -11,6 +11,16 @@
 			$( '.site-desc' ).text( to );
 		});
 	} );
+	wp.customize( 'welcome_title', function( value ) {
+		value.bind( function( to ) {
+			$( '.fs-welcome-title' ).text( to );
+		});
+	} );
+	wp.customize( 'welcome_text', function( value ) {
+		value.bind( function( to ) {
+			$( '.fs-welcome-text' ).text( to );
+		});
+	} );
 
 	// Tagline
     wp.customize('hide_tagline', function( value ){
@@ -20,6 +30,30 @@
             }
             else{
                 $( '.site-desc' ).show();
+            }
+        });
+    });
+    
+    // Scroll
+    wp.customize('scrolldown', function( value ){
+        value.bind( function( to ) {
+            if( to ){
+                $( '.scroll-down' ).show();
+            }
+            else{
+                $( '.scroll-down' ).hide();
+            }
+        });
+    });
+    
+    // Hide Welcome
+    wp.customize('hide_welcome', function( value ){
+        value.bind( function( to ) {
+            if( to ){
+                $( '.fs-welcome' ).hide();
+            }
+            else{
+                $( '.fs-welcome' ).show();
             }
         });
     });
