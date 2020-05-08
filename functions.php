@@ -718,8 +718,8 @@ if( class_exists('acf') ) {
 
 require 'inc/plugin-update-checker/plugin-update-checker.php';
 $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
-	'https://github.com/anybodesign/good-time',
+	'https://github.com/anybodesign/fs-goodtime',
 	__FILE__,
-	'good-time'
+	'fs-goodtime'
 );
 $myUpdateChecker->setBranch('master');
