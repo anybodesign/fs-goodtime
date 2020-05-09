@@ -97,7 +97,8 @@ function fs_customize_register($fs_customize) {
 		$fs_customize->add_setting(
 			'palette', 
 			array(
-				'default' => 'violet',
+				'default' 			=> 'violet',
+				'transport'			=> 'postMessage',
 				'sanitize_callback' => 'fs_customizer_sanitize_palette',
 			)
 		);
@@ -398,7 +399,8 @@ function fs_customize_register($fs_customize) {
 		$fs_customize->add_setting(
 			'layout_option', 
 			array(
-				'default' => 'version1',
+				'default' 			=> 'version1',
+				'transport'			=> 'postMessage',
 				'sanitize_callback' => 'fs_customizer_sanitize_radio_layout',
 			)
 		);
