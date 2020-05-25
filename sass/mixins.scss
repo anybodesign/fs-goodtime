@@ -5,6 +5,7 @@
 // Color Themes
 
 @mixin custom-primary($prop: background-color) {
+	.palette-1 & { #{$prop}: $primary-color; }
 	.palette-2 & { #{$prop}: $primary-color-2; }
 	.palette-3 & { #{$prop}: $primary-color-3; }
 	.palette-4 & { #{$prop}: $primary-color-4; }
@@ -14,6 +15,7 @@
 	.palette-8 & { #{$prop}: $primary-color-8; }
 }
 @mixin custom-secondary($prop: background-color) {
+	.palette-1 & { #{$prop}: $secondary-color; }
 	.palette-2 & { #{$prop}: $secondary-color-2; }
 	.palette-3 & { #{$prop}: $secondary-color-3; }
 	.palette-4 & { #{$prop}: $secondary-color-4; }
@@ -23,6 +25,7 @@
 	.palette-8 & { #{$prop}: $secondary-color-8; }
 }
 @mixin custom-alpha($prop: background-color, $op: .1) {
+	.palette-1 & { #{$prop}: transparentize($primary-color, $op); }
 	.palette-2 & { #{$prop}: transparentize($primary-color-2, $op); }
 	.palette-3 & { #{$prop}: transparentize($primary-color-3, $op); }
 	.palette-4 & { #{$prop}: transparentize($primary-color-4, $op); }
@@ -32,6 +35,7 @@
 	.palette-8 & { #{$prop}: transparentize($primary-color-8, $op); }
 }
 @mixin custom-white($prop: background-color) {
+	.palette-1 &, 
 	.palette-2 &, 
 	.palette-3 &, 
 	.palette-4 &,
