@@ -4,6 +4,14 @@ A WordPress Theme for all good times in life :)
 
 ## Changelog
 
+### 1.4 - 2020.05.25
+* New layout for Editorial Block 
+* Bugfix: palettes and CSS
+* Bugfix: header z-index
+* Bugfix: mobile menu top position
+* Bugfix: display title on single (v2-v3)
+* Bugfix: customizer refresh
+
 ### 1.3 - 2020.05.23
 * Customizer live previews
 
