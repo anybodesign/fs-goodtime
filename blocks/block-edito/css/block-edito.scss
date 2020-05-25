@@ -27,7 +27,7 @@
 		z-index: 5;
 		
 		@include rwd(large) {
-			padding: $grid-padding*4;
+			padding: $grid-padding*4 $grid-padding*6;
 			width: 75%;
 			margin: 4.8rem auto 0 auto;
 			
@@ -39,7 +39,7 @@
 		&.has-single-image {
 			
 			@include rwd(medium) {
-				padding-right: 24rem;
+				padding-right: 26rem;
 			}
 			@include rwd(large) {
 				padding-right: 16rem;
@@ -61,7 +61,7 @@
 				border-radius: 50%;
 				border: $border;
 				box-shadow: $shadow;
-				width: 22rem;
+				width: 24rem;
 			}
 		}
 	}
