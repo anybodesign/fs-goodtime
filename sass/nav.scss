@@ -307,7 +307,10 @@
 				left: 100%;
 				top: 0;
 			}
-			.header-v2 &,
+			.header-v2 & {
+				left: auto;
+				transform: translateY(-4px);				
+			}
 			.header-v3 & {
 				left: 50%;
 				transform: translateX(-50%) translateY(-4px);
@@ -342,7 +345,10 @@
 			left: 100%;
 			top: 0;
 		}
-		.header-v2 &,
+		.header-v2 & {
+			left: auto;
+			transform: translateY(-4px);				
+		}
 		.header-v3 & {
 			left: 50%;
 			transform: translateX(-50%) translateY(-4px);
@@ -384,12 +390,17 @@
 		.header-v3 & {
 			border-top: $secondary-color 5px solid;
 			background-image: none;
-			min-width: 22rem;
-			text-align: center;
 			box-shadow: $shadow;
 			
 			// Color Themes
 			@include custom-secondary(border-top-color);
+		}
+		.header-v2 & {
+			min-width: 16rem;
+		}
+		.header-v3 & {
+			min-width: 22rem;
+			text-align: center;
 		}
 	}
 
