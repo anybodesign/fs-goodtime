@@ -4,6 +4,12 @@ A WordPress Theme for all good times in life :)
 
 ## Changelog
 
+### 1.4.1 - 2020.05.25
+* CSS update: Menu gradient
+* CSS update: Sub-menus (v2-3)
+* CSS update: Titles (v2-3)
+* CSS update: Gallery block
+
 ### 1.4 - 2020.05.25
 * New layout for Editorial Block 
 * Bugfix: palettes and CSS
