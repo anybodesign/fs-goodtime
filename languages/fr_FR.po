@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Good Time\n"
-"POT-Creation-Date: 2020-04-23 14:48+0200\n"
-"PO-Revision-Date: 2020-04-23 14:49+0200\n"
+"POT-Creation-Date: 2020-05-25 09:29+0200\n"
+"PO-Revision-Date: 2020-05-25 09:29+0200\n"
 "Last-Translator: Thomas Villain <atelier@anybodesign.com>\n"
 "Language-Team: Thomas Villain <atelier@anybodesign.com>\n"
 "Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.3\n"
+"X-Generator: Poedit 2.3.1\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-WPHeader: style.css\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
@@ -25,7 +25,7 @@ msgid "It looks like nothing was found at this location. Maybe try a search?"
 msgstr "On dirait qu’il n'y a rien ici. Essayez peut-être une recherche ?"
 
 #: blocks/block-edito/block-edito-fields.php:9
-msgid "Block Edito"
+msgid "Editorial Block"
 msgstr "Bloc édito"
 
 #: blocks/block-edito/block-edito-fields.php:13
@@ -37,12 +37,24 @@ msgid "Text"
 msgstr "Texte"
 
 #: blocks/block-edito/block-edito-fields.php:51
+msgid "Display two side pictures"
+msgstr "Afficher deux images latérales"
+
+#: blocks/block-edito/block-edito-fields.php:70
+msgid "Side pictures"
+msgstr "Images latérales"
+
+#: blocks/block-edito/block-edito-fields.php:93
 msgid "Left picture"
 msgstr "Image de gauche"
 
-#: blocks/block-edito/block-edito-fields.php:75
+#: blocks/block-edito/block-edito-fields.php:117
 msgid "Right picture"
 msgstr "Image de droite"
+
+#: blocks/block-edito/block-edito-fields.php:143
+msgid "Picture"
+msgstr "Image"
 
 #: blocks/block-edito/block-edito.php:14
 msgid "Editorial"
@@ -259,59 +271,59 @@ msgstr ""
 msgid "Footer Options"
 msgstr "Options du pied de page"
 
-#: inc/customizer.php:109
+#: inc/customizer.php:110
 msgid "Color Themes"
 msgstr "Thèmes couleur"
 
-#: inc/customizer.php:110
+#: inc/customizer.php:111
 msgid "Choose a color theme"
 msgstr "Choisissez un thème de couleur"
 
-#: inc/customizer.php:113
+#: inc/customizer.php:114
 msgid "Violette"
 msgstr "Violette"
 
-#: inc/customizer.php:114
+#: inc/customizer.php:115
 msgid "Spring"
 msgstr "Printemps"
 
-#: inc/customizer.php:115
+#: inc/customizer.php:116
 msgid "Fall"
 msgstr "Automne"
 
-#: inc/customizer.php:116
+#: inc/customizer.php:117
 msgid "Summer"
 msgstr "Été"
 
-#: inc/customizer.php:117
+#: inc/customizer.php:118
 msgid "Winter"
 msgstr "Hiver"
 
-#: inc/customizer.php:118
+#: inc/customizer.php:119
 msgid "Vineyard"
 msgstr "Vigne"
 
-#: inc/customizer.php:119
+#: inc/customizer.php:120
 msgid "Dark Pink"
 msgstr "Noir et rose"
 
-#: inc/customizer.php:120
+#: inc/customizer.php:121
 msgid "Dark Yellow"
 msgstr "Noir et jaune"
 
-#: inc/customizer.php:143
+#: inc/customizer.php:144
 msgid "Site Logo"
 msgstr "Logo du site"
 
-#: inc/customizer.php:144
+#: inc/customizer.php:145
 msgid "Your logo, displayed instead of the website title."
 msgstr "Votre logo, affiché à la place du titre du site."
 
-#: inc/customizer.php:163
+#: inc/customizer.php:164
 msgid "Site Logo - Mobile"
 msgstr "Logo du site - mobile"
 
-#: inc/customizer.php:164
+#: inc/customizer.php:165
 msgid ""
 "Specific version of the logo for mobile devices. If none, the default logo "
 "will be used."
@@ -319,160 +331,160 @@ msgstr ""
 "Version spécifique du logo pour appareils mobiles. Si non renseigné, le logo "
 "par défaut sera utilisé."
 
-#: inc/customizer.php:186
+#: inc/customizer.php:187
 msgid "Hide the website tagline"
 msgstr "Masquer le slogan du site"
 
-#: inc/customizer.php:210
+#: inc/customizer.php:211
 msgid "Footer picture"
 msgstr "Image du pied de page"
 
-#: inc/customizer.php:211
+#: inc/customizer.php:212
 msgid "A small picture displayed in the first widgets column"
 msgstr "Une petite image affichée dans la première colonne de widgets"
 
-#: inc/customizer.php:229
+#: inc/customizer.php:230
 msgid "Footer decoration"
 msgstr "Décoration du pied de page"
 
-#: inc/customizer.php:230
+#: inc/customizer.php:231
 msgid "An optional decoration at the bottom of the first widgets column"
 msgstr "Une décoration optionnelle au bas de la première colonne de widgets"
 
-#: inc/customizer.php:250
+#: inc/customizer.php:251
 msgid "Custom footer text"
 msgstr "Texte de pied de page personnalisé"
 
-#: inc/customizer.php:251
+#: inc/customizer.php:252
 msgid "Add a custom text instead of the year and blog name"
 msgstr ""
 "Ajouter un texte personnalisé au lieu de l’année en cours et du nom de blog"
 
-#: inc/customizer.php:272
+#: inc/customizer.php:273
 msgid "Display WordPress Link"
 msgstr "Afficher le lien WordPress"
 
-#: inc/customizer.php:287 template-parts/header-welcome.php:3
+#: inc/customizer.php:288 template-parts/header-welcome.php:3
 msgid "Aloha :)"
 msgstr "Aloha :)"
 
-#: inc/customizer.php:292
+#: inc/customizer.php:293
 msgid "Front page welcome title"
 msgstr "Titre de bienvenue de la page d'accueil"
 
-#: inc/customizer.php:293
+#: inc/customizer.php:294
 msgid "Add a custom title instead of “Aloha :)”"
 msgstr "Ajouter un titre personnalisé au lieu de \"Aloha :)\""
 
-#: inc/customizer.php:301 template-parts/header-welcome.php:4
+#: inc/customizer.php:302 template-parts/header-welcome.php:4
 msgid "Welcome and have a good time"
 msgstr "Bienvenue et passez un bon moment"
 
-#: inc/customizer.php:307
+#: inc/customizer.php:308
 msgid "Front page welcome text"
 msgstr "Texte de bienvenue de la page d'accueil"
 
-#: inc/customizer.php:308
+#: inc/customizer.php:309
 msgid "Add a custom text instead of “Welcome and have a good time”"
 msgstr ""
 "Ajouter un texte personnalisé au lieu de \"Bienvenue et passez un bon moment"
 "\""
 
-#: inc/customizer.php:327
+#: inc/customizer.php:328
 msgid "Display a Scroll Down button"
 msgstr "Afficher un bouton pour défiler vers le bas"
 
-#: inc/customizer.php:346
+#: inc/customizer.php:347
 msgid "Display a Back to top button"
 msgstr "Afficher un bouton retour haut de page"
 
-#: inc/customizer.php:366
+#: inc/customizer.php:367
 msgid "Hide welcome text & title"
 msgstr "Masquer le titre et le texte de bienvenue"
 
-#: inc/customizer.php:385
+#: inc/customizer.php:386
 msgid "Make the header sticky"
 msgstr "Rendre l'en-tête collant"
 
-#: inc/customizer.php:410
+#: inc/customizer.php:412
 msgid "Layout version"
 msgstr "Version de mise en page"
 
-#: inc/customizer.php:413
+#: inc/customizer.php:415
 msgid "Version 1"
 msgstr "Version 1"
 
-#: inc/customizer.php:414
+#: inc/customizer.php:416
 msgid "Version 2"
 msgstr "Version 2"
 
-#: inc/customizer.php:415
+#: inc/customizer.php:417
 msgid "Version 3"
 msgstr "Version 3"
 
-#: inc/customizer.php:439
+#: inc/customizer.php:441
 msgid "Default banner"
 msgstr "Bannière par défaut"
 
-#: inc/customizer.php:440
+#: inc/customizer.php:442
 msgid "Choose a default banner picture. (2048 x 625 pixels max.)"
 msgstr ""
 "Choisissez une image par défaut pour la bannière. (2048 x 625 pixels max.)"
 
-#: inc/customizer.php:460
+#: inc/customizer.php:462
 msgid "Blog"
 msgstr "Blog"
 
-#: inc/customizer.php:461
+#: inc/customizer.php:463
 msgid "Choose a picture for the blog page. (2048 x 625 pixels max.)"
 msgstr "Choisissez une image pour la page actualités. (2048 x 625 pixels max.)"
 
-#: inc/customizer.php:481
+#: inc/customizer.php:483
 msgid "404 error"
 msgstr "Erreur 404"
 
-#: inc/customizer.php:482
+#: inc/customizer.php:484
 msgid "Choose a picture for the 404 error page. (2048 x 625 pixels max.)"
 msgstr ""
 "Choisissez une image pour la page d’erreur 404. (2048 x 625 pixels max.)"
 
-#: inc/plugin-update-checker/Puc/v4p8/Plugin/Ui.php:54
+#: inc/plugin-update-checker/Puc/v4p9/Plugin/Ui.php:54
 msgid "View details"
 msgstr "Voir les détails"
 
-#: inc/plugin-update-checker/Puc/v4p8/Plugin/Ui.php:77
+#: inc/plugin-update-checker/Puc/v4p9/Plugin/Ui.php:77
 #, php-format
 msgid "More information about %s"
 msgstr "Plus d'informations sur %s"
 
-#: inc/plugin-update-checker/Puc/v4p8/Plugin/Ui.php:128
+#: inc/plugin-update-checker/Puc/v4p9/Plugin/Ui.php:128
 msgid "Check for updates"
 msgstr "Vérifier les mises à jour"
 
-#: inc/plugin-update-checker/Puc/v4p8/Plugin/Ui.php:213
+#: inc/plugin-update-checker/Puc/v4p9/Plugin/Ui.php:213
 #, php-format
 msgctxt "the plugin title"
 msgid "The %s plugin is up to date."
 msgstr "L’extension %s est à jour."
 
-#: inc/plugin-update-checker/Puc/v4p8/Plugin/Ui.php:215
+#: inc/plugin-update-checker/Puc/v4p9/Plugin/Ui.php:215
 #, php-format
 msgctxt "the plugin title"
 msgid "A new version of the %s plugin is available."
 msgstr "Une nouvelle version de l'extension %s est disponible."
 
-#: inc/plugin-update-checker/Puc/v4p8/Plugin/Ui.php:217
+#: inc/plugin-update-checker/Puc/v4p9/Plugin/Ui.php:217
 #, php-format
 msgctxt "the plugin title"
 msgid "Could not determine if updates are available for %s."
 msgstr "Impossible de déterminer si des mises à jour sont disponibles pour %s."
 
-#: inc/plugin-update-checker/Puc/v4p8/Plugin/Ui.php:223
+#: inc/plugin-update-checker/Puc/v4p9/Plugin/Ui.php:223
 #, php-format
 msgid "Unknown update checker status \"%s\""
 msgstr "Statut inconnu du vérificateur de mise à jour \"%s\""
 
-#: inc/plugin-update-checker/Puc/v4p8/Vcs/PluginUpdateChecker.php:98
+#: inc/plugin-update-checker/Puc/v4p9/Vcs/PluginUpdateChecker.php:98
 msgid "There is no changelog available."
 msgstr "Il n’y a aucun historique des mises à jour disponible."
 
@@ -594,6 +606,18 @@ msgstr "https://anybodesign.com/"
 #. Template Name of the plugin/theme
 msgid "Maintenance"
 msgstr "Maintenance"
+
+#~ msgid "Afficher deux images latérales"
+#~ msgstr "Afficher deux images latérales"
+
+#~ msgid "Images latérales"
+#~ msgstr "Images latérales"
+
+#~ msgid "Image"
+#~ msgstr "Image"
+
+#~ msgid "Block Edito"
+#~ msgstr "Bloc édito"
 
 #~ msgid "Theme Fonts"
 #~ msgstr "Polices du thème"
@@ -933,9 +957,6 @@ msgstr "Maintenance"
 
 #~ msgid "Enter the name of the creation"
 #~ msgstr "Entrer le nom de la création"
-
-#~ msgid "Picture"
-#~ msgstr "Image"
 
 #~ msgid "Date"
 #~ msgstr "Date"

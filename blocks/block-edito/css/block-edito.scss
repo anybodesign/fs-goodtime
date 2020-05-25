@@ -35,7 +35,37 @@
 				margin-top: $grid-padding*2;
 			}
 		}
+		
+		&.has-single-image {
+			
+			@include rwd(medium) {
+				padding-right: 24rem;
+			}
+			@include rwd(large) {
+				padding-right: 16rem;
+			}
+		}
 	}
+	
+	.edito-picture {
+		display: none;
+
+		@include rwd(medium) {
+			display: block;
+			position: absolute;
+			top: $grid-padding*4;
+			right: $grid-padding*2;
+			z-index: 5;
+			
+			img {
+				border-radius: 50%;
+				border: $border;
+				box-shadow: $shadow;
+				width: 22rem;
+			}
+		}
+	}
+	
 	[class*=edito-picture--] {
 		position: absolute;
 		display: none;

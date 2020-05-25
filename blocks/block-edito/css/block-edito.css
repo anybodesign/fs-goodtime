@@ -23,6 +23,26 @@
         margin: 4.8rem auto 0 auto; }
         .header-v3 .acf-block--edito .edito-content {
           margin-top: 2rem; } }
+    @media only screen and (min-width: 45em) {
+      .acf-block--edito .edito-content.has-single-image {
+        padding-right: 24rem; } }
+    @media only screen and (min-width: 60em) {
+      .acf-block--edito .edito-content.has-single-image {
+        padding-right: 16rem; } }
+  .acf-block--edito .edito-picture {
+    display: none; }
+    @media only screen and (min-width: 45em) {
+      .acf-block--edito .edito-picture {
+        display: block;
+        position: absolute;
+        top: 4rem;
+        right: 2rem;
+        z-index: 5; }
+        .acf-block--edito .edito-picture img {
+          border-radius: 50%;
+          border: #fff 0.8rem solid;
+          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+          width: 22rem; } }
   .acf-block--edito [class*=edito-picture--] {
     position: absolute;
     display: none; }
