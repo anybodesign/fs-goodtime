@@ -88,6 +88,7 @@
 		.header-v1 & {
 			flex-direction: column;
 			padding-top: 0;
+			background-image: none;
 		}
 		.header-v2 & {
 			border-bottom: #fff 1px solid;
@@ -308,7 +309,8 @@
 			}
 			.header-v2 &,
 			.header-v3 & {
-				left: auto;
+				left: 50%;
+				transform: translateX(-50%) translateY(-4px);
 			}
 			
 			& > li {
@@ -342,7 +344,8 @@
 		}
 		.header-v2 &,
 		.header-v3 & {
-			left: auto;
+			left: 50%;
+			transform: translateX(-50%) translateY(-4px);
 		}
 		
 		& > li {
@@ -372,7 +375,6 @@
 		left: -999em;
 		opacity: 0;
 		transform: none;
-		min-width: 100%;
 		z-index: 100;
 		transition: opacity .2s ease-in-out;
 		
@@ -380,9 +382,15 @@
 
 		.header-v2 &,
 		.header-v3 & {
+			border-top: $secondary-color 5px solid;
 			background-image: none;
+			min-width: 22rem;
+			text-align: center;
+			box-shadow: $shadow;
+			
+			// Color Themes
+			@include custom-secondary(border-top-color);
 		}
-		
 	}
 
 	& > li {
