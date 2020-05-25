@@ -329,24 +329,33 @@ hr,
 		}
 	}
 	
-	@include rwd(large) {
+	&.outside {
 		.acf-block-gallery-caption {
-			background-color: transparentize($primary-color, .3) !important;
-			
-			// Color Themes
-			@include custom-alpha(background-color, .3);
-			
+			padding: $grid-padding;
+			border-bottom: $text-color 1px solid;
 		}
-		
-		.acf-block-gallery-item {
+	}
+	@include rwd(large) {
+	
+		&.inside {
+			.acf-block-gallery-caption {
+				background-color: transparentize($primary-color, .3) !important;
+				
+				// Color Themes
+				@include custom-alpha(background-color, .3);
+				
+			}
 			
-			&:hover,
-			&.focus-visible {
-				img {
-					transform: none !important;
+			.acf-block-gallery-item {
+				
+				&:hover,
+				&.focus-visible {
+					img {
+						transform: none !important;
+					}
 				}
 			}
-		}
+		}	
 	}
 }
 
