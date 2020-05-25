@@ -55,6 +55,20 @@
 		}
 	}
 
+	.header-v2 &	,
+	.header-v3 & {
+		padding-bottom: $grid-padding*3;
+		
+		&::after {
+			content: '';
+			display: block;
+			width: 50%;
+			height: 1px;
+			border-top: $text-color 1px dashed;
+			position: absolute;
+			bottom: 0;
+		}			
+	}
 	
 	.search-term {
 		font-family: $font-bolditalic;
