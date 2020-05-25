@@ -37,7 +37,7 @@
 			
 	& > .row {
 		position: relative;
-		z-index: 2;
+		z-index: 5;
 	}	
 }
 .header-content {
@@ -101,9 +101,10 @@
 		}
 		.home .header-v3 & {
 			min-height: 50vh;
-			
 			&::after {
-				top: -2rem;				
+				top: 2rem;				
+				background-image: url(img/ui/logo-shadow-cut.png);
+				transform: none;
 			}
 		}
 	}
