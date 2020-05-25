@@ -243,7 +243,14 @@ hr,
 	
 	&.is-style-dots::before {
 		color: $primary-color;
-		font-size: 4rem;
+		
+		@include rwd(medium) {
+			font-size: 3rem;
+		}
+		
+		&::before {
+			padding-left: 0;
+		}
 		
 		// Color Themes
 		@include custom-primary(color);
