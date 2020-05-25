@@ -146,9 +146,20 @@
 	.home .has-welcome-title &::after {
 		background-image: linear-gradient(to bottom, #000 35%, rgba(0,0,0,0) 100%);
 	}
-	.home .header-v2 &::after {
-		opacity: .7;
+	.home .header-v2 &::after,
+	.home .header-v3 &::after {
+		opacity: .6;
 	}
+	
+	.header-v2 &,
+	.header-v3 & {
+		min-height: 25rem;
+		
+		@include rwd(large) {
+			min-height: 0;
+		}
+	}
+	
 	
 	@include rwd(large) {
 		padding: 0;
@@ -163,10 +174,11 @@
 			background-image: linear-gradient(to bottom, #000 20%, rgba(0,0,0,0) 50%);
 		}
 		.header-v3 &::after {
-			background-image: linear-gradient(to top, #000 20%, rgba(0,0,0,0) 70%);
+			background-image: linear-gradient(to bottom, #000 0%, rgba(0,0,0,0) 70%);
 		}
 		.header-v3.has-welcome-title &::after {
-			background-image: linear-gradient(to top, #000 35%, rgba(0,0,0,0) 100%);
+			background-image: linear-gradient(to top, #000 0%, rgba(0,0,0,0) 70%), linear-gradient(to bottom, #000 0%, rgba(0,0,0,0) 70%);
+			opacity: .6;
 		}
 				
 	}

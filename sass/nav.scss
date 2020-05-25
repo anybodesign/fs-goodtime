@@ -54,7 +54,6 @@
 	width: 100%;
 	padding: 0;
 	background-color: #fff;
-	//background-image: linear-gradient(to bottom, #eee 0%, #fff 30%);
 	
 	transform: translateY(-100%);
 	transition: transform .4s ease-in-out;
@@ -65,7 +64,8 @@
 	}
 	
 	.header-v1 & {
-		padding-top: 10rem;
+		padding-top: 3rem;
+		background-image: linear-gradient(to bottom, #eee 0%, #fff 30%);
 	}
 	
 	@include rwd(small) { width: 75%; }
@@ -563,13 +563,13 @@
 	padding: 0;
 	padding-left: 3.4rem;
 	background-color: transparent;
-	color: $primary-color;
+	color: $text-color;
 	text-transform: none;
 	cursor: pointer;
 	z-index: 200;
 
 	// Color Themes
-	@include custom-primary(color);
+	//@include custom-primary(color);
 	
 
 	span,
