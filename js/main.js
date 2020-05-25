@@ -1,5 +1,20 @@
 jQuery(document).ready(function($) {
 	
+	// Mobile top
+	
+	function mobiletop() {
+		if ($(window).width() < 960) {
+			var mobilehead = $('#site_head .inner').height();
+			$('.main-menu').css('top', mobilehead);
+		}
+	}
+	$(window).on('load',function() {		
+		mobiletop();
+	});	
+	$(window).on('resize',function() {
+		mobiletop();
+	});	
+	
 	
 	// Responsive Main Menu
 
