@@ -34,33 +34,6 @@
         });
     });
     
-    // Scroll
-    wp.customize('scrolldown', function( value ){
-        value.bind( function( to ) {
-            if( to ){
-                $( '.scroll-down' ).show();
-            }
-            else {
-                $( '.scroll-down' ).hide();
-            }
-        });
-    });
-    
-    // Hide Welcome
-    wp.customize('hide_welcome', function( value ){
-        value.bind( function( to ) {
-            if( to ){
-                $( '.fs-welcome' ).hide();
-                	$( '#wrapper' ).removeClass('has-welcome-title');
-            }
-            else {
-                $( '.fs-welcome' ).show();
-                	$( '#wrapper' ).addClass('has-welcome-title');
-            }
-        });
-    });
-    
-    
     // Palette
     wp.customize('palette', function( value ){
         value.bind( function( to ) {

@@ -317,7 +317,6 @@ function fs_customize_register($fs_customize) {
 			'scrolldown', 
 			array(
 				'default'			=> true,
-				'transport'			=> 'postMessage',
 				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
 			)
 		);
@@ -331,7 +330,7 @@ function fs_customize_register($fs_customize) {
 			)
 		);
 		
-		// Scroll down
+		// Back to top
 
 		$fs_customize->add_setting(
 			'back2top', 
@@ -356,7 +355,6 @@ function fs_customize_register($fs_customize) {
 			'hide_welcome', 
 			array(
 				'default'			=> false,
-				'transport'			=> 'postMessage',
 				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
 			)
 		);
