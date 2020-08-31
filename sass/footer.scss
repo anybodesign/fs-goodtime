@@ -62,6 +62,12 @@
 		textarea {
 			height: 8rem;
 		}
+		.wpcf7-response-output {
+			color: #fff;
+			border: 0 !important;
+			border-left: #fff 4px solid !important;
+			padding-left: $grid-padding !important;
+		}
 	}
 	
 		
