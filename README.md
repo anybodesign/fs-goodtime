@@ -4,6 +4,10 @@ A WordPress Theme for all good times in life :)
 
 ## Changelog
 
+### 1.4.2 - 2020.08.31
+* Editor: New WP 5.5 styles
+* CSS: ContactForm7 responses
+
 ### 1.4.1 - 2020.05.25
 * CSS update: Menu gradient
 * CSS update: Sub-menus (v2-3)
